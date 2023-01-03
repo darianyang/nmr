@@ -1,0 +1,20 @@
+###/Network/Servers/sagan.structbio.pitt.edu/Volumes/home3/Users/dyang/nmr/ctd/600-2/DTY-CaCTD-F-12152022 
+ README Created: Tue Jan 3 16:55:51 EST 2023 
+
+ EXP 1/ 
+ 	 SUBEXP 1/pdata/1/ 
+	DTY 15Dec2022 637uM CA CTD 7F PBS pH 7.4 298K 1024 NS 
+
+ EXP 10/ 
+ 	 SUBEXP 10/pdata/1/ 
+	DTY 16Dec2022 528 NS Test before EXSY 637uM CA CTD 4F PBS pH 7.4 298K 1024 NS 
+
+ EXP 2/ 
+ 	 SUBEXP 2/pdata/1/ 
+	DTY 15Dec2022 637uM CA CTD 4F PBS pH 7.4 298K 1024 NS 
+
+ EXP 3/ 
+ 	 SUBEXP 3/pdata/1/ 
+	DTY 15Dec2022 63.7uM CA CTD 4F PBS pH 7.4 298K 1024 NS 
+
+
