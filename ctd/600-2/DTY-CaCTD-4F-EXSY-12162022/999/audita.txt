@@ -1,0 +1,15 @@
+##TITLE= Audit trail, TOPSPIN		Version 3.2
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= fatema
+$$ /opt/topspin/data/fatema/DTY-CaCTD-4F-EXSY-12162022/999/audita.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2022-12-16 18:17:29.193 -0500>,<fatema>,<bh029603>,<mvrow>,<TOPSPIN 3.2>,
+      <rser 1 from
+       10 "DTY-CaCTD-4F-EXSY-12162022" "/opt/topspin/data/fatema"
+       data hash MD5: 2K
+       88 27 47 C7 A7 D3 5B E4 74 49 84 54 FA 29 73 8E>)
+##END=
+
+$$ hash MD5
+$$ 33 FC A5 23 5F DC 66 74 56 B9 2E A7 1E D0 01 3B

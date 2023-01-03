@@ -1,0 +1,22 @@
+##TITLE= Parameter file, TOPSPIN		Version 3.2
+##JCAMPDX= 5.0
+##DATATYPE= Parameter Values
+##NPOINTS= 2	$$ modification sequence number
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= fatema
+$$ 2022-12-16 16:14:38.337 -0500  fatema@nmr800.structbio.pitt.edu
+$$ /opt/topspin/data/fatema/nmr/DTY-CaCTD-15NFW-12162022/3/acqu2
+$$ process /opt/topspin3.2/prog/mod/dataserver
+##$ACQT0= 0
+##$BF1= 81.093695
+##$FnMODE= 5
+##$NUC1= <15N>
+##$NusJSP= 0
+##$NusT2= 1
+##$NusTD= 0
+##$O1= 9609.60285749479
+##$SFO1= 81.1033046028575
+##$SW= 36
+##$SW_h= 2919.71896570287
+##$TD= 128
+##END=

@@ -1,0 +1,47 @@
+##TITLE= Audit trail, TOPSPIN		Version 3.2
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= fatema
+$$ /opt/topspin/data/fatema/DTY-CaCTD-F-12152022/3/pdata/1/auditp.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2022-12-15 19:40:22.629 -0500>,<fatema>,<bh029603>,<go>,<TOPSPIN 3.2>,
+      <created by zg
+	started at 2022-12-15 19:17:39.910 -0500,
+	POWCHK enabled, PULCHK disabled,
+       configuration hash MD5:
+       13 A2 8B 82 6A D9 42 3D A1 9C 77 11 2C 6A 98 D7
+       data hash MD5: 16K
+       B7 3A BA 90 A5 E7 B1 97 05 5A 82 0A DD B2 93 D7>)
+(   2,<2022-12-16 09:58:13.033 -0500>,<fatema>,<bh029603>,<proc1d>,<TOPSPIN 3.2>,
+      <Start of raw data processing
+       efp LB = 100 FT_mod = 6 PKNL = 1 PHC0 = -58.8659 PHC1 = 136.1085 SI = 16K 
+       data hash MD5: 16K
+       31 27 22 5C 03 AF D2 FC 80 D5 59 BC 1E 87 46 11>)
+(   3,<2022-12-16 09:58:39.654 -0500>,<fatema>,<bh029603>,<proc1d>,<TOPSPIN 3.2>,
+      <pk fgphup PHC0 = 27.15 PHC1 = 0 
+       data hash MD5: 16K
+       CA E5 5F 70 D1 01 3D ED 68 D8 9B E5 14 E4 EE DA>)
+(   4,<2022-12-16 10:00:54.756 -0500>,<fatema>,<bh029603>,<audit>,<TOPSPIN 3.2>,
+      <user comment:
+       TITLE=DTY 15Dec2022
+       63.7uM CA CTD 4F
+       PBS pH 7.4
+       298K 1024 NSTITLE_END
+       data hash MD5: 16K
+       CA E5 5F 70 D1 01 3D ED 68 D8 9B E5 14 E4 EE DA>)
+(   5,<2022-12-16 10:05:12.847 -0500>,<fatema>,<bh029603>,<proc1d>,<TOPSPIN 3.2>,
+      <pk fgphup PHC0 = 5.3 PHC1 = 0 
+       data hash MD5: 16K
+       0D 8D F1 9A 0C 24 59 F0 F1 CD E2 24 99 CD AD E3>)
+(   6,<2022-12-16 10:05:16.360 -0500>,<fatema>,<bh029603>,<proc1d>,<TOPSPIN 3.2>,
+      <apk 
+       data hash MD5: 16K
+       05 B6 3F 5E 5C A2 CF EA 9B D5 89 7B 61 3F B0 91>)
+(   7,<2022-12-16 10:05:17.993 -0500>,<fatema>,<bh029603>,<proc1d>,<TOPSPIN 3.2>,
+      <abs ABSG = 5 
+       data hash MD5: 16K
+       BB 04 DA F0 06 18 D4 AB 49 E5 B0 6C 37 AA CB B8>)
+##END=
+
+$$ hash MD5
+$$ 18 A7 CF AA 4B 33 45 DC 5F C5 56 9A 58 13 C6 01

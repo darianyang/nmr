@@ -1,0 +1,27 @@
+##TITLE= Parameter file, TOPSPIN		Version 3.2
+##JCAMPDX= 5.0
+##DATATYPE= Parameter Values
+##NPOINTS= 1	$$ modification sequence number
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= fatema
+$$ 2022-12-16 14:00:26.130 -0500  fatema@nmr800.structbio.pitt.edu
+$$ /opt/topspin/data/fatema/nmr/DTY-CaCTD-15NFW-12162022/1/pdata/1/clevels
+$$ process /opt/topspin3.2/prog/mod/edparproc
+##$LEVELS= (0..255)
+10865.6 13038.7 15646.5 18775.8 22530.9 27037.1 32444.5 38933.4 46720.1
+56064.1 67276.9 80732.3 96878.8 116254.5 139505.4 167406.5 200887.8 241065.4
+289278.5 347134.2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$LEVSIGN= 1
+##$MAXLEV= 20
+##$METHOD= 0
+##$NEGBASE= -10865.6
+##$NEGINCR= 1.8
+##$POSBASE= 10865.6
+##$POSINCR= 1.2
+##END=

@@ -1,0 +1,59 @@
+##TITLE= Audit trail, TOPSPIN		Version 3.2
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= fatema
+$$ /opt/topspin/data/fatema/DTY-CaCTD-F-12152022/1/pdata/1/auditp.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2022-12-15 17:40:36.217 -0500>,<fatema>,<bh029603>,<go>,<TOPSPIN 3.2>,
+      <acquisition in progress>)
+(   2,<2022-12-15 17:46:51.106 -0500>,<fatema>,<bh029603>,<proc1d>,<TOPSPIN 3.2>,
+      <Start of raw data processing
+       efp LB = 100 FT_mod = 6 PKNL = 1 PHC0 = 166.1671 PHC1 = 269.0183 SI = 16K 
+       data hash MD5: 16K
+       6F 6A A3 52 D1 B1 6F 1A 0E 6E 2C 36 2C C1 5A DF>)
+(   3,<2022-12-15 17:46:52.011 -0500>,<fatema>,<bh029603>,<proc1d>,<TOPSPIN 3.2>,
+      <apk 
+       data hash MD5: 16K
+       DD BA AE 79 AE 06 DA AE 7A 68 5D 6A 7C 4D 06 78>)
+(   4,<2022-12-15 18:05:17.087 -0500>,<fatema>,<bh029603>,<proc1d>,<TOPSPIN 3.2>,
+      <apk 
+       data hash MD5: 16K
+       4E E8 2A 6F D6 DE E0 C9 7B 6C BC 86 5A F9 E6 95>)
+(   5,<2022-12-15 18:06:09.572 -0500>,<fatema>,<bh029603>,<proc1d>,<TOPSPIN 3.2>,
+      <apk 
+       data hash MD5: 16K
+       C3 C9 89 38 D7 AA 33 44 BE EC 2A 58 1D 95 F4 BE>)
+(   6,<2022-12-15 18:08:37.863 -0500>,<fatema>,<bh029603>,<audit>,<TOPSPIN 3.2>,
+      <user comment:
+       TITLE=DTY 15Dec2022
+       637uM CA CTD 7F
+       PBS pH 7.4TITLE_END
+       data hash MD5: 16K
+       C3 C9 89 38 D7 AA 33 44 BE EC 2A 58 1D 95 F4 BE>)
+(   7,<2022-12-15 18:08:39.728 -0500>,<fatema>,<bh029603>,<audit>,<TOPSPIN 3.2>,
+      <user comment:
+       TITLE=DTY 15Dec2022
+       637uM CA CTD 7F
+       PBS pH 7.4TITLE_END
+       data hash MD5: 16K
+       C3 C9 89 38 D7 AA 33 44 BE EC 2A 58 1D 95 F4 BE>)
+(   8,<2022-12-15 18:09:08.649 -0500>,<fatema>,<bh029603>,<audit>,<TOPSPIN 3.2>,
+      <user comment:
+       TITLE=DTY 15Dec2022
+       637uM CA CTD 7F
+       PBS pH 7.4
+       298K 1024 NSTITLE_END
+       data hash MD5: 16K
+       C3 C9 89 38 D7 AA 33 44 BE EC 2A 58 1D 95 F4 BE>)
+(   9,<2022-12-15 18:09:12.106 -0500>,<fatema>,<bh029603>,<audit>,<TOPSPIN 3.2>,
+      <user comment:
+       TITLE=DTY 15Dec2022
+       637uM CA CTD 7F
+       PBS pH 7.4
+       298K 1024 NSTITLE_END
+       data hash MD5: 16K
+       C3 C9 89 38 D7 AA 33 44 BE EC 2A 58 1D 95 F4 BE>)
+##END=
+
+$$ hash MD5
+$$ 5A 81 E5 A3 EB DE 75 B3 D8 40 12 15 BE 9C F5 06

@@ -1,0 +1,24 @@
+##TITLE= Audit trail, TOPSPIN		Version 3.2
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= fatema
+$$ /opt/topspin/data/fatema/nmr/DTY-CaCTD-15NFW-12162022/2/pdata/1/auditp.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2022-12-16 15:40:18.092 -0500>,<fatema>,<nmr800.structbio.pitt.edu>,<go>,<TOPSPIN 3.2>,
+      <acquisition in progress>)
+(   2,<2022-12-16 15:56:02.076 -0500>,<fatema>,<nmr800.structbio.pitt.edu>,<proc2d>,<TOPSPIN 3.2>,
+      <Start of raw data processing
+       xfb F2: SI = 2K BC_mod = 6 BCFW = 0.4 WDW = 4 SSB = 3 FT_mod = 6 PKNL = 1 STSR = 0 STSI = 1K PHC0 = -74.39507 PHC1 = -39.3882 F1: SI = 256 WDW = 3 SSB = 3 FT_mod = 4 FCOR = 0.5 PHC0 = 176.7015 PHC1 = 0
+       data hash MD5: 1K * 256
+       E8 A3 D1 60 D0 91 87 3E 02 6F 10 84 56 CF 54 63>)
+(   3,<2022-12-16 15:57:06.328 -0500>,<fatema>,<nmr800.structbio.pitt.edu>,<audit>,<TOPSPIN 3.2>,
+      <user comment:
+       TITLE=fhsqcf3ggph 298K
+       CA-CTD 7F 673uM
+       PBS pH 7.4 0.02% NaN3 0.5M TCEPTITLE_END
+       data hash MD5: 1K * 256
+       E8 A3 D1 60 D0 91 87 3E 02 6F 10 84 56 CF 54 63>)
+##END=
+
+$$ hash MD5
+$$ CA E5 CF 60 1D 23 E1 55 96 8F 8F 2C D6 E4 C0 FC

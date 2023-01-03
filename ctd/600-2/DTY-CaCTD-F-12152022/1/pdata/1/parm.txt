@@ -1,0 +1,40 @@
+
+Current Data Parameters
+NAME     DTY-CaCTD-F-12152022              
+EXPNO                 1              
+PROCNO                1              
+
+F2 - Acquisition Parameters
+Date_          20221215              
+Time              17.45              
+INSTRUM           spect              
+PROBHD   5 mm CPTXO 19F              
+PULPROG              zg              
+TD                16384              
+SOLVENT         H2O+D2O              
+NS                 1024              
+DS                    2              
+SWH           28409.092 Hz           
+FIDRES         1.733953 Hz           
+AQ            0.2883584 sec          
+RG                 2050              
+DW               17.600 usec         
+DE                18.00 usec         
+TE                298.0 K            
+D1           1.00000000 sec          
+TD0                   1              
+
+======== CHANNEL f1 ========
+SFO1        564.6169316 MHz          
+NUC1                19F              
+P1                14.50 usec         
+PLW1        23.82299995 W            
+
+F2 - Processing parameters
+SI                16384              
+SF          564.6863880 MHz          
+WDW                  EM              
+SSB      0              
+LB               100.00 Hz           
+GB       0              
+PC                 1.00              

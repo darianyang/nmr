@@ -1,0 +1,18 @@
+##TITLE= Audit trail, TOPSPIN		Version 3.2
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= fatema
+$$ /opt/topspin/data/fatema/nmr/DTY-CaCTD-15NFW-12162022/1/audita.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2022-12-16 15:05:39.789 -0500>,<fatema>,<nmr800.structbio.pitt.edu>,<go>,<TOPSPIN 3.2>,
+      <created by zg
+	started at 2022-12-16 14:46:06.708 -0500,
+	POWCHK enabled, PULCHK disabled,
+       configuration hash MD5:
+       F3 27 FC 00 D0 D2 04 A6 9F 6F 6C BE DF 42 1C 34
+       data hash MD5: 2K * 128
+       97 D8 54 A4 92 21 13 0B 95 78 46 D6 DA AA F6 86>)
+##END=
+
+$$ hash MD5
+$$ 52 3F 71 28 20 B2 90 A9 B8 4E 77 B4 D5 22 95 C5
