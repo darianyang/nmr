@@ -8,9 +8,22 @@ import numpy as np
 
 #plt.style.use("/Users/darian/github/wedap/wedap/styles/default.mplstyle")
 
-def plot_1d(path, ax=None, label=None, color="magenta"):
+def plot_1d(path, ax=None, label=None, color="magenta", scale=None, xlim=(-120, -140)):
     """
     Plot 1D NMR spectrum.
+
+    Parameters
+    ----------
+    path : str
+        Path to nmr data file (e.g. nmrpipe).
+    ax : mpl axes object
+    label : str
+        Plot label
+    color : str
+        Plot color
+    scale : int
+        Multiply data to scale if comparing across multiple concentrations.
+    xlim : tuple of ints/floats
     """
     if ax is None:
         fig, ax = plt.subplots()
@@ -19,6 +32,10 @@ def plot_1d(path, ax=None, label=None, color="magenta"):
 
     # read in the data from a NMRPipe file
     dic,data = ng.pipe.read(path)
+
+    # optionally scale data for different concentrations
+    if scale:
+        data *= scale
 
     # create a unit conversion object for the axis
     uc = ng.pipe.make_uc(dic, data)
@@ -30,8 +47,8 @@ def plot_1d(path, ax=None, label=None, color="magenta"):
     ax.set_yticklabels([])
     ax.set_yticks([])
     #ax.set_title("CTD $^{19}$F 1D")
-    ax.set_xlabel("$^{19}$F ppm")
-    ax.set_xlim(-120, -140)
+    ax.set_xlabel("$^{19}$F ppm", fontsize=12, labelpad=10, fontweight="bold")
+    ax.set_xlim(xlim[0], xlim[1])
     #ax.set_ylim(-80000, 2500000)
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
@@ -43,9 +60,11 @@ def plot_1d(path, ax=None, label=None, color="magenta"):
 
 fig, ax = plt.subplots()
 
-plot_1d("600-2/DTY-CaCTD-F-12152022/1/test.DAT", ax=ax, label="7F", color="k")
-plot_1d("600-2/DTY-CaCTD-F-12152022/2/test.DAT", ax=ax, label="4F", color="magenta")
-
+#plot_1d("600-2/DTY-CaCTD-F-12152022/1/test.DAT", ax=ax, label="7F", color="black")
+plot_1d("600-2/DTY-CaCTD-F-12152022/2/test.DAT", ax=ax, label="4F 1200µM", color="magenta")
+plot_1d("600-2/DTY-CaCTD-F-12152022/3/test.DAT", ax=ax, label="4F 120µM", color="k", scale=10, xlim=(-117, -135))
+ax.invert_xaxis()
 plt.legend(prop={'size': 12})
 fig.tight_layout()
 plt.show()
+fig.savefig("figures/1d_ctd_4F_comp.png", dpi=300, transparent=True)
