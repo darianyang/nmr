@@ -8,7 +8,7 @@ DIRS=(10 11 12 13 14 15 16 17 18 19 20)
 #####################################
 ### loop each mixing time and dir ###
 #####################################
-for I in {0..9} ; do
+for I in {0..10} ; do
 # go into appropriate directory
 cd ${DIRS[$I]}
 
@@ -28,7 +28,7 @@ bruk2pipe -in ./ser \
   -ndim               2  -aq2D          States  \
   -out ./test.fid -verb -ov
 
-sleep 2
+sleep 1
 EOF
 csh fid.com
 
@@ -42,16 +42,16 @@ nmrPipe   -in  test.fid  \
 | nmrPipe -fn ZF -auto  \
 | nmrPipe -fn EM -lb 40 \
 | nmrPipe -fn FT -auto \
-| nmrPipe -fn PS -p0 64 -p1 0.0 -verb -di \
-| nmrPipe -fn POLY -auto -ord 0 \
+| nmrPipe -fn PS -p0 70 -p1 0.0 -verb -di \
+| nmrPipe -fn POLY -auto -ord 1.5 \
 | nmrPipe -fn TP \
 | nmrPipe -fn SP -off 0.15 -end 0.99 -pow 1 -c 0.5 \
 | nmrPipe -fn EM -lb 40 \
 | nmrPipe -fn ZF -auto \
 | nmrPipe -fn FT -alt \
-| nmrPipe -fn PS -p0 4 -p1 0.0 -verb -di \
+| nmrPipe -fn PS -p0 -32 -p1 55 -verb -di \
 | nmrPipe -fn TP \
--out test.DAT -ov -verb
+-out test.DAT -ov
 EOF
 csh nmrPROC-exsy.com
 
