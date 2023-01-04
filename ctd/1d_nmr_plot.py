@@ -47,7 +47,7 @@ def plot_1d(path, ax=None, label=None, color="magenta", scale=None, xlim=(-120, 
     ax.set_yticklabels([])
     ax.set_yticks([])
     #ax.set_title("CTD $^{19}$F 1D")
-    ax.set_xlabel("$^{19}$F ppm", fontsize=12, labelpad=10, fontweight="bold")
+    ax.set_xlabel("$^{19}$F (ppm)", fontsize=12, labelpad=10, fontweight="bold")
     ax.set_xlim(xlim[0], xlim[1])
     #ax.set_ylim(-80000, 2500000)
     ax.spines['top'].set_visible(False)

@@ -1,3 +1,112 @@
 """
 Plot 2D EXSY (e.g. 19F-19F) spectra.
 """
+
+import nmrglue as ng
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.cm
+
+import gif
+from tqdm.auto import tqdm
+
+plt.style.use("/Users/darian/github/wedap/wedap/styles/default.mplstyle")
+
+# plot parameters
+cmap = matplotlib.cm.Blues_r    # contour map (colors to use for contours)
+contour_start = 250000           # contour level start value
+contour_num = 8                # number of contour levels
+contour_factor = 1.8          # scaling factor between contour levels
+
+# calculate contour levels
+cl = contour_start * contour_factor ** np.arange(contour_num) 
+
+def plot_exsy(path, ax=None, label=None, color="magenta", title="$^{19}$F-$^{19}$F EXSY"):
+    """
+    Plot 19F-19F EXSY.
+
+    Parameters
+    ----------
+    path : str
+        Path to nmr data file (e.g. nmrpipe).
+    ax : mpl axes object
+    label : str
+        Plot label
+    color : str
+        Plot color
+    title : str
+        Plot title
+    """
+    if ax is None:
+        fig, ax = plt.subplots()
+    else:
+        fig = plt.gcf()
+
+    # read in the data from a NMRPipe file
+    dic, data = ng.pipe.read(path)
+
+    # make ppm scales
+    uc_19fx = ng.pipe.make_uc(dic, data, dim=0)
+    ppm_19fx = uc_19fx.ppm_scale()
+    ppm_19fx_0, ppm_19fx_1 = uc_19fx.ppm_limits()
+    uc_19fy = ng.pipe.make_uc(dic, data, dim=1)
+    ppm_19fy = uc_19fy.ppm_scale()
+    ppm_19fy_0, ppm_19fy_1 = uc_19fy.ppm_limits()
+
+    # plot the contours (tranpose needed here)
+    #ax.contour(data.T, cl, cmap=cmap, extent=(ppm_19fx_0, ppm_19fx_1, ppm_19fy_0, ppm_19fy_1))
+    ax.contour(data, cl, colors=color, extent=(ppm_19fx_0, ppm_19fx_1, ppm_19fy_0, ppm_19fy_1), 
+               linewidths=1, label=label)
+
+    # add grid at each x and y tick
+    ax.grid(color='darkgrey', linestyle='-', linewidth=0.5)
+
+    # decorate the axes
+    ax.set_ylabel("$^{19}$F (ppm)")
+    ax.set_xlabel("$^{19}$F (ppm)")
+    ax.set_title(title)
+    ax.set_xlim(-126, -125)
+    ax.set_ylim(-130, -122)
+    ax.invert_xaxis()
+    ax.invert_yaxis()
+
+
+# fig, ax = plt.subplots()
+# plot_exsy("600-2/DTY-CaCTD-4F-EXSY-12162022/10/test.DAT", color="magenta", ax=ax)
+# fig.tight_layout()
+# plt.show()
+#fig.savefig("figures/4f_exsy.png", dpi=300, transparent=True)
+
+
+### make a gif ###
+# (optional) set the dots per inch resolution to 300:
+#gif.options.matplotlib["dpi"] = 300
+
+# decorate a plot function with @gif.frame (return not required):
+@gif.frame
+def plot(dir, mixing):
+    """
+    Make a gif of multiple EXSY plots.
+
+    Parameters
+    ----------
+    dir : int
+    mixing : int
+        mixing time OF EXSY experiment.
+    """
+    dir += 10
+    fig, ax = plt.subplots()
+    plot_exsy(f"600-2/DTY-CaCTD-4F-EXSY-12162022/{dir}/test.DAT", color="magenta", ax=ax, 
+              title="$^{19}$F-$^{19}$F EXSY: Mixing Time = " + str(mixing) + "ms")
+    fig.tight_layout()
+
+# build a bunch of "frames"
+frames = []
+# loop each mixing time
+times = [2, 5, 10, 15, 25, 35, 50, 75, 100, 200, 600]
+for i, mix in enumerate(tqdm(times, desc="GIF Progress")):
+    frame = plot(i, mix)
+    frames.append(frame)
+
+# specify the duration between frames (milliseconds) and save to file:
+gif.save(frames, "exsy.gif", duration=200)
