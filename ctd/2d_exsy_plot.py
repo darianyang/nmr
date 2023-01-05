@@ -97,7 +97,7 @@ def exsy_gif():
         """
         dir += 10
         fig, ax = plt.subplots()
-        plot_exsy(f"600-2/DTY-CaCTD-4F-EXSY-12162022/{dir}/test.DAT", color="magenta", ax=ax, 
+        plot_exsy(f"600-2/DTY-CaCTD-4F-EXSY-12162022/{dir}/test.DAT", ax=ax, 
                 title="$^{19}$F-$^{19}$F EXSY: Mixing Time = " + str(mixing) + "ms")
         fig.tight_layout()
 
@@ -112,7 +112,7 @@ def exsy_gif():
     # specify the duration between frames (milliseconds) and save to file:
     gif.save(frames, "figures/exsy.gif", duration=500)
 
-exsy_gif()
+#exsy_gif()
 
 def plot_iratios():
     # from looking at peak heights, amplitudes, and nmrpipe peak heights
@@ -148,6 +148,9 @@ def plot_iratios():
         ratios.append(iratio)
         print(iratio)
 
+    # save ratios to file
+    np.savetxt("iratios_4F.txt", ratios, delimiter="\t")
+
     plt.scatter(times, ratios)
     plt.xlim(-10, 210)
     plt.ylim(0, 0.6)
@@ -157,3 +160,5 @@ def plot_iratios():
     plt.tight_layout()
     plt.savefig("figures/Iratios_4F.png", dpi=300, transparent=True)
     plt.show()
+
+plot_iratios()
