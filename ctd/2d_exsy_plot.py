@@ -78,35 +78,82 @@ def plot_exsy(path, ax=None, label=None, color="magenta", title="$^{19}$F-$^{19}
 #fig.savefig("figures/4f_exsy.png", dpi=300, transparent=True)
 
 
-### make a gif ###
-# (optional) set the dots per inch resolution to 300:
-#gif.options.matplotlib["dpi"] = 300
+def exsy_gif():
+    ### make a gif ###
+    # (optional) set the dots per inch resolution to 300:
+    #gif.options.matplotlib["dpi"] = 300
 
-# decorate a plot function with @gif.frame (return not required):
-@gif.frame
-def plot(dir, mixing):
-    """
-    Make a gif of multiple EXSY plots.
+    # decorate a plot function with @gif.frame (return not required):
+    @gif.frame
+    def plot(dir, mixing):
+        """
+        Make a gif of multiple EXSY plots.
 
-    Parameters
-    ----------
-    dir : int
-    mixing : int
-        mixing time OF EXSY experiment.
-    """
-    dir += 10
-    fig, ax = plt.subplots()
-    plot_exsy(f"600-2/DTY-CaCTD-4F-EXSY-12162022/{dir}/test.DAT", color="magenta", ax=ax, 
-              title="$^{19}$F-$^{19}$F EXSY: Mixing Time = " + str(mixing) + "ms")
-    fig.tight_layout()
+        Parameters
+        ----------
+        dir : int
+        mixing : int
+            mixing time OF EXSY experiment.
+        """
+        dir += 10
+        fig, ax = plt.subplots()
+        plot_exsy(f"600-2/DTY-CaCTD-4F-EXSY-12162022/{dir}/test.DAT", color="magenta", ax=ax, 
+                title="$^{19}$F-$^{19}$F EXSY: Mixing Time = " + str(mixing) + "ms")
+        fig.tight_layout()
 
-# build a bunch of "frames"
-frames = []
-# loop each mixing time
-times = [2, 5, 10, 15, 25, 35, 50, 75, 100, 200, 600]
-for i, mix in enumerate(tqdm(times, desc="GIF Progress")):
-    frame = plot(i, mix)
-    frames.append(frame)
+    # build a bunch of "frames"
+    frames = []
+    # loop each mixing time
+    times = [2, 5, 10, 15, 25, 35, 50, 75, 100, 200, 600]
+    for i, mix in enumerate(tqdm(times, desc="GIF Progress")):
+        frame = plot(i, mix)
+        frames.append(frame)
 
-# specify the duration between frames (milliseconds) and save to file:
-gif.save(frames, "exsy.gif", duration=200)
+    # specify the duration between frames (milliseconds) and save to file:
+    gif.save(frames, "figures/exsy.gif", duration=500)
+
+exsy_gif()
+
+def plot_iratios():
+    # from looking at peak heights, amplitudes, and nmrpipe peak heights
+    # the first peak 2 peaks picked can be used for I ratio
+    # I_12 / I_11
+    ### plot the intensity ratio over mixing times
+    #times = [2, 5, 10, 15, 25, 35, 50, 75, 100, 200, 600]
+    times = [2, 5, 10, 15, 25, 35, 50, 75, 100, 200]
+    ratios = []
+    for i, time in enumerate(times):
+        i += 10
+        # read in the data from a NMRPipe file
+        dic, data = ng.pipe.read(f"600-2/DTY-CaCTD-4F-EXSY-12162022/{i}/test.DAT")
+        peaks = ng.peakpick.pick(data, 350000, cluster=False)
+        #print(peaks)
+
+        # peak D1 D1
+        loc11_x = int(peaks[0][0])
+        loc11_y = int(peaks[0][1])
+
+        # peak D1 D2
+        loc12_x = int(peaks[1][0])
+        loc12_y = int(peaks[1][1])
+
+        # extracting intensity from array
+        i11 = data[loc11_x, loc11_y]
+        i12 = data[loc12_x, loc12_y]
+
+        # ratio of i12 / i11
+        iratio = i12 / i11
+        if iratio > 1:
+            print(peaks)
+        ratios.append(iratio)
+        print(iratio)
+
+    plt.scatter(times, ratios)
+    plt.xlim(-10, 210)
+    plt.ylim(0, 0.6)
+    plt.xlabel("Time (ms)")
+    plt.ylabel("I$_{12}$/I$_{11}$")
+    #plt.title("")
+    plt.tight_layout()
+    plt.savefig("figures/Iratios_4F.png", dpi=300, transparent=True)
+    plt.show()
