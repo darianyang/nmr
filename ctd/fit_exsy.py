@@ -61,4 +61,5 @@ def plot_fitted_curve(ax):
 plot_fitted_curve(ax)
 
 fig.tight_layout()
+fig.savefig("figures/fit_exsy_4F.png", dpi=300, transparent=True)
 plt.show()
