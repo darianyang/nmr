@@ -73,12 +73,17 @@ def plot_hsqc(path, ax=None, label=None, color="magenta", title="CTD HSQC"):
 fig, ax = plt.subplots()
 
 plot_hsqc("800/DTY-CaCTD-15NFW-12162022/1/test.DAT", color="k", ax=ax)
-plot_hsqc("800/DTY-CaCTD-15NFW-12162022/3/test.DAT", color="magenta", ax=ax)
+plot_hsqc("800/DTY-CaCTD-15NFW-12162022/2/test.DAT", color="magenta", ax=ax)
 
 # peak label plotting function
-plot_peak_labels.peak_text_plotter("CA_CTD_BMRB_assignments.shifts", ax=ax)
+# 4F
+#shifted = [176, 172, 185, 183, 174, 190, 182, 180, 174, 192, 177, 179]
+#plot_peak_labels.peak_text_plotter("CA_CTD_BMRB_assignments.shifts", ax=ax, redlist=shifted)
+# 7F
+shifted = [182, 185, 184, 186]
+plot_peak_labels.peak_text_plotter("CA_CTD_BMRB_assignments.shifts", ax=ax, redlist=shifted)
 
-ax.set_title("CTD WT vs 4F")
+ax.set_title("CTD WT vs 7F")
 fig.tight_layout()
 plt.show()
-#fig.savefig("figures/wt_vs_7f_hsqc.png", dpi=300, transparent=True)
+#fig.savefig("figures/wt_vs_7f_hsqc_peak_labels.png", dpi=300, transparent=True)
