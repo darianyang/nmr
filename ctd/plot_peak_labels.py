@@ -37,6 +37,13 @@ def peak_text_plotter(shifts, color="k", ax=None):
     """
     Plot the 1H-15N peaks from peak_list array.
     shifts = 3 cols: resnum | atom_name | shift_val
+
+    Parameters
+    ----------
+    shifts : str or array
+        Can be file path or prefomatted array.
+    color : str
+    ax : mpl axes object
     """
     # if file path, gen list of shifts
     if isinstance(shifts, str):
