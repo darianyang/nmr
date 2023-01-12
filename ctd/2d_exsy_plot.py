@@ -16,7 +16,7 @@ plt.style.use("/Users/darian/github/wedap/wedap/styles/default.mplstyle")
 cmap = matplotlib.cm.Blues_r    # contour map (colors to use for contours)
 contour_start = 500000           # contour level start value
 contour_num = 8                # number of contour levels
-contour_factor = 1.6          # scaling factor between contour levels
+contour_factor = 1.5          # scaling factor between contour levels
 
 # calculate contour levels
 cl = contour_start * contour_factor ** np.arange(contour_num) 
@@ -63,7 +63,7 @@ def plot_exsy(path, ax=None, color="magenta", title="$^{19}$F-$^{19}$F EXSY"):
     ax.set_ylabel("$^{19}$F (ppm)")
     ax.set_xlabel("$^{19}$F (ppm)")
     ax.set_title(title)
-    ax.set_xlim(-126, -125)
+    ax.set_xlim(-126, -125.2)
     ax.set_ylim(-130, -122)
     ax.invert_xaxis()
     ax.invert_yaxis()
@@ -109,7 +109,7 @@ def multi_exsy_plot():
     #plt.tight_layout()
     plt.show()
 
-multi_exsy_plot()
+#multi_exsy_plot()
 
 def exsy_gif():
     ### make a gif ###
@@ -145,7 +145,7 @@ def exsy_gif():
     # specify the duration between frames (milliseconds) and save to file:
     gif.save(frames, "figures/exsy_lp.gif", duration=500)
 
-#exsy_gif()
+exsy_gif()
 
 def plot_iratios():
     # from looking at peak heights, amplitudes, and nmrpipe peak heights
