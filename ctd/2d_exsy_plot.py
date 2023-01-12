@@ -14,14 +14,14 @@ plt.style.use("/Users/darian/github/wedap/wedap/styles/default.mplstyle")
 
 # plot parameters
 cmap = matplotlib.cm.Blues_r    # contour map (colors to use for contours)
-contour_start = 250000           # contour level start value
+contour_start = 500000           # contour level start value
 contour_num = 8                # number of contour levels
-contour_factor = 1.8          # scaling factor between contour levels
+contour_factor = 1.6          # scaling factor between contour levels
 
 # calculate contour levels
 cl = contour_start * contour_factor ** np.arange(contour_num) 
 
-def plot_exsy(path, ax=None, label=None, color="magenta", title="$^{19}$F-$^{19}$F EXSY"):
+def plot_exsy(path, ax=None, color="magenta", title="$^{19}$F-$^{19}$F EXSY"):
     """
     Plot 19F-19F EXSY.
 
@@ -30,8 +30,6 @@ def plot_exsy(path, ax=None, label=None, color="magenta", title="$^{19}$F-$^{19}
     path : str
         Path to nmr data file (e.g. nmrpipe).
     ax : mpl axes object
-    label : str
-        Plot label
     color : str
         Plot color
     title : str
@@ -56,7 +54,7 @@ def plot_exsy(path, ax=None, label=None, color="magenta", title="$^{19}$F-$^{19}
     # plot the contours (tranpose needed here)
     #ax.contour(data.T, cl, cmap=cmap, extent=(ppm_19fx_0, ppm_19fx_1, ppm_19fy_0, ppm_19fy_1))
     ax.contour(data, cl, colors=color, extent=(ppm_19fx_0, ppm_19fx_1, ppm_19fy_0, ppm_19fy_1), 
-               linewidths=1, label=label)
+               linewidths=1)
 
     # add grid at each x and y tick
     ax.grid(color='darkgrey', linestyle='-', linewidth=0.5)
@@ -77,6 +75,41 @@ def plot_exsy(path, ax=None, label=None, color="magenta", title="$^{19}$F-$^{19}
 # plt.show()
 #fig.savefig("figures/4f_exsy.png", dpi=300, transparent=True)
 
+import matplotlib.cm as cm
+from matplotlib.colors import Normalize
+import matplotlib
+
+def multi_exsy_plot():
+    """
+    Plot multiple exsy mixing times with cbar for mixing time.
+    TODO
+    """
+    fig, ax = plt.subplots()
+    cmap = cm.viridis
+    norm = Normalize(vmin=0, vmax=10)
+    for i in range(9, -1, -1):
+    #for i in range(2):
+        # color needs to be in 1 item list since otherwise, it is rgba multi item tuple
+        # this tuple would get interpreted as multiple colors for contours
+        color = [cmap(norm(i))]
+        plot_exsy(f"600-2/DTY-CaCTD-4F-EXSY-12162022/1{i}/test.DAT", color=color, ax=ax)
+
+    # make cbar axes
+    cax, cbar_kwds = matplotlib.colorbar.make_axes(ax, location="top",
+                            fraction=1, shrink=0.5, aspect=10, anchor=(1, 1))
+    #cax = fig.add_axes([0.95, 0.1, 0.025, 0.4])
+
+    cbar = matplotlib.colorbar.ColorbarBase(cax, cmap=cmap, 
+                                        norm=norm,
+                                        orientation="horizontal")
+    #cbar.add_lines(range(0,vmax + 1), "k", linewidths=1)
+    cbar.set_label("Mixing Time (s)", fontweight="bold", labelpad=16)
+
+    fig.tight_layout()
+    #plt.tight_layout()
+    plt.show()
+
+multi_exsy_plot()
 
 def exsy_gif():
     ### make a gif ###
@@ -110,7 +143,7 @@ def exsy_gif():
         frames.append(frame)
 
     # specify the duration between frames (milliseconds) and save to file:
-    gif.save(frames, "figures/exsy.gif", duration=500)
+    gif.save(frames, "figures/exsy_lp.gif", duration=500)
 
 #exsy_gif()
 
@@ -161,4 +194,4 @@ def plot_iratios():
     plt.savefig("figures/Iratios_4F.png", dpi=300, transparent=True)
     plt.show()
 
-plot_iratios()
+#plot_iratios()
