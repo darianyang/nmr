@@ -37,14 +37,14 @@ def plot_1d(path, ax=None, label=None, color="magenta", scale=None, xlim=(-120, 
     dic,data = ng.pipe.read(path)
 
     # print intensity of d1 and d2 peaks
-    peaks = ng.peakpick.pick(data, 21000000)
-    #peaks = ng.peakpick.pick(data, 10000000)
-    print(peaks)
-    p1 = peaks[0][0]
-    p2 = peaks[1][0]
-    print("Peak Intensities:", data[int(p1)], data[int(p2)])
-    # Kd = [D2] / [D1]
-    print("\t\t  Kd = ", data[int(p2)] / data[int(p1)])
+    # peaks = ng.peakpick.pick(data, 21000000)
+    # #peaks = ng.peakpick.pick(data, 10000000)
+    # print(peaks)
+    # p1 = peaks[0][0]
+    # p2 = peaks[1][0]
+    # print("Peak Intensities:", data[int(p1)], data[int(p2)])
+    # # Kd = [D2] / [D1]
+    # print("\t\t  Kd = ", data[int(p2)] / data[int(p1)])
 
     # optionally scale data for different concentrations
     if scale:
@@ -80,8 +80,8 @@ fig, ax = plt.subplots()
 # plt.legend(prop={'size': 12})
 
 #plot_1d("600-2/DTY-CaCTD-F-12152022/10/test.DAT", ax=ax, label=f"{f_pos} 512NS", xlim=(-117, -135))
-plot_1d("600-2/DTY-CaCTD-F-12152022/23/test.DAT", ax=ax, label=f"{f_pos} 512NS", xlim=(-127, -140))
+plot_1d("600-2/DTY-CaCTD-F-12152022/21/test.DAT", ax=ax, label=f"{f_pos}", xlim=(-127, -140))
 
 fig.tight_layout()
 plt.show()
-#fig.savefig(f"figures/1d_ctd_{f_pos}_512NS.png", dpi=300, transparent=True)
+fig.savefig(f"figures/1d_ctd_{f_pos}_200uM.png", dpi=300, transparent=True)
