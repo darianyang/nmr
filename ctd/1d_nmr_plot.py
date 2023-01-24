@@ -80,8 +80,8 @@ fig, ax = plt.subplots()
 # plt.legend(prop={'size': 12})
 
 #plot_1d("600-2/DTY-CaCTD-F-12152022/10/test.DAT", ax=ax, label=f"{f_pos} 512NS", xlim=(-117, -135))
-plot_1d("600-2/DTY-CaCTD-F-12152022/21/test.DAT", ax=ax, label=f"{f_pos}", xlim=(-127, -140))
+plot_1d("600-2/DTY-CaCTD-F-12152022/23/test.DAT", ax=ax, label=f"{f_pos}", xlim=(-140, -127))
 
 fig.tight_layout()
 plt.show()
-fig.savefig(f"figures/1d_ctd_{f_pos}_200uM.png", dpi=300, transparent=True)
+fig.savefig(f"figures/1d_ctd_{f_pos}_2mM_512NS.png", dpi=300, transparent=True)
