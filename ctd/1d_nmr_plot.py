@@ -8,6 +8,9 @@ import numpy as np
 
 #plt.style.use("/Users/darian/github/wedap/wedap/styles/default.mplstyle")
 
+# 4F or 7F
+f_pos = "7F"
+
 def plot_1d(path, ax=None, label=None, color="magenta", scale=None, xlim=(-120, -140)):
     """
     Plot 1D NMR spectrum.
@@ -34,7 +37,9 @@ def plot_1d(path, ax=None, label=None, color="magenta", scale=None, xlim=(-120, 
     dic,data = ng.pipe.read(path)
 
     # print intensity of d1 and d2 peaks
-    peaks = ng.peakpick.pick(data, 20000000)
+    peaks = ng.peakpick.pick(data, 21000000)
+    #peaks = ng.peakpick.pick(data, 10000000)
+    print(peaks)
     p1 = peaks[0][0]
     p2 = peaks[1][0]
     print("Peak Intensities:", data[int(p1)], data[int(p2)])
@@ -68,14 +73,15 @@ def plot_1d(path, ax=None, label=None, color="magenta", scale=None, xlim=(-120, 
 
 fig, ax = plt.subplots()
 
-#plot_1d("600-2/DTY-CaCTD-F-12152022/1/test.DAT", ax=ax, label="7F", color="black")
-# plot_1d("600-2/DTY-CaCTD-F-12152022/2/test.DAT", ax=ax, label="4F 1200µM", color="magenta")
-# plot_1d("600-2/DTY-CaCTD-F-12152022/3/test.DAT", ax=ax, label="4F 120µM", color="k", scale=10, xlim=(-117, -135))
+#plot_1d(f"600-2/DTY-CaCTD-F-12152022/1/test.DAT", ax=ax, label={f_pos}, color="black")
+# plot_1d("600-2/DTY-CaCTD-F-12152022/2/test.DAT", ax=ax, label=f"{f_pos} 1200µM", color="magenta")
+# plot_1d("600-2/DTY-CaCTD-F-12152022/3/test.DAT", ax=ax, label=f"{f_pos} 120µM", color="k", scale=10, xlim=(-117, -135))
 # ax.invert_xaxis()
 # plt.legend(prop={'size': 12})
 
-plot_1d("600-2/DTY-CaCTD-F-12152022/10/test.DAT", ax=ax, label="4F 512NS", xlim=(-117, -135))
+#plot_1d("600-2/DTY-CaCTD-F-12152022/10/test.DAT", ax=ax, label=f"{f_pos} 512NS", xlim=(-117, -135))
+plot_1d("600-2/DTY-CaCTD-F-12152022/23/test.DAT", ax=ax, label=f"{f_pos} 512NS", xlim=(-127, -140))
 
 fig.tight_layout()
 plt.show()
-#fig.savefig("figures/1d_ctd_4F_512NS.png", dpi=300, transparent=True)
+#fig.savefig(f"figures/1d_ctd_{f_pos}_512NS.png", dpi=300, transparent=True)
