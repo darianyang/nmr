@@ -12,9 +12,21 @@ from tqdm.auto import tqdm
 
 plt.style.use("/Users/darian/github/wedap/wedap/styles/default.mplstyle")
 
+# 4F or 7F
+f_pos = "7F"
+if f_pos == "4F":
+    f_path = "600-2/DTY-CaCTD-4F-EXSY-12162022"
+elif f_pos == "7F":
+    f_path = "600-2/DTY-CaCTD-7F-EXSY-20Jan2023"
+
 # plot parameters
 cmap = matplotlib.cm.Blues_r    # contour map (colors to use for contours)
-contour_start = 500000           # contour level start value
+# # 4F ideal
+# contour_start = 500000           # contour level start value
+# contour_num = 8                # number of contour levels
+# contour_factor = 1.5          # scaling factor between contour levels
+# 7F ideal
+contour_start = 1200000           # contour level start value
 contour_num = 8                # number of contour levels
 contour_factor = 1.5          # scaling factor between contour levels
 
@@ -63,23 +75,23 @@ def plot_exsy(path, ax=None, color="magenta", title="$^{19}$F-$^{19}$F EXSY"):
     ax.set_ylabel("$^{19}$F (ppm)")
     ax.set_xlabel("$^{19}$F (ppm)")
     ax.set_title(title)
-    ax.set_xlim(-126, -125.2)
-    ax.set_ylim(-130, -122)
+    # ax.set_xlim(-126, -125.2)
+    # ax.set_ylim(-130, -122)
     ax.invert_xaxis()
     ax.invert_yaxis()
 
 
 # fig, ax = plt.subplots()
-# plot_exsy("600-2/DTY-CaCTD-4F-EXSY-12162022/10/test.DAT", color="magenta", ax=ax)
+# plot_exsy(f"{f_path}/1/test.DAT", color="magenta", ax=ax)
 # fig.tight_layout()
 # plt.show()
-#fig.savefig("figures/4f_exsy.png", dpi=300, transparent=True)
+#fig.savefig(f"figures/{f_pos}_exsy.png", dpi=300, transparent=True)
 
 import matplotlib.cm as cm
 from matplotlib.colors import Normalize
 import matplotlib
 
-def multi_exsy_plot():
+def multi_exsy_plot(path):
     """
     Plot multiple exsy mixing times with cbar for mixing time.
     TODO
@@ -92,7 +104,7 @@ def multi_exsy_plot():
         # color needs to be in 1 item list since otherwise, it is rgba multi item tuple
         # this tuple would get interpreted as multiple colors for contours
         color = [cmap(norm(i))]
-        plot_exsy(f"600-2/DTY-CaCTD-4F-EXSY-12162022/1{i}/test.DAT", color=color, ax=ax)
+        plot_exsy(f"{f_path}/1{i}/test.DAT", color=color, ax=ax)
 
     # make cbar axes
     cax, cbar_kwds = matplotlib.colorbar.make_axes(ax, location="top",
@@ -128,9 +140,12 @@ def exsy_gif():
         mixing : int
             mixing time OF EXSY experiment.
         """
-        dir += 10
+        if f_pos == "4F":
+            dir += 10
+        elif f_pos == "7F":
+            dir += 1
         fig, ax = plt.subplots()
-        plot_exsy(f"600-2/DTY-CaCTD-4F-EXSY-12162022/{dir}/test.DAT", ax=ax, 
+        plot_exsy(f"{f_path}/{dir}/test.DAT", ax=ax, 
                 title="$^{19}$F-$^{19}$F EXSY: Mixing Time = " + str(mixing) + "ms")
         fig.tight_layout()
 
@@ -143,9 +158,9 @@ def exsy_gif():
         frames.append(frame)
 
     # specify the duration between frames (milliseconds) and save to file:
-    gif.save(frames, "figures/exsy_lp.gif", duration=500)
+    gif.save(frames, f"figures/{f_pos}_exsy.gif", duration=500)
 
-exsy_gif()
+#exsy_gif()
 
 def plot_iratios():
     # from looking at peak heights, amplitudes, and nmrpipe peak heights
@@ -156,10 +171,17 @@ def plot_iratios():
     times = [2, 5, 10, 15, 25, 35, 50, 75, 100, 200]
     ratios = []
     for i, time in enumerate(times):
-        i += 10
+        if f_pos == "4F":
+            i += 10
+            cut = 350000
+            lim = 0.6
+        elif f_pos == "7F":
+            i += 1
+            cut = 1400000
+            lim = 0.2
         # read in the data from a NMRPipe file
-        dic, data = ng.pipe.read(f"600-2/DTY-CaCTD-4F-EXSY-12162022/{i}/test.DAT")
-        peaks = ng.peakpick.pick(data, 350000, cluster=False)
+        dic, data = ng.pipe.read(f"{f_path}/{i}/test.DAT")
+        peaks = ng.peakpick.pick(data, cut, cluster=False)
         #print(peaks)
 
         # peak D1 D1
@@ -182,16 +204,16 @@ def plot_iratios():
         print(iratio)
 
     # save ratios to file
-    np.savetxt("iratios_4F.txt", ratios, delimiter="\t")
+    np.savetxt(f"iratios_{f_pos}.txt", ratios, delimiter="\t")
 
     plt.scatter(times, ratios)
     plt.xlim(-10, 210)
-    plt.ylim(0, 0.6)
+    plt.ylim(0, lim)
     plt.xlabel("Time (ms)")
     plt.ylabel("I$_{12}$/I$_{11}$")
     #plt.title("")
     plt.tight_layout()
-    plt.savefig("figures/Iratios_4F.png", dpi=300, transparent=True)
+    plt.savefig(f"figures/Iratios_{f_pos}.png", dpi=300, transparent=True)
     plt.show()
 
-#plot_iratios()
+plot_iratios()

@@ -12,8 +12,11 @@ import scipy.optimize
 
 plt.style.use("/Users/darian/github/wedap/wedap/styles/default.mplstyle")
 
+# 4F or 7F
+f_pos = "7F"
+
 # import intensity ratio dataset (I_12 / I_11)
-ratios = np.loadtxt("iratios_4F.txt")
+ratios = np.loadtxt(f"iratios_{f_pos}.txt")
 # mixing times (skipping 600ms for now)
 times = np.array([2, 5, 10, 15, 25, 35, 50, 75, 100, 200])
 # convert ms to seconds
@@ -21,7 +24,7 @@ times = times / 1000
 
 fig, ax = plt.subplots()
 ax.scatter(times, ratios)
-ax.set(xlabel="Time(s)", ylabel="I$_{12}$/I$_{11}$", title="4F-CA-CTD 1.2mM")
+ax.set(xlabel="Time(s)", ylabel="I$_{12}$/I$_{11}$", title=f"{f_pos}-CA-CTD")
 
 def calc_iratio(t_m, k_12, k_21):
     """
@@ -61,5 +64,5 @@ def plot_fitted_curve(ax):
 plot_fitted_curve(ax)
 
 fig.tight_layout()
-fig.savefig("figures/fit_exsy_4F.png", dpi=300, transparent=True)
+fig.savefig(f"figures/fit_exsy_{f_pos}.png", dpi=300, transparent=True)
 plt.show()
