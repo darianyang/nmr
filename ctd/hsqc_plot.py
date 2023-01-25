@@ -6,6 +6,7 @@ import nmrglue as ng
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.cm
+import matplotlib.patches as patches
 
 import plot_peak_labels
 
@@ -20,7 +21,7 @@ contour_factor = 1.8          # scaling factor between contour levels
 # calculate contour levels
 cl = contour_start * contour_factor ** np.arange(contour_num) 
 
-def plot_hsqc(path, ax=None, label=None, color="magenta", title="CTD HSQC"):
+def plot_hsqc(path, ax=None, label=None, color="magenta", title=None):
     """
     Plot 1H-15N HSQC.
 
@@ -64,8 +65,11 @@ def plot_hsqc(path, ax=None, label=None, color="magenta", title="CTD HSQC"):
     ax.set_ylabel("$^{15}$N (ppm)")
     ax.set_xlabel("$^{1}$H (ppm)")
     ax.set_title(title)
-    ax.set_xlim(6, 11)
-    ax.set_ylim(100, 135)
+    # ax.set_xlim(6, 11)
+    # ax.set_ylim(100, 135)
+    # the WT rectangle is X: 9.9 - 10.9, Y: 128 - 132.5
+    ax.set_xlim(9.9, 10.9)
+    ax.set_ylim(128, 132.5)
     ax.invert_xaxis()
     ax.invert_yaxis()
 
@@ -73,17 +77,27 @@ def plot_hsqc(path, ax=None, label=None, color="magenta", title="CTD HSQC"):
 fig, ax = plt.subplots()
 
 plot_hsqc("800/DTY-CaCTD-15NFW-12162022/1/test.DAT", color="k", ax=ax)
-plot_hsqc("800/DTY-CaCTD-15NFW-12162022/2/test.DAT", color="magenta", ax=ax)
+#plot_hsqc("800/DTY-CaCTD-15NFW-12162022/2/test.DAT", color="magenta", ax=ax)
 
 # peak label plotting function
 # 4F
 #shifted = [176, 172, 185, 183, 174, 190, 182, 180, 174, 192, 177, 179]
 #plot_peak_labels.peak_text_plotter("CA_CTD_BMRB_assignments.shifts", ax=ax, redlist=shifted)
 # 7F
-shifted = [182, 185, 184, 186]
-plot_peak_labels.peak_text_plotter("CA_CTD_BMRB_assignments.shifts", ax=ax, redlist=shifted)
+#shifted = [182, 185, 184, 186]
+#plot_peak_labels.peak_text_plotter("CA_CTD_BMRB_assignments.shifts", ax=ax, redlist=shifted)
 
-ax.set_title("CTD WT vs 7F")
+#ax.set_title("CTD WT vs 7F")
+# ax.set_title("CA-CTD WT $^1$H-$^{15}$N HSQC")
+#ax.set_title("CA-CTD WT W184 N$\epsilon$")
+
+# Create a Rectangle patch for zoom on WT CTD HSQC
+# rect = patches.Rectangle((9.9, 128), 0.9, 4.5, linewidth=1.5, edgecolor="k", facecolor="none")
+# # Add the patch to the Axes
+# ax.add_patch(rect)
+# # so the rectangle is X: 9.9 - 10.9, Y: 128 - 132.5
+
 fig.tight_layout()
 plt.show()
 #fig.savefig("figures/wt_vs_7f_hsqc_peak_labels.png", dpi=300, transparent=True)
+#fig.savefig("figures/wt_hsqc_boxonly.png", dpi=300, transparent=True)
