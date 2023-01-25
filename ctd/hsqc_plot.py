@@ -76,7 +76,7 @@ def plot_hsqc(path, ax=None, label=None, color="magenta", title=None):
 
 fig, ax = plt.subplots()
 
-plot_hsqc("800/DTY-CaCTD-15NFW-12162022/1/test.DAT", color="k", ax=ax)
+plot_hsqc("800/DTY-CaCTD-15NFW-12162022/1/test.DAT", color="cornflowerblue", ax=ax)
 #plot_hsqc("800/DTY-CaCTD-15NFW-12162022/2/test.DAT", color="magenta", ax=ax)
 
 # peak label plotting function
@@ -89,7 +89,7 @@ plot_hsqc("800/DTY-CaCTD-15NFW-12162022/1/test.DAT", color="k", ax=ax)
 
 #ax.set_title("CTD WT vs 7F")
 # ax.set_title("CA-CTD WT $^1$H-$^{15}$N HSQC")
-#ax.set_title("CA-CTD WT W184 N$\epsilon$")
+ax.set_title("CA-CTD WT W184 N$\epsilon$")
 
 # Create a Rectangle patch for zoom on WT CTD HSQC
 # rect = patches.Rectangle((9.9, 128), 0.9, 4.5, linewidth=1.5, edgecolor="k", facecolor="none")
@@ -100,4 +100,4 @@ plot_hsqc("800/DTY-CaCTD-15NFW-12162022/1/test.DAT", color="k", ax=ax)
 fig.tight_layout()
 plt.show()
 #fig.savefig("figures/wt_vs_7f_hsqc_peak_labels.png", dpi=300, transparent=True)
-#fig.savefig("figures/wt_hsqc_boxonly.png", dpi=300, transparent=True)
+fig.savefig("figures/wt_hsqc_boxonly.png", dpi=300, transparent=True)

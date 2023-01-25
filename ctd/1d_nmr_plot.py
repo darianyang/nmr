@@ -9,7 +9,7 @@ import numpy as np
 #plt.style.use("/Users/darian/github/wedap/wedap/styles/default.mplstyle")
 
 # 4F or 7F
-f_pos = "7F"
+f_pos = "4F"
 
 def plot_1d(path, ax=None, label=None, color="magenta", scale=None, xlim=(-120, -140)):
     """
@@ -66,7 +66,7 @@ def plot_1d(path, ax=None, label=None, color="magenta", scale=None, xlim=(-120, 
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
     ax.spines['left'].set_visible(False)
-    ax.invert_xaxis()
+    #ax.invert_xaxis()
 
     # save the figure
     #fig.savefig("spectrum.png") # this can be .pdf, .ps, etc
@@ -79,9 +79,9 @@ fig, ax = plt.subplots()
 # ax.invert_xaxis()
 # plt.legend(prop={'size': 12})
 
-#plot_1d("600-2/DTY-CaCTD-F-12152022/10/test.DAT", ax=ax, label=f"{f_pos} 512NS", xlim=(-117, -135))
-plot_1d("600-2/DTY-CaCTD-F-12152022/23/test.DAT", ax=ax, label=f"{f_pos}", xlim=(-140, -127))
+plot_1d("600-2/DTY-CaCTD-F-12152022/2/test.DAT", ax=ax, label=f"{f_pos}", xlim=(-120, -131.5))
+#plot_1d("600-2/DTY-CaCTD-F-12152022/23/test.DAT", ax=ax, label=f"{f_pos}", xlim=(-140, -127))
 
 fig.tight_layout()
 plt.show()
-fig.savefig(f"figures/1d_ctd_{f_pos}_2mM_512NS.png", dpi=300, transparent=True)
+fig.savefig(f"figures/1d_ctd_{f_pos}_1024NS.png", dpi=300, transparent=True)
