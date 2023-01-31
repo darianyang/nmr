@@ -13,7 +13,7 @@ import scipy.optimize
 plt.style.use("/Users/darian/github/wedap/wedap/styles/default.mplstyle")
 
 # 4F or 7F
-f_pos = "7F"
+f_pos = "4F"
 print(f"CTD-{f_pos}:")
 
 # import intensity ratio dataset (I_12 / I_11)
@@ -81,5 +81,5 @@ def plot_fitted_curve(ax):
 plot_fitted_curve(ax)
 
 fig.tight_layout()
-#fig.savefig(f"figures/fit_exsy_{f_pos}.png", dpi=300, transparent=True)
+fig.savefig(f"figures/fit_exsy_{f_pos}.png", dpi=300, transparent=True)
 plt.show()

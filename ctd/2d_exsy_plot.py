@@ -22,13 +22,13 @@ elif f_pos == "7F":
 # plot parameters
 cmap = matplotlib.cm.Blues_r    # contour map (colors to use for contours)
 # # 4F ideal
-contour_start = 500000           # contour level start value
-contour_num = 8                # number of contour levels
-contour_factor = 1.5          # scaling factor between contour levels
-# 7F ideal
-# contour_start = 1200000           # contour level start value
+# contour_start = 500000           # contour level start value
 # contour_num = 8                # number of contour levels
 # contour_factor = 1.5          # scaling factor between contour levels
+# 7F ideal
+contour_start = 1200000           # contour level start value
+contour_num = 8                # number of contour levels
+contour_factor = 1.5          # scaling factor between contour levels
 
 # calculate contour levels
 cl = contour_start * contour_factor ** np.arange(contour_num) 
@@ -66,8 +66,9 @@ def plot_exsy(path, ax=None, color="magenta", title="$^{19}$F-$^{19}$F EXSY"):
     # plot the contours (tranpose needed here?)
     # TODO: change extent to make x and y axes consistent?
     #ax.contour(data.T, cl, cmap=cmap, extent=(ppm_19fx_0, ppm_19fx_1, ppm_19fy_0, ppm_19fy_1))
-    ax.contour(data, cl, colors=color, extent=(ppm_19fx_0, ppm_19fx_1, ppm_19fy_0, ppm_19fy_1), 
-               linewidths=1)
+    # ax.contour(data, cl, colors=color, extent=(ppm_19fx_0, ppm_19fx_1, ppm_19fy_0, ppm_19fy_1), 
+    #            linewidths=1)
+    ax.contour(data, cl, colors=color, linewidths=1)
 
     # add grid at each x and y tick
     ax.grid(color='darkgrey', linestyle='-', linewidth=0.5)
@@ -78,12 +79,12 @@ def plot_exsy(path, ax=None, color="magenta", title="$^{19}$F-$^{19}$F EXSY"):
     ax.set_title(title)
     # ax.set_xlim(-126, -125.2)
     # ax.set_ylim(-130, -122)
-    ax.invert_xaxis()
-    ax.invert_yaxis()
+    #ax.invert_xaxis()
+    #ax.invert_yaxis()
 
 
 # fig, ax = plt.subplots()
-# plot_exsy(f"{f_path}/10/test.DAT", color="magenta", ax=ax)
+# plot_exsy(f"{f_path}/2/test.DAT", color="magenta", ax=ax)
 # fig.tight_layout()
 # plt.show()
 #fig.savefig(f"figures/{f_pos}_exsy.png", dpi=300, transparent=True)
@@ -179,27 +180,34 @@ def plot_iratios():
             cut = 450000
             lim = 0.6
             center = 297
+            # TODO: need to plot on spectrum to confirm peak position
+            loc_11 = (224, 1940)
+            loc_12 = (224, 2426)
         elif f_pos == "7F":
             i += 1
             cut = 1500000
             lim = 0.2
             center = 279
+            # TODO: need to plot on spectrum to confirm peak position
+            loc_11 = (188, 1810)
+            loc_12 = (188, 2401)
         # read in the data from a NMRPipe file
         dic, data = ng.pipe.read(f"{f_path}/{i}/test.DAT")
         peaks = ng.peakpick.pick(data, cut, cluster=False)
         #print(peaks)
 
         # peak D1 D1
-        loc11_x = int(peaks[0][0])
-        loc11_y = int(peaks[0][1])
-
-        # peak D1 D2
-        loc12_x = int(peaks[1][0])
-        loc12_y = int(peaks[1][1])
+        # loc11_x = int(peaks[0][0])
+        # loc11_y = int(peaks[0][1])
+        # # peak D1 D2
+        # loc12_x = int(peaks[1][0])
+        # loc12_y = int(peaks[1][1])
 
         # extracting intensity from array
-        i11 = data[loc11_x, loc11_y]
-        i12 = data[loc12_x, loc12_y]
+        # i11 = data[loc11_x, loc11_y]
+        # i12 = data[loc12_x, loc12_y]
+        i11 = data[loc_11[0], loc_11[1]]
+        i12 = data[loc_12[0], loc_12[1]]
 
         # diagonal auto peak (TODO)
         #diag2_x = int(peaks[diag_pos][0])
