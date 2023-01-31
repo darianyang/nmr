@@ -13,7 +13,7 @@ from tqdm.auto import tqdm
 plt.style.use("/Users/darian/github/wedap/wedap/styles/default.mplstyle")
 
 # 4F or 7F
-f_pos = "7F"
+f_pos = "4F"
 if f_pos == "4F":
     f_path = "600-2/DTY-CaCTD-4F-EXSY-12162022"
 elif f_pos == "7F":
@@ -22,13 +22,13 @@ elif f_pos == "7F":
 # plot parameters
 cmap = matplotlib.cm.Blues_r    # contour map (colors to use for contours)
 # # 4F ideal
-# contour_start = 500000           # contour level start value
-# contour_num = 8                # number of contour levels
-# contour_factor = 1.5          # scaling factor between contour levels
-# 7F ideal
-contour_start = 1200000           # contour level start value
+contour_start = 500000           # contour level start value
 contour_num = 8                # number of contour levels
 contour_factor = 1.5          # scaling factor between contour levels
+# 7F ideal
+# contour_start = 1200000           # contour level start value
+# contour_num = 8                # number of contour levels
+# contour_factor = 1.5          # scaling factor between contour levels
 
 # calculate contour levels
 cl = contour_start * contour_factor ** np.arange(contour_num) 
@@ -63,7 +63,8 @@ def plot_exsy(path, ax=None, color="magenta", title="$^{19}$F-$^{19}$F EXSY"):
     ppm_19fy = uc_19fy.ppm_scale()
     ppm_19fy_0, ppm_19fy_1 = uc_19fy.ppm_limits()
 
-    # plot the contours (tranpose needed here)
+    # plot the contours (tranpose needed here?)
+    # TODO: change extent to make x and y axes consistent?
     #ax.contour(data.T, cl, cmap=cmap, extent=(ppm_19fx_0, ppm_19fx_1, ppm_19fy_0, ppm_19fy_1))
     ax.contour(data, cl, colors=color, extent=(ppm_19fx_0, ppm_19fx_1, ppm_19fy_0, ppm_19fy_1), 
                linewidths=1)
@@ -82,7 +83,7 @@ def plot_exsy(path, ax=None, color="magenta", title="$^{19}$F-$^{19}$F EXSY"):
 
 
 # fig, ax = plt.subplots()
-# plot_exsy(f"{f_path}/1/test.DAT", color="magenta", ax=ax)
+# plot_exsy(f"{f_path}/10/test.DAT", color="magenta", ax=ax)
 # fig.tight_layout()
 # plt.show()
 #fig.savefig(f"figures/{f_pos}_exsy.png", dpi=300, transparent=True)
@@ -169,16 +170,20 @@ def plot_iratios():
     ### plot the intensity ratio over mixing times
     #times = [2, 5, 10, 15, 25, 35, 50, 75, 100, 200, 600]
     times = [2, 5, 10, 15, 25, 35, 50, 75, 100, 200]
+    #times = [2, 5, 10]
     ratios = []
+    errors = []
     for i, time in enumerate(times):
         if f_pos == "4F":
             i += 10
-            cut = 350000
+            cut = 450000
             lim = 0.6
+            center = 297
         elif f_pos == "7F":
             i += 1
-            cut = 1400000
+            cut = 1500000
             lim = 0.2
+            center = 279
         # read in the data from a NMRPipe file
         dic, data = ng.pipe.read(f"{f_path}/{i}/test.DAT")
         peaks = ng.peakpick.pick(data, cut, cluster=False)
@@ -196,19 +201,47 @@ def plot_iratios():
         i11 = data[loc11_x, loc11_y]
         i12 = data[loc12_x, loc12_y]
 
-        # uncertainty from random noise in peak ratio
+        # diagonal auto peak (TODO)
+        #diag2_x = int(peaks[diag_pos][0])
 
-        # ratio of i12 / i11
+        # uncertainty from random noise in peak ratio
+        # using the central row intensities should work well (no signals)
+        #noise = data[int(((loc11_x + diag2_x) / 2)),:]
+        noise = data[center, :]
+        #print(noise.shape)
+        # rmsd of the noise for a non-signal region
+        # sqrt(1/n * (x_1^2 + x_2^2 + ... + x_n^2))
+        rmsnoise = np.sqrt(np.sum(noise**2) / noise.shape[0])
+
+        # snr = peak_height / rms noise
+        snr_11 = i11 / rmsnoise
+        #snr_12 = i12 / rmsnoise
+        #print(snr_11)
+
+        # intensity ratio of i12 / i11
         iratio = i12 / i11
-        if iratio > 1:
+
+        # abs uncertainty from random noise in ratio of peak heights (∆R)
+        # |ΔR| = 1/SNR_B + R/SNR_B where R = A/B
+        dR = (1/snr_11) + (iratio/snr_11)
+        errors.append(dR)
+        #print(dR/iratio)
+
+        # sometimes the peaks aren't correctly picked (TODO)
+        if iratio > 1 or dR > 0.1:
             print(peaks)
         ratios.append(iratio)
-        print(iratio)
+        #print(iratio)
 
+    # make array with intensity ratios and errors
+    ratios = np.vstack((np.array(ratios), np.array(errors))).T
+    #print(ratios)
+    #import sys; sys.exit(0)
     # save ratios to file
     np.savetxt(f"iratios_{f_pos}.txt", ratios, delimiter="\t")
 
-    plt.scatter(times, ratios)
+    #plt.scatter(times, ratios)
+    plt.errorbar(times, ratios[:,0], yerr=ratios[:,1], fmt="o", capsize=3, capthick=2)
     plt.xlim(-10, 210)
     plt.ylim(0, lim)
     plt.xlabel("Time (ms)")
