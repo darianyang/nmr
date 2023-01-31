@@ -13,7 +13,7 @@ import scipy.optimize
 plt.style.use("/Users/darian/github/wedap/wedap/styles/default.mplstyle")
 
 # 4F or 7F
-f_pos = "7F"
+f_pos = "4F"
 
 # import intensity ratio dataset (I_12 / I_11)
 ratios = np.loadtxt(f"iratios_{f_pos}.txt")
@@ -42,13 +42,38 @@ def calc_rates():
     """
     # fit to estimate k_12 and k_21, using 1 as initial guess
     param, param_cov = scipy.optimize.curve_fit(calc_iratio, times, ratios)
-    print("k_12 and k_21:", param)
+    #print("k_12 and k_21:", param)
+    #print("cov:", param_cov)
+    # top-left to down-right is the leading/main diagonal
+    # diagonal of cov matrix is the variance per parameter
+    #print("\tdiag:", np.diag(param_cov))
+    # sqrt of the variance is the stdev
+    p_sigma = np.sqrt(np.diag(param_cov))
+    #print("std_12 and std_21:", p_sigma)
+
+    # rate with stdev
+    print(f"k_12 = {param[0]:0.2f} ± {p_sigma[0]:0.2f} s^-1")
+    print(f"k_21 = {param[1]:0.2f} ± {p_sigma[1]:0.2f} s^-1")
+
+    # exchange ratio
+    Kex = param[0] / param[1]
+
+    # 4F: from propagation of errors in uncertainties package
+    # >>> a = u.ufloat(67.04, 2.58)
+    # >>> b = u.ufloat(144.51, 6.06)
+    # >>> c = a / b
+    # >>> c
+    # 0.4639125320047056+/-0.026404670489883954
+
+    # if I propagate it myself, this is the same value, so good to go
+    # for z = x/y: ∆z/z = sqrt( (∆x/x)^2 + (∆y/y)^2 + ... )
+    K_error = Kex * (np.sqrt( (p_sigma[0]/param[0])**2 + (p_sigma[1]/param[1])**2 ))
+
+    print(f"K_ex = {Kex:0.2f} ± {K_error:0.2f}")
 
     return param
 
 rates = calc_rates()
-Kd = rates[0] / rates[1]
-print(f"\t\tKd = {Kd}")
 
 def plot_fitted_curve(ax):
     """
@@ -64,5 +89,5 @@ def plot_fitted_curve(ax):
 plot_fitted_curve(ax)
 
 fig.tight_layout()
-fig.savefig(f"figures/fit_exsy_{f_pos}.png", dpi=300, transparent=True)
+#fig.savefig(f"figures/fit_exsy_{f_pos}.png", dpi=300, transparent=True)
 plt.show()

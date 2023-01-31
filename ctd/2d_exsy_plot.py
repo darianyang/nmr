@@ -196,6 +196,8 @@ def plot_iratios():
         i11 = data[loc11_x, loc11_y]
         i12 = data[loc12_x, loc12_y]
 
+        # uncertainty from random noise in peak ratio
+
         # ratio of i12 / i11
         iratio = i12 / i11
         if iratio > 1:
@@ -213,7 +215,7 @@ def plot_iratios():
     plt.ylabel("I$_{12}$/I$_{11}$")
     #plt.title("")
     plt.tight_layout()
-    plt.savefig(f"figures/Iratios_{f_pos}.png", dpi=300, transparent=True)
+    #plt.savefig(f"figures/Iratios_{f_pos}.png", dpi=300, transparent=True)
     plt.show()
 
 plot_iratios()
