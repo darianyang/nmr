@@ -260,3 +260,5 @@ def plot_iratios():
     plt.show()
 
 plot_iratios()
+
+# use peak width for noise selection and select a more isolated corner/region
