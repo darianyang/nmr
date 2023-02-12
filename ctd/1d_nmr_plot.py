@@ -8,9 +8,6 @@ import numpy as np
 
 #plt.style.use("/Users/darian/github/wedap/wedap/styles/default.mplstyle")
 
-# 4F or 7F
-f_pos = "7F"
-
 def plot_1d(path, ax=None, label=None, color="magenta", scale=None, xlim=(-120, -140)):
     """
     Plot 1D NMR spectrum.
@@ -91,6 +88,8 @@ def plot_1d(path, ax=None, label=None, color="magenta", scale=None, xlim=(-120, 
     # save the figure
     #fig.savefig("spectrum.png") # this can be .pdf, .ps, etc
 
+# 4F or 7F
+f_pos = "4F"
 fig, ax = plt.subplots()
 
 #plot_1d(f"600-2/DTY-CaCTD-F-12152022/1/test.DAT", ax=ax, label={f_pos}, color="black")
@@ -104,5 +103,5 @@ plot_1d("600-2/DTY-CaCTD-F-12152022/2/test.DAT", ax=ax, label=f"{f_pos}", xlim=(
 #plot_1d("600-2/DTY-CaCTD-F-12152022/23/test.DAT", ax=ax, label=f"{f_pos}", xlim=(-140, -127))
 
 fig.tight_layout()
-plt.show()
-#fig.savefig(f"figures/1d_ctd_{f_pos}_1024NS.png", dpi=300, transparent=True)
+#plt.show()
+fig.savefig(f"figures/1d_ctd_{f_pos}_1024NS.svg", dpi=300, transparent=True)
