@@ -95,7 +95,7 @@ xlim = (-110, -135)
 # plt.legend(prop={'size': 12})
 
 # 64uM 4F CTD
-plot_1d("ctd/600-2/DTY-CaCTD-F-12152022/3/test.DAT", ax=ax, label="CTD", xlim=xlim, scale=1)
+#plot_1d("ctd/600-2/DTY-CaCTD-F-12152022/3/test.DAT", ax=ax, label="CTD", xlim=xlim, scale=1)
 # 500uM 4F CA
 plot_1d("ca_fl/DTY-CA-FL-4F-24Mar2023/1/test.DAT", ax=ax, label="CA", xlim=xlim)
 
