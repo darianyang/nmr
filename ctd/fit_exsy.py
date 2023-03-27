@@ -26,7 +26,7 @@ times = times / 1000
 fig, ax = plt.subplots()
 #ax.scatter(times, ratios)
 ax.errorbar(times, ratios[:,0], yerr=ratios[:,1], fmt="o", capsize=3, capthick=2)
-ax.set(xlabel="Time(s)", ylabel="I$_{12}$/I$_{11}$", title=f"{f_pos}-CA-CTD")
+ax.set(xlabel="Mixing Time(s)", ylabel="I$_{12}$/I$_{11}$", title=f"{f_pos}-CA-CTD")
 
 def calc_iratio(t_m, k_12, k_21):
     """
