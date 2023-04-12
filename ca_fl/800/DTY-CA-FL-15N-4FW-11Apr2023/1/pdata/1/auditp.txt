@@ -1,0 +1,51 @@
+##TITLE= Audit trail, TOPSPIN		Version 3.2
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= fatema
+$$ /opt/topspin/data/fatema/nmr/DTY-CA-FL-15N-4FW-11Apr2023/1/pdata/1/auditp.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2023-04-11 11:43:09.403 -0400>,<fatema>,<nmr800.structbio.pitt.edu>,<go>,<TOPSPIN 3.2>,
+      <created by zg
+	started at 2023-04-11 10:26:53.619 -0400,
+	POWCHK enabled, PULCHK disabled,
+       configuration hash MD5:
+       44 3C 6E 29 2C 5D 7F 8D 4F DD 3B 02 E4 04 49 25
+       data hash MD5: 2K * 128
+       56 18 42 1D 87 79 84 66 06 B6 6E 1B 59 6E 5F C2>)
+(   2,<2023-04-11 11:53:36.948 -0400>,<fatema>,<nmr800.structbio.pitt.edu>,<proc2d>,<TOPSPIN 3.2>,
+      <Start of raw data processing
+       xfb F2: SI = 2K BC_mod = 6 BCFW = 0.4 WDW = 4 SSB = 3 FT_mod = 6 PKNL = 1 STSR = 0 STSI = 1K PHC0 = -56.73161 PHC1 = 916.0865 F1: SI = 256 WDW = 3 SSB = 3 FT_mod = 4 FCOR = 0.5 PHC0 = 1.491239 PHC1 = 0
+       data hash MD5: 1K * 256
+       43 F5 35 B0 68 D3 F3 62 F5 D1 6B 48 9D 9D 4F 97>)
+(   3,<2023-04-11 11:53:53.902 -0400>,<fatema>,<nmr800.structbio.pitt.edu>,<proc2d>,<TOPSPIN 3.2>,
+      <pk2 fgphup F2: PHC0 = 105 PHC1 = 0
+       data hash MD5: 1K * 256
+       E3 F6 3A 79 30 0F B6 3D 94 07 0C 38 88 1B 90 5A>)
+(   4,<2023-04-11 11:54:17.684 -0400>,<fatema>,<nmr800.structbio.pitt.edu>,<proc2d>,<TOPSPIN 3.2>,
+      <pk2 fgphup F2: PHC0 = 72.3289 PHC1 = -478.4
+       data hash MD5: 1K * 256
+       DB F6 C4 74 69 BC 59 C3 03 2E BA 8E B8 15 78 A5>)
+(   5,<2023-04-11 11:54:38.998 -0400>,<fatema>,<nmr800.structbio.pitt.edu>,<proc2d>,<TOPSPIN 3.2>,
+      <pk2 fgphup F2: PHC0 = -12.05664 PHC1 = -0.8
+       data hash MD5: 1K * 256
+       0B 50 02 A0 4A AA 6E 6E 5E FB C0 07 68 B1 77 42>)
+(   6,<2023-04-11 11:54:56.015 -0400>,<fatema>,<nmr800.structbio.pitt.edu>,<proc2d>,<TOPSPIN 3.2>,
+      <pk1 fgphup F1: PHC0 = -12.525 PHC1 = 15.2
+       data hash MD5: 1K * 256
+       D3 79 13 82 EF 5A 5D C4 E6 CE 02 61 74 65 8E 29>)
+(   7,<2023-04-11 11:55:13.259 -0400>,<fatema>,<nmr800.structbio.pitt.edu>,<proc2d>,<TOPSPIN 3.2>,
+      <pk2 fgphup F2: PHC0 = -28.12383 PHC1 = 15.2
+       data hash MD5: 1K * 256
+       C0 94 07 F3 DC 89 6A 38 64 48 B7 33 5E CB 6E BA>)
+(   8,<2023-04-11 11:55:34.584 -0400>,<fatema>,<nmr800.structbio.pitt.edu>,<proc2d>,<TOPSPIN 3.2>,
+      <pk2 fgphup F2: PHC0 = 81.06445 PHC1 = -239.2
+       data hash MD5: 1K * 256
+       A1 AD 39 94 E8 25 8D 60 FB FA 21 B0 80 11 1B 89>)
+(   9,<2023-04-11 11:55:44.327 -0400>,<fatema>,<nmr800.structbio.pitt.edu>,<proc2d>,<TOPSPIN 3.2>,
+      <pk2 fgphup F2: PHC0 = 0 PHC1 = 0
+       data hash MD5: 1K * 256
+       A1 AD 39 94 E8 25 8D 60 FB FA 21 B0 80 11 1B 89>)
+##END=
+
+$$ hash MD5
+$$ 26 66 C6 3C 7C 4D 9F 7E EE 65 33 A0 2D B0 AA E7

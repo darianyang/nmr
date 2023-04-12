@@ -1,0 +1,29 @@
+##TITLE= Audit trail, TOPSPIN		Version 3.2
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= fatema
+$$ /opt/topspin/data/fatema/nmr/DTY-CA-FL-15N-4FW-11Apr2023/2/pdata/999/auditp.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2023-04-11 14:22:33.737 -0400>,<fatema>,<nmr800.structbio.pitt.edu>,<go>,<TOPSPIN 3.2>,
+      <acquisition in progress>)
+(   2,<2023-04-11 14:23:53.769 -0400>,<fatema>,<nmr800.structbio.pitt.edu>,<proc1d>,<TOPSPIN 3.2>,
+      <Start of raw data processing
+       efp 1 999 y BC_mod = 6 BCFW = 0.4 LB = 0.3 FT_mod = 6 PKNL = 1 STSR = 0 STSI = 1K PHC0 = 161.4813 PHC1 = 212.8865 SI = 2K 
+       data hash MD5: 1K
+       7A 0F BC EB 09 55 D9 CD B0 FF 6A 5E 23 F0 16 0F>)
+(   3,<2023-04-11 14:23:59.199 -0400>,<fatema>,<nmr800.structbio.pitt.edu>,<proc1d>,<TOPSPIN 3.2>,
+      <apk 
+       data hash MD5: 1K
+       70 41 B3 3E 24 BE D2 89 2F 20 E8 0F 0F 4E 21 33>)
+(   4,<2023-04-11 14:24:02.599 -0400>,<fatema>,<nmr800.structbio.pitt.edu>,<proc1d>,<TOPSPIN 3.2>,
+      <abs ABSG = 5 
+       data hash MD5: 1K
+       DB 33 FE 33 A9 C8 6F A1 E0 0C 08 89 57 9D 42 37>)
+(   5,<2023-04-11 14:24:05.653 -0400>,<fatema>,<nmr800.structbio.pitt.edu>,<proc1d>,<TOPSPIN 3.2>,
+      <apk 
+       data hash MD5: 1K
+       4C 1E 82 6B 21 85 86 41 90 0E 59 5B 5E E5 7C 6E>)
+##END=
+
+$$ hash MD5
+$$ D4 86 15 00 E6 00 8A 8B FE 18 D7 7C 59 60 02 3F
