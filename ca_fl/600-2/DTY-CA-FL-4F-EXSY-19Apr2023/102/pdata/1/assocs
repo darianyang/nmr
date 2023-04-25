@@ -1,0 +1,11 @@
+##TITLE= Parameter file, TOPSPIN		Version 3.2
+##JCAMPDX= 5.0
+##DATATYPE= Parameter Values
+##NPOINTS= 2	$$ modification sequence number
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= fatema
+$$ 2023-04-20 16:56:31.198 -0400  fatema@bh029603
+$$ /opt/topspin/data/fatema/DTY-CA-FL-4F-EXSY-19Apr2023/102/pdata/1/assocs
+$$ process /opt/topspin3.2/prog/mod/dataserver
+##$MULTDISP= </opt/topspin/data/fatema/DTY-CaCTD-F-12152022/3/pdata/1>
+##END=

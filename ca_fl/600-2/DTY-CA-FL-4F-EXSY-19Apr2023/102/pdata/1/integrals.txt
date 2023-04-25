@@ -1,0 +1,5 @@
+   Current data set:
+   NAME =	DTY-CA-FL-4F-EXSY-19Apr2023	EXPNO =	102	PROCNO = 1
+   DU   =	/opt/topspin/data/fatema
+
+   Number   Integrated Region     Integral

@@ -1,0 +1,22 @@
+##TITLE= Parameter file, TOPSPIN		Version 3.2
+##JCAMPDX= 5.0
+##DATATYPE= Parameter Values
+##NPOINTS= 15	$$ modification sequence number
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= fatema
+$$ 2023-04-19 16:38:56.009 -0400  fatema@bh029603
+$$ /opt/topspin/data/fatema/DTY-CA-FL-4F-EXSY-19Apr2023/1/acqu2
+$$ process /opt/topspin3.2/prog/mod/dataserver
+##$ACQT0= 0
+##$BF1= 564.686388
+##$FnMODE= 5
+##$NUC1= <19F>
+##$NusJSP= 0
+##$NusT2= 1
+##$NusTD= 0
+##$O1= -70890.7291494825
+##$SFO1= 564.61549727085
+##$SW= 4.00000016002009
+##$SW_h= 2258.46207943322
+##$TD= 32
+##END=

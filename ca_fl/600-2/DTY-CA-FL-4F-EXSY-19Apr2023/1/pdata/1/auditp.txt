@@ -1,0 +1,81 @@
+##TITLE= Audit trail, TOPSPIN		Version 3.2
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= fatema
+$$ /opt/topspin/data/fatema/DTY-CA-FL-4F-EXSY-19Apr2023/1/pdata/1/auditp.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2023-04-20 04:07:23.259 -0400>,<fatema>,<bh029603>,<go>,<TOPSPIN 3.2>,
+      <created by zg
+	started at 2023-04-19 17:05:41.973 -0400,
+	POWCHK enabled, PULCHK disabled,
+       configuration hash MD5:
+       13 A2 8B 82 6A D9 42 3D A1 9C 77 11 2C 6A 98 D7
+       data hash MD5: 2K * 32
+       B1 FD 34 86 A0 DC 00 01 8A 9C 33 01 80 93 08 5E>)
+(   2,<2023-04-20 12:20:23.089 -0400>,<fatema>,<bh029603>,<proc2d>,<TOPSPIN 3.2>,
+      <Start of raw data processing
+       xfb F2: SI = 4K WDW = 1 LB = 30 FT_mod = 6 PKNL = 1 PHC0 = -73.26428 PHC1 = -33.4 F1: SI = 64 WDW = 4 SSB = 6 FT_mod = 4 FCOR = 1 PHC0 = 0 PHC1 = 0
+       data hash MD5: 4K * 64
+       23 31 69 68 7B D1 55 78 78 19 1B D2 1B D0 B2 B5>)
+(   3,<2023-04-20 12:22:24.633 -0400>,<fatema>,<bh029603>,<audit>,<TOPSPIN 3.2>,
+      <user comment:
+       TITLE=2ms (d8/mixing time)
+       di=1s
+       1024NS
+       CTD like SW and O1P
+       1mM CA FL 4F
+       PBS pH 7.4
+       298KTITLE_END
+       data hash MD5: 4K * 64
+       23 31 69 68 7B D1 55 78 78 19 1B D2 1B D0 B2 B5>)
+(   4,<2023-04-20 12:22:25.352 -0400>,<fatema>,<bh029603>,<audit>,<TOPSPIN 3.2>,
+      <user comment:
+       TITLE=2ms (d8/mixing time)
+       di=1s
+       1024NS
+       CTD like SW and O1P
+       1mM CA FL 4F
+       PBS pH 7.4
+       298KTITLE_END
+       data hash MD5: 4K * 64
+       23 31 69 68 7B D1 55 78 78 19 1B D2 1B D0 B2 B5>)
+(   5,<2023-04-20 12:31:00.615 -0400>,<fatema>,<bh029603>,<proc2d>,<TOPSPIN 3.2>,
+      <pk2 fgphup F2: PHC0 = -83.66875 PHC1 = 340.8
+       data hash MD5: 4K * 64
+       89 AB D6 BB FE 8E E2 D8 2C 84 3D 90 10 61 84 53>)
+(   6,<2023-04-20 12:31:48.221 -0400>,<fatema>,<bh029603>,<proc2d>,<TOPSPIN 3.2>,
+      <pk2 fgphup F2: PHC0 = 50.78906 PHC1 = -143.6
+       data hash MD5: 4K * 64
+       E8 D2 DF C7 DE FD DB 75 E5 A1 78 B5 D3 05 07 F8>)
+(   7,<2023-04-20 12:33:01.956 -0400>,<fatema>,<bh029603>,<proc2d>,<TOPSPIN 3.2>,
+      <pk2 fgphup F2: PHC0 = -16.3 PHC1 = 0
+       data hash MD5: 4K * 64
+       BE 9D 94 1E 11 52 D2 BD E1 AF 3B 3C EE 69 08 9A>)
+(   8,<2023-04-20 12:33:24.275 -0400>,<fatema>,<bh029603>,<proc2d>,<TOPSPIN 3.2>,
+      <pk2 fgphup F2: PHC0 = 65.03213 PHC1 = -194.8
+       data hash MD5: 4K * 64
+       6C FB C6 52 CC 6F B4 D1 8D F8 76 B5 00 CD 5F 6C>)
+(   9,<2023-04-20 12:34:55.126 -0400>,<fatema>,<bh029603>,<proc2d>,<TOPSPIN 3.2>,
+      <pk1 fgphup F1: PHC0 = 124.95 PHC1 = 0
+       data hash MD5: 4K * 64
+       4B 66 A1 87 1D C7 97 70 9A F2 61 21 E0 2B 09 12>)
+(  10,<2023-04-20 12:35:11.234 -0400>,<fatema>,<bh029603>,<proc2d>,<TOPSPIN 3.2>,
+      <pk1 fgphup F1: PHC0 = -78.99375 PHC1 = -120.2
+       data hash MD5: 4K * 64
+       15 9D 21 88 B2 B3 79 AF DF 6A BF E2 27 1D 62 5C>)
+(  11,<2023-04-20 12:35:53.097 -0400>,<fatema>,<bh029603>,<proc2d>,<TOPSPIN 3.2>,
+      <pk2 fgphup F2: PHC0 = -98.89321 PHC1 = 167.8
+       data hash MD5: 4K * 64
+       55 F9 B7 35 92 37 40 58 E0 39 C0 24 EF E1 97 92>)
+(  12,<2023-04-20 12:40:29.619 -0400>,<fatema>,<bh029603>,<proc2d>,<TOPSPIN 3.2>,
+      <pk2 fgphup F2: PHC0 = -44.15 PHC1 = 0
+       data hash MD5: 4K * 64
+       93 A9 E6 75 11 54 62 5C 1D EA 5D C4 B0 56 E4 EA>)
+(  13,<2023-04-20 12:40:47.016 -0400>,<fatema>,<bh029603>,<proc2d>,<TOPSPIN 3.2>,
+      <pk2 fgphup F2: PHC0 = 44.5 PHC1 = 0
+       data hash MD5: 4K * 64
+       48 FF BC 95 F8 78 06 82 72 FD 6C F3 E3 8B 5F E3>)
+##END=
+
+$$ hash MD5
+$$ 26 39 AF BE 66 95 9D CD 06 92 93 81 BA 00 85 6A
