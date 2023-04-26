@@ -1,0 +1,27 @@
+##TITLE= Parameter file, TopSpin 3.5 pl 7
+##JCAMPDX= 5.0
+##DATATYPE= Parameter Values
+##NPOINTS= 7	$$ modification sequence number
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= Yang
+$$ 2020-09-29 12:18:47.151 -0400  Yang@2ua5461vxm.structbio.pitt.edu
+$$ /opt/topspin3.5pl7/data/Yang/nmr/29Sep2020_CA_13C_thr_SOFAST/1/acqu2
+$$ process /opt/topspin3.5pl7/prog/mod/dataserver
+##$ACQT0= 0
+##$BF1= 150.927953546
+##$DE= 207.0485
+##$DECIM= 1
+##$DR= 16
+##$FW= 1900
+##$FnMODE= 5
+##$NUC1= <13C>
+##$NusJSP= 0
+##$NusT2= 1
+##$NusTD= 0
+##$O1= 2837.44552666576
+##$ProjAngle= 0
+##$SFO1= 150.930790991527
+##$SW= 10
+##$SW_h= 1509.30790991527
+##$TD= 64
+##END=

@@ -1,0 +1,23 @@
+##TITLE= Audit trail, TOPSPIN		Version 3.1
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= Yang
+$$ /opt/topspin/data/yang/nmr/dcnCA_fl_pchpi_51uM_pH65_9_mar20/1/pdata/1/auditp.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2020-03-11 03:19:53.516 -0400>,<Yang>,<bh029203.structbio.pitt.edu>,<go>,<TOPSPIN 3.1>,
+      <created by zg
+	started at 2020-03-10 17:19:55.653 -0400,
+	POWCHK enabled, PULCHK disabled,
+       configuration hash MD5:
+       8B 43 64 F1 15 63 92 47 D5 92 93 18 FD 8A C6 1D
+       data hash MD5: 2K * 160
+       8D 2F 30 12 EB BE 00 9A 02 57 03 B8 FB FC 90 5B>)
+(   2,<2020-03-11 09:13:51.639 -0400>,<Yang>,<bh029203.structbio.pitt.edu>,<proc2d>,<TOPSPIN 3.1>,
+      <Start of raw data processing
+       xfb F2: SI = 2K BC_mod = 6 BCFW = 0.6 WDW = 4 SSB = 2 FT_mod = 6 PKNL = 1 STSR = 0 STSI = 1K PHC0 = 24.8 PHC1 = 0 F1: SI = 256 WDW = 4 SSB = 2 FT_mod = 4 PHC0 = -6.6 PHC1 = 0
+       data hash MD5: 1K * 256
+       C1 9B BA 4B 8E 5E 3B 07 FB 25 1F F3 7E 13 55 D3>)
+##END=
+
+$$ hash MD5
+$$ 13 98 F7 68 EF 52 D2 34 CC 53 31 DC 09 24 67 89

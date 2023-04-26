@@ -1,0 +1,50 @@
+#!/bin/csh
+# Basic 2D Phase-Sensitive Processing
+# Previously used for HMQC methyl spectrum
+# nmrPROC.com
+
+
+# Input File Name
+  nmrPipe -in test.fid \
+# Polynomial Subtract: subtracts a polynomial from time or frequency-domain data.
+  | nmrPipe -fn POLY -time \ # solvent subtraction in time domain
+# Adjustable Sine Bell: multiplies the data by an adjustable sine window, 
+# with the option of multiplying the first point of each vector by a given constant.
+  | nmrPipe -fn SP \       # adjustable sine window
+	-off 0.45 \        # offset Sine Start * Pi
+	-end 0.97 \        # Sine End * Pi
+	-pow 2 \           # Sine Exponent 
+	-c 0.5 \           # fScale point 1 scale
+# Zero Fill: pads data with zeros, pad count user defined
+  | nmrPipe -fn ZF -zf 1 \ # pad count = 1
+# Fourier Transform
+  | nmrPipe -fn FT \
+# Phase Corrections: ppm units
+  | nmrPipe -fn PS \
+	-p0 -31  \         # zero order correction
+	-p1 0  \           # first order correction
+	-di  \             # delete imaginary from FT
+# Extract Region
+  | nmrPipe -fn EXT \
+	-x1  -1ppm  \      # X axis extract start
+	-xn  4ppm  \       # X axis extract end
+	-sw  \             # adjust for sweep width and ppm calibration
+# 2-D Transpose XY -> YX
+  | nmrPipe -fn TP  \
+# Linear Prediction
+  | nmrPipe -fn LP \ 
+	-after \           # prediction region is after data region
+	-ord 8 \           # prediction order (number of LP coefficients)
+	-pred 30 \         # number of points to predict
+# Adjust Sine Window
+  | nmrPipe -fn SP -off 0.48 -end 1 -pow 2 -c 0.5   \
+# Zero Fill: Pad Count = 2
+  | nmrPipe -fn ZF -zf 2  \
+# Fourier Transform
+  | nmrPipe -fn FT  \
+# Phase Corrections
+  | nmrPipe -fn PS -p0 0 -p1 0 -di  \
+# Output File Name
+  | nmrPipe -out NAME.ucsf \
+	-ov \              # permit over-write of existing data file 
+	-verb              # print status message

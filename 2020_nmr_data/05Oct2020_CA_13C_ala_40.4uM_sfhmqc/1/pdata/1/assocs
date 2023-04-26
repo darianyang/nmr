@@ -1,0 +1,11 @@
+##TITLE= Parameter file, TopSpin 3.6.1
+##JCAMPDX= 5.0
+##DATATYPE= Parameter Values
+##NPOINTS= 1	$$ modification sequence number
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= dyang
+$$ 2020-10-28 13:03:40.068 -0400  dyang@defiant.structbio.pitt.edu
+$$ /Network/Servers/sagan.structbio.pitt.edu/Volumes/home3/Users/dyang/Data/nmr_data/05Oct2020_CA_13C_ala_40.4uM_sfhmqc/1/pdata/1/assocs
+$$ process /disk/skyhook_opt/topspin3.6.1/prog/mod/dataserver
+##$MULTDISP= </Network/Servers/sagan.structbio.pitt.edu/Volumes/home3/Users/dyang/Data/nmr_data/03Oct2020_CA_13C_ala_20.2uM_sfhmqc/22/pdata/1>
+##END=

@@ -1,0 +1,1 @@
+TITLE=13C sf-HMQC d1=1ms, aq=30m ns=64TITLE_END

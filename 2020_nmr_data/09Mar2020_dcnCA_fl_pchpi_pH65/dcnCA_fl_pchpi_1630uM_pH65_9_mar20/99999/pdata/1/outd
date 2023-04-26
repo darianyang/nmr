@@ -1,0 +1,16 @@
+##TITLE= Parameter file, TOPSPIN		Version 3.1
+##JCAMPDX= 5.0
+##DATATYPE= Parameter Values
+##NPOINTS= 3	$$ modification sequence number
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= Yang
+$$ 2020-03-09 16:35:22.899 -0400  Yang@bh029203.structbio.pitt.edu
+$$ /opt/topspin/data/yang/nmr/dcnCA_fl_pchpi_1630uM_pH65_9_mar20/99999/pdata/1/outd
+$$ process /opt/topspin3.1/prog/mod/edparproc
+##$CURPLOT= <_1034bw>
+##$CURPRIN= <$_1034bw>
+##$DFORMAT= <normdp>
+##$LAYOUT= <+/1D_H.xwp>
+##$LFORMAT= <normlp>
+##$PFORMAT= <normpl>
+##END=

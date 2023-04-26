@@ -1,0 +1,43 @@
+##TITLE= Audit trail, TopSpin 3.5 pl 7
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= Yang
+$$ /opt/topspin3.5pl7/data/Yang/nmr/N-CA-fl-13C-Thr/12/pdata/999/auditp.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2020-08-22 04:33:22.080 -0400>,<Yang>,<2ua5461vxm.structbio.pitt.edu>,<go4>,<TopSpin 3.5.7>,
+      <created by zg
+	started at 2020-08-22 00:48:04.676 -0400,
+	POWCHK enabled, PULCHK disabled,
+       configuration hash MD5:
+       95 13 F3 CB 9A 7E AA 6F 0F A0 FA DA 55 60 5D 8D
+       data hash MD5: 1K * 128
+       8F E6 AA 6A 59 A3 0D 76 90 57 49 FA 0D D2 30 16>)
+(   2,<2020-09-29 12:30:26.092 -0400>,<Yang>,<2ua5461vxm.structbio.pitt.edu>,<proc1d>,<TopSpin 3.5.7>,
+      <Start of raw data processing
+       sinm SSB = 2 SI = 1K 
+       data hash MD5: 1K
+       CC 2A 83 AC 77 4D 50 77 C2 DD 0D DE 3E D7 28 51>)
+(   3,<2020-09-29 12:30:28.242 -0400>,<Yang>,<2ua5461vxm.structbio.pitt.edu>,<proc1d>,<TopSpin 3.5.7>,
+      <ft FT_mod = 6 PKNL = 1 SI = 1K 
+       data hash MD5: 1K
+       FB F5 61 FA D1 06 0A 2E A6 94 0F 76 38 95 92 6B>)
+(   4,<2020-09-29 12:31:18.518 -0400>,<Yang>,<2ua5461vxm.structbio.pitt.edu>,<proc1d>,<TopSpin 3.5.7>,
+      <pk fgphup PHC0 = -73.8 PHC1 = 0 
+       data hash MD5: 1K
+       AF 9F E2 39 98 65 AC 33 59 5D EE F9 27 84 D8 A4>)
+(   5,<2020-09-29 12:34:48.357 -0400>,<Yang>,<2ua5461vxm.structbio.pitt.edu>,<proc1d>,<TopSpin 3.5.7>,
+      <rv 
+       data hash MD5: 1K
+       07 8F F3 4A A7 2B 6A 30 83 82 4F 11 8B 62 B9 DA>)
+(   6,<2020-09-29 12:36:07.380 -0400>,<Yang>,<2ua5461vxm.structbio.pitt.edu>,<proc1d>,<TopSpin 3.5.7>,
+      <bcm 0 109 254 -2.411776e+05 -4.154141e+02 -3.115216e+00 -1.226463e-03 -1.327864e-05 
+       data hash MD5: 1K
+       3D 32 5B 0C 92 F4 B4 0D D4 3D 9D F7 B0 CE BA 36>)
+(   7,<2020-09-29 12:36:11.494 -0400>,<Yang>,<2ua5461vxm.structbio.pitt.edu>,<proc1d>,<TopSpin 3.5.7>,
+      <rv 
+       data hash MD5: 1K
+       F3 74 B3 1C EF 3F A5 A4 61 DB 92 C6 1A DB 4D 6C>)
+##END=
+
+$$ hash MD5
+$$ E5 F6 F3 98 E7 FF BD DB AB 70 9A A5 98 87 93 00

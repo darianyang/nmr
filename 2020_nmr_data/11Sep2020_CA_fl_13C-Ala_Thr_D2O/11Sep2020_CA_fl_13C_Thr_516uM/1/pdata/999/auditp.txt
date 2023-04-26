@@ -1,0 +1,25 @@
+##TITLE= Audit trail, TOPSPIN		Version 2.1
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= Yang
+$$ /opt/topspin/data/Yang/nmr/11Sep2020_CA_fl_13C_Thr_500uM/1/pdata/999/auditp.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2020-09-11 17:02:09.327 -0400>,<Yang>,<BH029403>,<go>,<TOPSPIN 2.1>,
+      <acquisition in progress>)
+(   2,<2020-09-11 17:03:12.512 -0400>,<Yang>,<BH029403>,<proc1d>,<TOPSPIN 2.1>,
+      <Start of raw data processing
+       sinm 1 999 y SSB = 2 SI = 1K 
+       data hash MD5: 1K
+       65 90 46 73 5B 28 82 DF 7B FD CD 67 3D D1 2F 5D>)
+(   3,<2020-09-11 17:03:12.990 -0400>,<Yang>,<BH029403>,<proc1d>,<TOPSPIN 2.1>,
+      <ft FT_mod = 6 PKNL = 1 SI = 1K 
+       data hash MD5: 1K
+       66 11 75 2D 8B 7C 5A E2 65 84 82 13 1D 87 01 A0>)
+(   4,<2020-09-11 17:03:13.215 -0400>,<Yang>,<BH029403>,<proc1d>,<TOPSPIN 2.1>,
+      <pk PHC0 = 0 PHC1 = 0 
+       data hash MD5: 1K
+       66 11 75 2D 8B 7C 5A E2 65 84 82 13 1D 87 01 A0>)
+##END=
+
+$$ hash MD5
+$$ 8B 6D AE 53 41 26 3E 33 6D E6 78 D3 72 71 BF 55

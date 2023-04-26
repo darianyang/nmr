@@ -1,0 +1,28 @@
+##TITLE= Parameter file, TopSpin 3.5 pl 7
+##JCAMPDX= 5.0
+##DATATYPE= Parameter Values
+##NPOINTS= 49	$$ modification sequence number
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= Yang
+$$ 2020-10-01 15:35:28.237 -0400  Yang@2ua5461vxm.structbio.pitt.edu
+$$ /opt/topspin3.5pl7/data/Yang/nmr/29Sep2020_CA_13C_thr_207uM_sfhmqc_opt/22/pdata/1/clevels
+$$ process /opt/topspin3.5pl7/prog/mod/dataserver
+##$LEVELS= (0..255)
+3744.8 4493.8 5392.5 6471 7765.2 9318.3 11181.9 13418.3 16102 19322.3 23186.8
+27824.2 33389 40066.8 48080.2 57696.2 69235.5 83082.5 99699.1 119638.9
+143566.6 172280 206736 248083.2 297699.8 357239.8 428687.7 514425.2 617310.3
+740772.3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$LEVSIGN= 1
+##$MAXLEV= 30
+##$METHOD= 0
+##$NEGBASE= -1872.4
+##$NEGINCR= 1.2
+##$POSBASE= 3744.8
+##$POSINCR= 1.2
+##END=

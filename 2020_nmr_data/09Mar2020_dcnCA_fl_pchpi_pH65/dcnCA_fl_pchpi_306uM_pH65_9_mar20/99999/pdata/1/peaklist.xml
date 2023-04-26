@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PeakList>
+  <PeakList1D>
+    <PeakList1DHeader creator="Yang" date="2020-03-11T09:24:57.201-04:00" expNo="99999" name="dcnCA_fl_pchpi_306uM_pH65_9_mar20" owner="" procNo="1" source="/opt/topspin/data/yang/nmr">
+      <PeakPickDetails>F1=1.851ppm, F2=-1.851ppm, MI=25.00cm, MAXI=110.00cm, PC=1.000
+      </PeakPickDetails>
+    </PeakList1DHeader>
+    <Peak1D F1="0.7179" intensity="1.000000e+02" type="0"/>
+    <Peak1D F1="-0.7179" intensity="1.000000e+02" type="0"/>
+  </PeakList1D>
+</PeakList>

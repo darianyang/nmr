@@ -1,0 +1,17 @@
+##TITLE= Parameter file, TOPSPIN		Version 2.1
+##JCAMPDX= 5.0
+##DATATYPE= Parameter Values
+##NPOINTS= 161	$$ modification sequence number
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= Yang
+$$ 2020-09-13 11:56:15.767 -0400  Yang@BH029403
+$$ /opt/topspin/data/Yang/nmr/12Sep2020_CA_fl_13C_Ala_600uM/2/acqu2s
+$$ process /opt/topspin/prog/mod/go
+##$BF1= 176.0428
+##$FnMODE= 1
+##$NUC1= <13C>
+##$O1= 3168.7704
+##$SFO1= 176.0459687704
+##$SW= 70
+##$TD= 160
+##END=

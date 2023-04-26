@@ -1,0 +1,2 @@
+TITLE=13C sf-HMQC d1=1ms, aq=30m, ns=256, rg=912
+O1p=4.7pTITLE_END

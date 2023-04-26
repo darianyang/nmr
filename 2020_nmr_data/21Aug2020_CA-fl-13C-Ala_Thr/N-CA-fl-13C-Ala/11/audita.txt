@@ -1,0 +1,18 @@
+##TITLE= Audit trail, TopSpin 3.5 pl 7
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= Yang
+$$ /opt/topspin3.5pl7/data/Yang/nmr/N-CA-fl-13C-Ala/11/audita.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2020-08-21 21:19:00.893 -0400>,<Yang>,<2ua5461vxm.structbio.pitt.edu>,<go4>,<TopSpin 3.5.7>,
+      <created by zg
+	started at 2020-08-21 17:33:43.597 -0400,
+	POWCHK enabled, PULCHK disabled,
+       configuration hash MD5:
+       95 13 F3 CB 9A 7E AA 6F 0F A0 FA DA 55 60 5D 8D
+       data hash MD5: 1K * 128
+       EE 02 0E 22 8C B6 C6 FF FD 9F 3D 27 79 BE 97 86>)
+##END=
+
+$$ hash MD5
+$$ 73 C8 B6 9E C8 BE 53 06 16 1D B6 FB 8C E4 6E 6A

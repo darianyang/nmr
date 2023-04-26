@@ -1,0 +1,4 @@
+13C HSQC d1=1s, aq=71m, ns=16, rg=362;
+O1p=1.2ppm, SW (1H)=12ppm; TD(1H)=1k
+O2p=18.8ppm; SW(13C)=10ppm; TD(13C)=80
+90deg flip pulse P50 = 6m

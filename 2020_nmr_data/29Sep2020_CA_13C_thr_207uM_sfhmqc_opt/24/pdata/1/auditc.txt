@@ -1,0 +1,3 @@
+TITLE=13C CT-HSQC d1=1s aq=61m, NS=16, rg=322;
+O1p=4.7ppm, SW(1H)=14ppm; TD(1H)=1k
+O2p=18ppm; SW(13C)=10ppm; TD(13C)=64TITLE_END

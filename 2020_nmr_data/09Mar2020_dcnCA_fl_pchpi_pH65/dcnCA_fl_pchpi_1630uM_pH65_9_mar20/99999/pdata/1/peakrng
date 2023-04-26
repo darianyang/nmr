@@ -1,0 +1,4 @@
+P    #regions in PPM
+# 2020-03-09 16:35:55 -0400  Yang@bh029203.structbio.pitt.edu
+# low field   high field   mi   maxi
+  10000.0  -10000.0  90.000  110.000  # for region 1

@@ -1,0 +1,29 @@
+##TITLE= Audit trail, TopSpin 3.5 pl 7
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= Yang
+$$ /opt/topspin3.5pl7/data/Yang/nmr/N-CA-fl-13C-Ala/1/pdata/999/auditp.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2020-08-21 13:55:00.495 -0400>,<Yang>,<2ua5461vxm.structbio.pitt.edu>,<go4>,<TopSpin 3.5.7>,
+      <acquisition in progress>)
+(   2,<2020-08-21 13:57:53.438 -0400>,<Yang>,<2ua5461vxm.structbio.pitt.edu>,<proc1d>,<TopSpin 3.5.7>,
+      <Start of raw data processing
+       qsin BC_mod = 6 BCFW = 0.3 SSB = 3 SI = 2K 
+       data hash MD5: 2K
+       1D CC 73 00 4A 07 B1 3F FB E1 EA 03 57 E5 7B 92>)
+(   3,<2020-08-21 13:57:53.528 -0400>,<Yang>,<2ua5461vxm.structbio.pitt.edu>,<proc1d>,<TopSpin 3.5.7>,
+      <ft FT_mod = 6 PKNL = 1 SI = 2K STSR = 0 STSI = 1K 
+       data hash MD5: 1K
+       F0 FD 0D 1B 0E 60 39 CF BC DD 5B F8 93 60 6B 41>)
+(   4,<2020-08-21 13:57:53.541 -0400>,<Yang>,<2ua5461vxm.structbio.pitt.edu>,<proc1d>,<TopSpin 3.5.7>,
+      <pk PHC0 = -87.91132 PHC1 = 60.14354 
+       data hash MD5: 1K
+       6C 25 62 96 35 BB 39 91 1F 11 DA AB F7 DE 5B 37>)
+(   5,<2020-08-21 13:58:30.840 -0400>,<Yang>,<2ua5461vxm.structbio.pitt.edu>,<proc1d>,<TopSpin 3.5.7>,
+      <pk fgphup PHC0 = 67.6 PHC1 = 0 
+       data hash MD5: 1K
+       6C C3 29 CD A9 F4 C0 D7 F3 2B 53 54 65 93 87 58>)
+##END=
+
+$$ hash MD5
+$$ ED 11 E6 78 64 AF A0 24 49 E4 29 60 DC 5C 2A 37

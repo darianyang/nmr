@@ -1,0 +1,98 @@
+# Mon Mar  9 18:26:57 2020
+#$$PROBEID=35
+#$$PROBEINFO=5 mm CPTCI 1H-13C/15N/D Z-GRD Z44910/0014
+#$$PICSINFO=Z44910_0014_35.par
+#
+# Active Shim Gradients
+#
+Z           		19315           
+Z2          		-4705           
+Z3          		-776            
+Z4          		832             
+Z5          		1966            
+Z6          		-20025          
+X           		1371            
+XZ          		2928            
+XZ2         		-925            
+XZ3         		136             
+XZ4         		-596            
+XZ5         		-7993           
+Y           		-1763           
+YZ          		-3372           
+YZ2         		784             
+YZ3         		-1776           
+YZ4         		425             
+YZ5         		10196           
+XY          		10420           
+XYZ         		-2971           
+XYZ2        		-3048           
+XYZ3        		4294            
+XYZ4        		9715            
+XYZ5        		0               
+(X2-Y2)     		1659            
+(X2-Y2)Z    		278             
+(X2-Y2)Z2   		228             
+(X2-Y2)Z3   		1087            
+(X2-Y2)Z4   		-1110           
+(X2-Y2)Z5   		0               
+X3          		-1363           
+X3Z         		-35             
+Y3          		1662            
+Y3Z         		-818            
+#
+# Lock Parameter
+#
+FIELD		-7372.792
+LOCKPHASE		102.000 
+LOCKPOWER		-18.000 
+LOCKGAIN		119.025 
+LOCKDC		-45.800 
+LOCKSHIFT		4.700   
+LOOPGAIN		-5.000  
+LOOPTIME		0.350   
+LOOPFILTER		100.000 
+#
+IEEE64_VERSION_CODE 1
+#
+# Shim currents 
+#
+SHIM_SETTING [1 ]  19315.02978370  
+SHIM_SETTING [2 ]  -4704.54009775  
+SHIM_SETTING [3 ]  -776.24002745   
+SHIM_SETTING [4 ]  0.00000000      
+SHIM_SETTING [5 ]  832.08915740    
+SHIM_SETTING [6 ]  1966.13211618   
+SHIM_SETTING [7 ]  -20025.00000000 
+SHIM_SETTING [8 ]  0.00000000      
+SHIM_SETTING [9 ]  0.00000000      
+SHIM_SETTING [10]  -1327.87300000  
+SHIM_SETTING [11]  -1397.41300000  
+SHIM_SETTING [12]  2480.74300000   
+SHIM_SETTING [13]  844.06800000    
+SHIM_SETTING [14]  0.00000000      
+SHIM_SETTING [15]  227.46154129    
+SHIM_SETTING [16]  -326.36145871   
+SHIM_SETTING [17]  2044.94037451   
+SHIM_SETTING [18]  3083.60862549   
+SHIM_SETTING [19]  -6906.57861871  
+SHIM_SETTING [20]  7849.50928342   
+SHIM_SETTING [21]  1866.98000000   
+SHIM_SETTING [22]  -294.63100000   
+SHIM_SETTING [23]  2110.19600000   
+SHIM_SETTING [24]  3093.71500000   
+SHIM_SETTING [25]  939.77900000    
+SHIM_SETTING [26]  -1358.90100000  
+SHIM_SETTING [27]  0.00000000      
+SHIM_SETTING [28]  -1987.93206423  
+SHIM_SETTING [29]  15493.59200000  
+SHIM_SETTING [30]  8232.87700000   
+SHIM_SETTING [31]  -256.64378658   
+SHIM_SETTING [32]  889.59393577    
+SHIM_SETTING [33]  8403.54000000   
+SHIM_SETTING [34]  8001.01900000   
+SHIM_SETTING [35]  -1871.88200000  
+SHIM_SETTING [36]  7746.92600000   
+SHIM_SETTING [37]  -9088.73383914  
+SHIM_SETTING [38]  7598.18379795   
+SHIM_SETTING [39]  -5133.05621342  
+SHIM_SETTING [40]  0.00000000      

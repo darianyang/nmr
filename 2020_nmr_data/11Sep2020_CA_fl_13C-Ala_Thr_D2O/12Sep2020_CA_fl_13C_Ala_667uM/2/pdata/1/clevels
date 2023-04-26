@@ -1,0 +1,28 @@
+##TITLE= Parameter file, TopSpin 3.6.1
+##JCAMPDX= 5.0
+##DATATYPE= Parameter Values
+##NPOINTS= 8	$$ modification sequence number
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= dyang
+$$ 2020-09-16 14:23:15.484 -0400  dyang@defiant.structbio.pitt.edu
+$$ /Network/Servers/sagan.structbio.pitt.edu/Volumes/home3/Users/dyang/Data/nmr_data/11Sep2020_CA_fl_13C-Ala_Thr_D2O/12Sep2020_CA_fl_13C_Ala_667uM/2/pdata/1/clevels
+$$ process /disk/skyhook_opt/topspin3.6.1/prog/mod/dataserver
+##$LEVELS= (0..255)
+-928002144.953549 -515556747.196416 -286420415.10912 -159122452.8384 -88401362.688
+-49111868.16 -27284371.2 -15157984 15157984 27284371.2 49111868.16 88401362.688
+159122452.8384 286420415.10912 515556747.196416 928002144.953549 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$LEVSIGN= 3
+##$MAXLEV= 8
+##$METHOD= 0
+##$NEGBASE= -15157984
+##$NEGINCR= 1.8
+##$POSBASE= 15157984
+##$POSINCR= 1.8
+##END=

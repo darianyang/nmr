@@ -1,0 +1,18 @@
+##TITLE= Parameter file, TOPSPIN		Version 2.1
+##JCAMPDX= 5.0
+##DATATYPE= Parameter Values
+##NPOINTS= 1	$$ modification sequence number
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= Yang
+$$ 2020-09-11 17:14:40.942 -0400  Yang@BH029403
+$$ /opt/topspin/data/Yang/nmr/11Sep2020_CA_fl_13C_Thr_500uM/2/pdata/999/used_from
+$$ process /opt/topspin/prog/mod/proc1d
+##$CUREXP= <ser>
+##$DU= </opt/topspin>
+##$EXPNO= 2
+##$NAME= <11Sep2020_CA_fl_13C_Thr_500uM>
+##$PROCNO= 1
+##$PROCNO2= 1
+##$TYPE= <nmr>
+##$USER= <Yang>
+##END=

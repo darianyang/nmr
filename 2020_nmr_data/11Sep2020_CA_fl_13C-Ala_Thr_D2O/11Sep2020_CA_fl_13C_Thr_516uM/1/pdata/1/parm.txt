@@ -1,0 +1,111 @@
+
+Current Data Parameters
+NAME     11Sep2020_CA_fl_13C_Thr_516uM              
+EXPNO                 1              
+PROCNO                1              
+
+F2 - Acquisition Parameters
+Date_          20200911              
+Time              17.24              
+INSTRUM           spect              
+PROBHD   5 mm CPTCI 1H-              
+PULPROG    hsqcctetgpsp              
+TD                 1024              
+SOLVENT         H2O+D2O              
+NS                  128              
+DS                  128              
+SWH            9765.625 Hz           
+FIDRES         9.536743 Hz           
+AQ            0.0524288 sec          
+RG                18400              
+DW               51.200 usec         
+DE                 6.50 usec         
+TE                298.0 K            
+CNST2       145.0000000              
+CNST21      175.0000000              
+D0           0.00000300 sec          
+D1           1.50000000 sec          
+D4           0.00172414 sec          
+D11          0.03000000 sec          
+D12          0.00002000 sec          
+D16          0.00020000 sec          
+D20          0.02504750 sec          
+D23          0.02660000 sec          
+IN0          0.00004055 sec          
+IN20         0.00004055 sec          
+P21               45.00 usec         
+
+======== CHANNEL f1 ========
+NUC1                 1H              
+P1                 7.60 usec         
+P2                15.20 usec         
+P28      0 usec         
+PL1                2.50 dB           
+PL1W         7.86783409 W            
+SFO1        700.1132905 MHz          
+
+======== CHANNEL f2 ========
+CPDPRG[2           garp              
+NUC2                13C              
+P3                15.00 usec         
+P8               500.00 usec         
+P14              219.00 usec         
+PCPD2             55.00 usec         
+PL0              120.00 dB           
+PL2               -0.50 dB           
+PL12              10.79 dB           
+PL0W     0 W            
+PL2W       113.29899597 W            
+PL12W        8.41833210 W            
+SFO2        176.0459688 MHz          
+SP3                0.37 dB           
+SP5                0.37 dB           
+SP13               2.89 dB           
+SPNAM[3]        Q3.1000              
+SPNAM[5]        Q3.1000              
+SPNAM[13 Crp80,0.5,20.1              
+SPOAL3            0.500              
+SPOAL5            0.500              
+SPOAL13           0.500              
+spoffs3  0 Hz           
+spoffs5        27638.72 Hz           
+spoffs13 0 Hz           
+
+======== CHANNEL f3 ========
+NUC3                15N              
+P22               90.00 usec         
+PL3               -1.20 dB           
+PL3W       135.76376343 W            
+SFO3         70.9497265 MHz          
+
+====== GRADIENT CHANNEL =====
+GPNAM[1]       SINE.100              
+GPNAM[2]       SINE.100              
+GPZ1              80.00 %            
+GPZ2              20.10 %            
+P16             1000.00 usec         
+
+F1 - Acquisition parameters
+TD                  160              
+SFO1            176.046 MHz          
+FIDRES       154.040222 Hz           
+SW               70.000 ppm          
+FnMODE    Echo-Antiecho              
+
+F2 - Processing parameters
+SI                 1024              
+SF          700.1100000 MHz          
+WDW               QSINE              
+SSB                   2              
+LB       0 Hz           
+GB       0              
+PC                 1.00              
+
+F1 - Processing parameters
+SI                 1024              
+MC2       echo-antiecho              
+SF          176.0428000 MHz          
+WDW               QSINE              
+SSB                   2              
+LB       0 Hz           
+GB       0              
