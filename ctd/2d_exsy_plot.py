@@ -10,7 +10,8 @@ import matplotlib.cm
 import gif
 from tqdm.auto import tqdm
 
-plt.style.use("/Users/darian/github/wedap/wedap/styles/default.mplstyle")
+#plt.style.use("/Users/darian/github/wedap/wedap/styles/default.mplstyle")
+plt.style.use("/Users/darian/github/wedap/styles/poster.mplstyle")
 
 # 4F or 7F
 f_pos = "4F"
@@ -22,18 +23,18 @@ elif f_pos == "7F":
 # plot parameters
 cmap = matplotlib.cm.Blues_r    # contour map (colors to use for contours)
 # # 4F ideal
-# contour_start = 500000           # contour level start value
-# contour_num = 8                # number of contour levels
-# contour_factor = 1.5          # scaling factor between contour levels
-# 7F ideal
-contour_start = 1200000           # contour level start value
+contour_start = 500000           # contour level start value
 contour_num = 8                # number of contour levels
 contour_factor = 1.5          # scaling factor between contour levels
+# 7F ideal
+# contour_start = 1200000           # contour level start value
+# contour_num = 8                # number of contour levels
+# contour_factor = 1.5          # scaling factor between contour levels
 
 # calculate contour levels
 cl = contour_start * contour_factor ** np.arange(contour_num) 
 
-def plot_exsy(path, ax=None, color="magenta", title="$^{19}$F-$^{19}$F EXSY"):
+def plot_exsy(path, ax=None, color="magenta", title=None):
     """
     Plot 19F-19F EXSY.
 
@@ -66,21 +67,21 @@ def plot_exsy(path, ax=None, color="magenta", title="$^{19}$F-$^{19}$F EXSY"):
     # plot the contours (tranpose needed here?)
     # TODO: change extent to make x and y axes consistent?
     #ax.contour(data.T, cl, cmap=cmap, extent=(ppm_19fx_0, ppm_19fx_1, ppm_19fy_0, ppm_19fy_1))
-    # ax.contour(data, cl, colors=color, extent=(ppm_19fx_0, ppm_19fx_1, ppm_19fy_0, ppm_19fy_1), 
-    #            linewidths=1)
-    ax.contour(data, cl, colors=color, linewidths=1)
+    ax.contour(data, cl, colors=color, extent=(ppm_19fx_0, ppm_19fx_1, ppm_19fy_0, ppm_19fy_1), 
+               linewidths=1)
+    #ax.contour(data, cl, colors=color, linewidths=1)
 
     # add grid at each x and y tick
     ax.grid(color='darkgrey', linestyle='-', linewidth=0.5)
 
     # decorate the axes
-    ax.set_ylabel("$^{19}$F (ppm)")
-    ax.set_xlabel("$^{19}$F (ppm)")
+    # ax.set_ylabel("$^{19}$F (ppm)")
+    # ax.set_xlabel("$^{19}$F (ppm)")
     ax.set_title(title)
-    # ax.set_xlim(-126, -125.2)
-    # ax.set_ylim(-130, -122)
-    #ax.invert_xaxis()
-    #ax.invert_yaxis()
+    ax.set_xlim(-126, -125.2)
+    ax.set_ylim(-131, -122)
+    ax.invert_xaxis()
+    ax.invert_yaxis()
 
 
 # fig, ax = plt.subplots()
@@ -163,6 +164,53 @@ def exsy_gif():
     gif.save(frames, f"figures/{f_pos}_exsy.gif", duration=500)
 
 #exsy_gif()
+
+def four_panel_exsy():
+    times = [2, 5, 10, 15, 25, 35, 50, 75, 100, 200, 600]
+    # if f_pos == "4F":
+    #     dir += 10
+    # elif f_pos == "7F":
+    #     dir += 1
+
+    # fig, ax = plt.subplots()
+    # plot_exsy(f"{f_path}/11/test.DAT", ax=ax, 
+    #         title="Mixing Time = " + str(times[0]) + "ms")
+
+    fig, ax = plt.subplots(ncols=2, nrows=2, sharex=False, sharey=False)
+    xticks = [-125.4, -125.8]
+    yticks = [-123, -126, -129]
+    # 2 5 50 200
+    for i, mt in enumerate([0, 1, 6, 9]):
+        plot_exsy(f"{f_path}/1{mt}/test.DAT", ax=ax.flatten()[i]) 
+             #title=str(times[mt]) + "ms")  
+        ax.flatten()[i].set_xticks(xticks)
+        ax.flatten()[i].set_yticks(yticks)
+    # plot_exsy(f"{f_path}/10/test.DAT", ax=ax.flatten()[0])
+    # plot_exsy(f"{f_path}/11/test.DAT", ax=ax.flatten()[1])
+    # plot_exsy(f"{f_path}/16/test.DAT", ax=ax.flatten()[2])
+    # plot_exsy(f"{f_path}/19/test.DAT", ax=ax.flatten()[3]) 
+
+    # fig.supxlabel("$^{19}$F (ppm)", fontweight="bold")
+    # fig.supylabel("$^{19}$F (ppm)", fontweight="bold")
+
+    fig.text(0.55, 0.02, "$^{19}$F (ppm)", ha='center', fontweight="bold", fontsize=22)
+    fig.text(0.0, 0.5, "$^{19}$F (ppm)", va='center', rotation='vertical', fontweight="bold", fontsize=22)
+
+    # get rid of white space
+    # plot 1
+    ax[0,0].set_xticklabels([])
+    # plot 2
+    ax[0,1].set_xticklabels([])
+    ax[0,1].set_yticklabels([])
+    # plot 4
+    ax[1,1].set_yticklabels([])
+    plt.subplots_adjust(hspace=0, wspace=0)
+    fig.tight_layout(pad=2, h_pad=0, w_pad=0)
+
+    #plt.show()
+    plt.savefig("figures/4panel.png", dpi=600, transparent=True)
+
+four_panel_exsy()
 
 def plot_iratios():
     # from looking at peak heights, amplitudes, and nmrpipe peak heights
@@ -259,6 +307,6 @@ def plot_iratios():
     #plt.savefig(f"figures/Iratios_{f_pos}.png", dpi=300, transparent=True)
     plt.show()
 
-plot_iratios()
+#plot_iratios()
 
 # use peak width for noise selection and select a more isolated corner/region

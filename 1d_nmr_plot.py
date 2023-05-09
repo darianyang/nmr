@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 #plt.style.use("/Users/darian/github/wedap/wedap/styles/default.mplstyle")
+plt.style.use("/Users/darian/github/wedap/styles/poster.mplstyle")
 
 def plot_1d(path, ax=None, label=None, color="magenta", scale=None, xlim=(-120, -140)):
     """
@@ -77,7 +78,8 @@ def plot_1d(path, ax=None, label=None, color="magenta", scale=None, xlim=(-120, 
     ax.set_yticklabels([])
     ax.set_yticks([])
     #ax.set_title("CTD $^{19}$F 1D")
-    ax.set_xlabel("$^{19}$F (ppm)", fontsize=12, labelpad=10, fontweight="bold")
+    #ax.set_xlabel("$^{19}$F (ppm)", fontsize=12, labelpad=10, fontweight="bold")
+    ax.set_xlabel("$^{19}$F (ppm)")
     ax.set_xlim(xlim[0], xlim[1])
     #ax.set_ylim(-80000, 2500000)
     ax.spines['top'].set_visible(False)
@@ -98,10 +100,11 @@ fig, ax = plt.subplots()
 # ax.invert_xaxis()
 # plt.legend(prop={'size': 12})
 
-plot_1d("600-2/DTY-CaCTD-F-12152022/2/test.DAT", ax=ax, label=f"{f_pos}", xlim=(-120, -131.5))
+plot_1d("ctd/600-2/DTY-CaCTD-F-12152022/2/test.DAT", ax=ax, label=f"{f_pos}", xlim=(-120.5, -131))
 #plot_1d("600-2/DTY-CaCTD-F-12152022/1/test.DAT", ax=ax, label=f"{f_pos}", xlim=(-140, -127))
 #plot_1d("600-2/DTY-CaCTD-F-12152022/23/test.DAT", ax=ax, label=f"{f_pos}", xlim=(-140, -127))
 
 fig.tight_layout()
 #plt.show()
-fig.savefig(f"figures/1d_ctd_{f_pos}_1024NS.svg", dpi=300, transparent=True)
+#fig.savefig(f"figures/1d_ctd_{f_pos}_1024NS.svg", dpi=300, transparent=True)
+fig.savefig(f"ctd/figures/poster_1d_ctd_{f_pos}_1024NS.pdf", dpi=600, transparent=True)
