@@ -72,7 +72,7 @@ def plot_1d(path, ax=None, label=None, color="magenta", scale=None, xlim=(-120, 
     uc = ng.pipe.make_uc(dic, data)
 
     # plot the spectrum
-    ax.plot(uc.ppm_scale(), data, color=color, label=label)
+    ax.plot(uc.ppm_scale(), data, color=color, label=label, lw=3.5)
 
     # decorate axes
     ax.set_yticklabels([])
@@ -107,4 +107,4 @@ plot_1d("ctd/600-2/DTY-CaCTD-F-12152022/2/test.DAT", ax=ax, label=f"{f_pos}", xl
 fig.tight_layout()
 #plt.show()
 #fig.savefig(f"figures/1d_ctd_{f_pos}_1024NS.svg", dpi=300, transparent=True)
-fig.savefig(f"ctd/figures/poster_1d_ctd_{f_pos}_1024NS.pdf", dpi=600, transparent=True)
+fig.savefig(f"ctd/figures/poster_1d_ctd_{f_pos}_1024NS.png", dpi=900, transparent=True)

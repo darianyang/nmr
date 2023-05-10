@@ -27,8 +27,8 @@ times = np.array([2, 5, 10, 15, 25, 35, 50, 75, 100, 200])
 fig, ax = plt.subplots()
 #ax.scatter(times, ratios)
 ax.errorbar(times, ratios[:,0], yerr=ratios[:,1], fmt="o", capsize=3, capthick=2)
-#ax.set(xlabel="Mixing Time(s)", ylabel="I$_{12}$/I$_{11}$", title=f"{f_pos}-CA-CTD")
-ax.set(xlabel="Mixing Time(ms)", ylabel="I$_{12}$/I$_{11}$")
+#ax.set(xlabel="Mixing Time (s)", ylabel="I$_{12}$/I$_{11}$", title=f"{f_pos}-CA-CTD")
+ax.set(xlabel="Mixing Time (ms)", ylabel="I$_{12}$/I$_{11}$")
 
 def calc_iratio(t_m, k_12, k_21):
     """
