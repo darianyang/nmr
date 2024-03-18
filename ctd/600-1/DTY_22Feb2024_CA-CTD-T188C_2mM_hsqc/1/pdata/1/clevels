@@ -1,0 +1,27 @@
+##TITLE= Parameter file, TopSpin 3.5 pl 7
+##JCAMPDX= 5.0
+##DATATYPE= Parameter Values
+##NPOINTS= 41	$$ modification sequence number
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= fatema
+$$ 2024-02-24 13:04:22.415 -0500  fatema@2ua5461vxm.structbio.pitt.edu
+$$ /opt/topspin3.5pl7/data/Fatema/DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/1/pdata/1/clevels
+$$ process /opt/topspin3.5pl7/prog/mod/dataserver
+##$LEVELS= (0..255)
+29207.5 35049.1 42058.5 50470.6 60564.4 72677.7 87213.2 104655.1 125586.3
+150704.3 180844.8 217013.8 260416.3 312499.9 374999.3 449999.2 539999.2
+647999.3 777598.8 933118.6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+##$LEVSIGN= 1
+##$MAXLEV= 20
+##$METHOD= 0
+##$NEGBASE= -40000
+##$NEGINCR= 1.8
+##$POSBASE= 40000
+##$POSINCR= 1.2
+##END=
