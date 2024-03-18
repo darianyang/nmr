@@ -21,7 +21,7 @@ contour_factor = 1.8          # scaling factor between contour levels
 # calculate contour levels
 cl = contour_start * contour_factor ** np.arange(contour_num) 
 
-def plot_hsqc(path, ax=None, label=None, color="magenta", title=None):
+def plot_hsqc(path, ax=None, label=None, color="magenta", title=None, linewidths=0.25):
     """
     Plot 1H-15N HSQC.
 
@@ -56,7 +56,11 @@ def plot_hsqc(path, ax=None, label=None, color="magenta", title=None):
     # plot the contours (tranpose needed here)
     #ax.contour(data.T, cl, cmap=cmap, extent=(ppm_1h_0, ppm_1h_1, ppm_15n_0, ppm_15n_1))
     ax.contour(data.T, cl, colors=color, extent=(ppm_1h_0, ppm_1h_1, ppm_15n_0, ppm_15n_1), 
-               linewidths=0.25, label=label)
+               linewidths=linewidths)
+
+    if label is not None:
+        # Add labels to the legend using dummy plots
+        ax.plot([], [], color=color, label=label)
 
     # add grid at each x and y tick
     ax.grid(color='darkgrey', linestyle='-', linewidth=0.5)
@@ -65,19 +69,35 @@ def plot_hsqc(path, ax=None, label=None, color="magenta", title=None):
     ax.set_ylabel("$^{15}$N (ppm)")
     ax.set_xlabel("$^{1}$H (ppm)")
     ax.set_title(title)
-    # ax.set_xlim(6, 11)
-    # ax.set_ylim(100, 135)
+    ax.set_xlim(6, 11)
+    ax.set_ylim(100, 135)
     # the WT rectangle is X: 9.9 - 10.9, Y: 128 - 132.5
-    ax.set_xlim(9.9, 10.9)
-    ax.set_ylim(128, 132.5)
+    #ax.set_xlim(9.9, 10.9)
+    #ax.set_ylim(128, 132.5)
     ax.invert_xaxis()
     ax.invert_yaxis()
 
 
-fig, ax = plt.subplots()
+fig, ax = plt.subplots(figsize=(11,7))
 
-plot_hsqc("800/DTY-CaCTD-15NFW-12162022/1/test.DAT", color="cornflowerblue", ax=ax)
-#plot_hsqc("800/DTY-CaCTD-15NFW-12162022/2/test.DAT", color="magenta", ax=ax)
+# # WT
+# plot_hsqc("DTY_22Feb2024_CA-CTD-WT_2mM_hsqc/4/test.DAT", color="tab:blue", ax=ax, label="WT")
+# # T188C reduced
+# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/1/test.DAT", color="tab:orange", ax=ax, label="T188C")
+
+# T188C full red
+plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/1/test.DAT", 
+          color="tab:orange", ax=ax, label="T188C Reduced")
+# T188C 'full' ox
+plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/10/test.DAT", 
+          color="tab:green", ax=ax, label="T188C Oxidized")
+
+# # T188C ox some
+# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/2/test.DAT", color="cornflowerblue", ax=ax)
+# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/3/test.DAT", color="cornflowerblue", ax=ax)
+# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/5/test.DAT", color="cornflowerblue", ax=ax)
+# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/6/test.DAT", color="cornflowerblue", ax=ax)
+
 
 # peak label plotting function
 # 4F
@@ -89,7 +109,7 @@ plot_hsqc("800/DTY-CaCTD-15NFW-12162022/1/test.DAT", color="cornflowerblue", ax=
 
 #ax.set_title("CTD WT vs 7F")
 # ax.set_title("CA-CTD WT $^1$H-$^{15}$N HSQC")
-ax.set_title("CA-CTD WT W184 N$\epsilon$")
+#ax.set_title("CA-CTD WT W184 N$\epsilon$")
 
 # Create a Rectangle patch for zoom on WT CTD HSQC
 # rect = patches.Rectangle((9.9, 128), 0.9, 4.5, linewidth=1.5, edgecolor="k", facecolor="none")
@@ -97,7 +117,12 @@ ax.set_title("CA-CTD WT W184 N$\epsilon$")
 # ax.add_patch(rect)
 # # so the rectangle is X: 9.9 - 10.9, Y: 128 - 132.5
 
+#plot_peak_labels.peak_text_plotter("../CA_CTD_BMRB_assignments.shifts", ax=ax, redlist=[188])
+plot_peak_labels.peak_text_plotter("../CA_CTD_BMRB_assignments.shifts", ax=ax, redlist=[188, 198, 218])
+plt.legend(frameon=False)
 fig.tight_layout()
 plt.show()
 #fig.savefig("figures/wt_vs_7f_hsqc_peak_labels.png", dpi=300, transparent=True)
 #fig.savefig("figures/wt_hsqc_boxonly.png", dpi=300, transparent=True)
+#fig.savefig("WT_vs_T188C.pdf")
+fig.savefig("T188C_red_vs_ox.pdf")
