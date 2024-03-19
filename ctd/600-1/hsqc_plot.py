@@ -83,20 +83,24 @@ fig, ax = plt.subplots(figsize=(11,7))
 # # WT
 # plot_hsqc("DTY_22Feb2024_CA-CTD-WT_2mM_hsqc/4/test.DAT", color="tab:blue", ax=ax, label="WT")
 # # T188C reduced
-# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/1/test.DAT", color="tab:orange", ax=ax, label="T188C")
+# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/1/test.DAT", color="tab:red", ax=ax, label="T188C")
 
-# T188C full red
+# T188C 'full' red
 plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/1/test.DAT", 
-          color="tab:orange", ax=ax, label="T188C Reduced")
+          color="tab:blue", ax=ax, label="T188C Reduced")
 # T188C 'full' ox
-plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/10/test.DAT", 
-          color="tab:green", ax=ax, label="T188C Oxidized")
+# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/10/test.DAT", 
+#           color="tab:red", ax=ax, label="T188C Oxidized")
 
-# # T188C ox some
-# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/2/test.DAT", color="cornflowerblue", ax=ax)
-# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/3/test.DAT", color="cornflowerblue", ax=ax)
-# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/5/test.DAT", color="cornflowerblue", ax=ax)
-# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/6/test.DAT", color="cornflowerblue", ax=ax)
+# T188C ox some
+# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/2/test.DAT", 
+#           color="tab:red", ax=ax, label="T188C Oxidized 1")
+# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/3/test.DAT", 
+#           color="tab:red", ax=ax, label="T188C Oxidized 2")
+# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/5/test.DAT", 
+#           color="tab:red", ax=ax, label="T188C Oxidized 3")
+plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/6/test.DAT", 
+          color="tab:red", ax=ax, label="T188C Oxidized 4")
 
 
 # peak label plotting function
@@ -117,12 +121,23 @@ plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/10/test.DAT",
 # ax.add_patch(rect)
 # # so the rectangle is X: 9.9 - 10.9, Y: 128 - 132.5
 
-#plot_peak_labels.peak_text_plotter("../CA_CTD_BMRB_assignments.shifts", ax=ax, redlist=[188])
-plot_peak_labels.peak_text_plotter("../CA_CTD_BMRB_assignments.shifts", ax=ax, redlist=[188, 198, 218])
+# cysteines
+#plot_peak_labels.peak_text_plotter("../CA_CTD_BMRB_assignments.shifts", ax=ax, redlist=[188, 198, 218])
+# WT vs T188C
+# plot_peak_labels.peak_text_plotter("../CA_CTD_BMRB_assignments.shifts", ax=ax, 
+#                                    redlist=[150,220,186,210,193,190,209,184,146,187,213,177,215,216,148,192,191,199,206])
+# T188C red vs ox
+# plot_peak_labels.peak_text_plotter("../CA_CTD_BMRB_assignments.shifts", ax=ax, 
+#                                    redlist=[156,162,206,218,186,210,150,195,161,194,146,148,153,189,187,205])
+# gradual oxidation comparison
+plot_peak_labels.peak_text_plotter("../CA_CTD_BMRB_assignments.shifts", ax=ax, 
+                                   redlist=[])
+
 plt.legend(frameon=False)
 fig.tight_layout()
 plt.show()
 #fig.savefig("figures/wt_vs_7f_hsqc_peak_labels.png", dpi=300, transparent=True)
 #fig.savefig("figures/wt_hsqc_boxonly.png", dpi=300, transparent=True)
-#fig.savefig("WT_vs_T188C.pdf")
-fig.savefig("T188C_red_vs_ox.pdf")
+#fig.savefig("WT_vs_T188C_shifts.pdf")
+#fig.savefig("T188C_red_vs_ox_shifts.pdf")
+#fig.savefig("T188C_red_vs_ox4_shifts.pdf")
