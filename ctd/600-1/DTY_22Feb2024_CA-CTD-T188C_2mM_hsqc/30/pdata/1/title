@@ -1,0 +1,4 @@
+CA-CTD T188C 20uM (OX) (100x lower conc)
+25mM NaPi pH 6.5, 0.02% NaN3, 10% D2O
+298K, originally using 8 NS, I wanted to use 64**2 = 4096NS
+But that would take >6 days so just going with 512

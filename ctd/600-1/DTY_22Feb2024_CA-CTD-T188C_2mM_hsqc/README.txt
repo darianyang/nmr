@@ -1,6 +1,6 @@
 ###/Network/Servers/sagan.structbio.pitt.edu/Volumes/home3/Users/dyang/nmr/ctd/600-1/DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc 
 
- README Created: Mon Mar 18 16:46:41 EDT 2024 
+ README Created: Tue Mar 26 13:34:31 EDT 2024 
 
  EXP 1/ 
  	 SUBEXP 1/pdata/1/ 
@@ -14,9 +14,17 @@
  	 SUBEXP 2/pdata/1/ 
 	CA-CTD T188C 2mM (OXIDIZED) 25mM NaPi pH 6.5, 0.02% NaN3, 10% D2O 298K, 23Feb2024 10:30am 
 
+ EXP 20/ 
+ 	 SUBEXP 20/pdata/1/ 
+	CA-CTD T188C 2mM (REDUCED) 25mM NaPi pH 6.5, 0.02% NaN3, 10% D2O 298K, 20Mar2024 11am Other sample maybe wasn't fully reduced 
+
  EXP 3/ 
  	 SUBEXP 3/pdata/1/ 
 	CA-CTD T188C 2mM (OXIDIZED) 25mM NaPi pH 6.5, 0.02% NaN3, 10% D2O 298K, 24Feb2024 11:30am 
+
+ EXP 30/ 
+ 	 SUBEXP 30/pdata/1/ 
+	CA-CTD T188C 20uM (OX) (100x lower conc) 25mM NaPi pH 6.5, 0.02% NaN3, 10% D2O 298K, originally using 8 NS, I wanted to use 64**2 = 4096NS But that would take >6 days so just going with 512 
 
  EXP 4/ 
  	 SUBEXP 4/pdata/1/ 
