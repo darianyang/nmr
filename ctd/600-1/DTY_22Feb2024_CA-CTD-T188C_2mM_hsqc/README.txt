@@ -1,6 +1,6 @@
 ###/Network/Servers/sagan.structbio.pitt.edu/Volumes/home3/Users/dyang/nmr/ctd/600-1/DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc 
 
- README Created: Sat Mar 30 20:28:39 EDT 2024 
+ README Created: Tue Apr 2 12:42:38 EDT 2024 
 
  EXP 1/ 
  	 SUBEXP 1/pdata/1/ 
@@ -33,6 +33,10 @@
  EXP 40/ 
  	 SUBEXP 40/pdata/1/ 
 	CA-CTD T188C 200uM (Post Cu OX) 10x lower conc than before (2mM), so 64NS instead of 8NS 25mM NaPi pH 6.5, 0.02% NaN3, 10% D2O 298K Sample is now mostly dimer on mass spec after Cu expedited oxidation. 
+
+ EXP 41/ 
+ 	 SUBEXP 41/pdata/1/ 
+	CA-CTD T188C 200uM (Post Cu OX) 10x lower conc than before (2mM) 25mM NaPi pH 6.5, 0.02% NaN3, 10% D2O 298K Sample is now mostly dimer on mass spec after Cu expedited oxidation. 64 NS wasn't enough, trying with more overnight. 
 
  EXP 5/ 
  	 SUBEXP 5/pdata/1/ 

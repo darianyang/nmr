@@ -1,0 +1,51 @@
+##TITLE= Audit trail, TopSpin 3.5 pl 7
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= fatema
+$$ /opt/topspin3.5pl7/data/Fatema/DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/41/pdata/1/auditp.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2024-04-02 11:03:59.326 -0400>,<fatema>,<2ua5461vxm.structbio.pitt.edu>,<go4>,<TopSpin 3.5.7>,
+      <created by zg
+	started at 2024-04-01 18:34:07.431 -0400,
+	POWCHK enabled, PULCHK disabled,
+       configuration hash MD5:
+       7C 7A 5B 26 59 83 7B DA 48 74 5A 42 71 2F 63 1F
+       data hash MD5: 2K * 128
+       3B 71 4C 3E 6D EA 00 7C 94 EA 9D B3 AE 0C 99 CB>)
+(   2,<2024-04-02 11:36:44.993 -0400>,<fatema>,<2ua5461vxm.structbio.pitt.edu>,<proc2d>,<TopSpin 3.5.7>,
+      <Start of raw data processing
+       xfb F2: SI = 2K BC_mod = 6 BCFW = 0.3 WDW = 4 SSB = 3 FT_mod = 6 PKNL = 1 STSR = 0 STSI = 1K PHC0 = -71.93797 PHC1 = -68.85646 F1: SI = 256 WDW = 3 SSB = 3 FT_mod = 6 FCOR = 0.5 PHC0 = 172.4851 PHC1 = 0
+       data hash MD5: 1K * 256
+       D4 BE 8A F8 0A 22 F7 C2 FD 59 16 7E DD E3 C6 6C>)
+(   3,<2024-04-02 11:37:35.636 -0400>,<fatema>,<2ua5461vxm.structbio.pitt.edu>,<proc2d>,<TopSpin 3.5.7>,
+      <pk2 fgphup F2: PHC0 = 21.5 PHC1 = 0
+       data hash MD5: 1K * 256
+       19 91 C4 04 81 EA 86 65 18 53 86 22 93 7C 1A 96>)
+(   4,<2024-04-02 11:37:55.637 -0400>,<fatema>,<2ua5461vxm.structbio.pitt.edu>,<proc2d>,<TopSpin 3.5.7>,
+      <pk1 fgphup F1: PHC0 = 5.6 PHC1 = 0
+       data hash MD5: 1K * 256
+       47 25 14 4D B7 8F 9E C9 08 FE 53 2A 94 BF 71 2A>)
+(   5,<2024-04-02 11:38:16.939 -0400>,<fatema>,<2ua5461vxm.structbio.pitt.edu>,<proc2d>,<TopSpin 3.5.7>,
+      <pk2 fgphup F2: PHC0 = 179.2851 PHC1 = 555.8
+       data hash MD5: 1K * 256
+       D1 ED 7C 59 E1 9A 5B 6B 3E 7A 96 EE 6A 57 19 74>)
+(   6,<2024-04-02 11:38:31.591 -0400>,<fatema>,<2ua5461vxm.structbio.pitt.edu>,<proc2d>,<TopSpin 3.5.7>,
+      <pk2 fgphup F2: PHC0 = 2.605469 PHC1 = -8
+       data hash MD5: 1K * 256
+       5C DA 8D 2F 65 2D DA 7D DE 58 3D 10 0A 54 57 6B>)
+(   7,<2024-04-02 11:38:51.079 -0400>,<fatema>,<2ua5461vxm.structbio.pitt.edu>,<proc2d>,<TopSpin 3.5.7>,
+      <pk2 fgphup F2: PHC0 = -15.21484 PHC1 = -36.8
+       data hash MD5: 1K * 256
+       17 07 F0 D0 E1 61 77 92 77 10 2D 67 63 97 04 FF>)
+(   8,<2024-04-02 11:39:06.044 -0400>,<fatema>,<2ua5461vxm.structbio.pitt.edu>,<proc2d>,<TopSpin 3.5.7>,
+      <pk2 fgphup F2: PHC0 = 74.02129 PHC1 = -162.8
+       data hash MD5: 1K * 256
+       AC DE 02 D5 3D 8E 3D BB AB A2 F2 13 64 D8 DA A2>)
+(   9,<2024-04-02 11:39:46.638 -0400>,<fatema>,<2ua5461vxm.structbio.pitt.edu>,<proc2d>,<TopSpin 3.5.7>,
+      <pk2 fgphup F2: PHC0 = 76.60283 PHC1 = -187
+       data hash MD5: 1K * 256
+       D3 B2 BF 66 5A 2B 90 B5 27 D2 E5 FE 91 7F 67 1D>)
+##END=
+
+$$ hash MD5
+$$ 09 25 CD 29 2A 91 0A 22 A4 0B E5 08 72 9D 64 78
