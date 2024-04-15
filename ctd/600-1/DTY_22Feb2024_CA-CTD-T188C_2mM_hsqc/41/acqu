@@ -1,12 +1,12 @@
 ##TITLE= Parameter file, TopSpin 3.5 pl 7
 ##JCAMPDX= 5.0
 ##DATATYPE= Parameter Values
-##NPOINTS= 27	$$ modification sequence number
+##NPOINTS= 28	$$ modification sequence number
 ##ORIGIN= Bruker BioSpin GmbH
 ##OWNER= fatema
-$$ 2024-04-01 18:42:52.578 -0400  fatema@2ua5461vxm.structbio.pitt.edu
+$$ 2024-04-12 11:51:20.201 -0400  fatema@2ua5461vxm.structbio.pitt.edu
 $$ /opt/topspin3.5pl7/data/Fatema/DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/41/acqu
-$$ process /opt/topspin3.5pl7/prog/mod/shimcntl
+$$ process /opt/topspin3.5pl7/prog/mod/go4
 ##$ACQT0= 0
 ##$AMP= (0..31)
 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100 100

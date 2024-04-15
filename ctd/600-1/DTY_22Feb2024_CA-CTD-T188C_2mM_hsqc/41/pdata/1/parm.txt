@@ -1,0 +1,84 @@
+
+Current Data Parameters
+NAME     DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc              
+EXPNO                41              
+PROCNO                1              
+
+F2 - Acquisition Parameters
+Date_          20240401              
+Time              18.42 h            
+INSTRUM           spect              
+PROBHD   Z44916_0001 (C              
+PULPROG  hsqcetfpf3gpsi              
+TD                 2048              
+SOLVENT         H2O+D2O              
+NS                  448              
+DS                   64              
+SWH           10822.511 Hz           
+FIDRES        10.568858 Hz           
+AQ            0.0946176 sec          
+RG                  512              
+DW               46.200 usec         
+DE                10.00 usec         
+TE                298.0 K            
+CNST4        96.0000000              
+D0           0.00000300 sec          
+D1           0.89999998 sec          
+D11          0.03000000 sec          
+D16          0.00020000 sec          
+D24          0.00225000 sec          
+D26          0.00260417 sec          
+IN0          0.00022830 sec          
+TDav                  1              
+ZGOPTNS                              
+SFO1        600.2328211 MHz          
+NUC1                 1H              
+P1                11.99 usec         
+P2                23.98 usec         
+P11             1000.00 usec         
+PLW0     0 W            
+PLW1         5.76000023 W            
+SPNAM[1]     Sinc1.1000              
+SPOAL1            0.500              
+SPOFFS1  0 Hz           
+SPW1         0.00238850 W            
+SFO3         60.8279853 MHz          
+NUC3                15N              
+CPDPRG[3        waltz16              
+P21               40.00 usec         
+P22               80.00 usec         
+PCPD3            220.00 usec         
+PLW3       122.00000000 W            
+PLW16        4.03310013 W            
+GPNAM[1]     SMSQ10.100              
+GPZ1              50.00 %            
+GPNAM[2]     SMSQ10.100              
+GPZ2              80.00 %            
+GPNAM[3]     SMSQ10.100              
+GPZ3               8.10 %            
+P16             1000.00 usec         
+
+F1 - Acquisition parameters
+TD                  128              
+SFO1           60.82799 MHz          
+FIDRES        34.220325 Hz           
+SW               36.005 ppm          
+FnMODE    Echo-Antiecho              
+
+F2 - Processing parameters
+SI                 1024              
+SF          600.2299591 MHz          
+WDW               QSINE              
+SSB                   3              
+LB       0 Hz           
+GB       0              
+PC                 1.00              
+
+F1 - Processing parameters
+SI                  256              
+MC2       echo-antiecho              
+SF           60.8207780 MHz          
+WDW                SINE              
+SSB                   3              
+LB       0 Hz           
+GB       0              

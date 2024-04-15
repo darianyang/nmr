@@ -1,0 +1,45 @@
+##TITLE= Audit trail, TopSpin 3.5 pl 7
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= fatema
+$$ /opt/topspin3.5pl7/data/Fatema/DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/11/pdata/999/auditp.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2024-04-12 10:42:14.485 -0400>,<fatema>,<2ua5461vxm.structbio.pitt.edu>,<go4>,<TopSpin 3.5.7>,
+      <acquisition in progress>)
+(   2,<2024-04-12 10:43:39.723 -0400>,<fatema>,<2ua5461vxm.structbio.pitt.edu>,<proc1d>,<TopSpin 3.5.7>,
+      <Start of raw data processing
+       ft BC_mod = 6 BCFW = 0.3 FT_mod = 6 PKNL = 1 STSR = 0 STSI = 1K SI = 2K 
+       data hash MD5: 1K
+       A5 D0 B1 04 66 02 87 D3 22 C7 0B 2B 90 F3 0D 29>)
+(   3,<2024-04-12 10:43:43.295 -0400>,<fatema>,<2ua5461vxm.structbio.pitt.edu>,<proc1d>,<TopSpin 3.5.7>,
+      <apk 
+       data hash MD5: 1K
+       13 F5 64 5E A8 32 B5 DB 8E 7D C9 54 50 CF 01 2E>)
+(   4,<2024-04-12 10:43:46.145 -0400>,<fatema>,<2ua5461vxm.structbio.pitt.edu>,<proc1d>,<TopSpin 3.5.7>,
+      <apk 
+       data hash MD5: 1K
+       13 F5 64 5E A8 32 B5 DB 8E 7D C9 54 50 CF 01 2E>)
+(   5,<2024-04-12 10:43:47.539 -0400>,<fatema>,<2ua5461vxm.structbio.pitt.edu>,<proc1d>,<TopSpin 3.5.7>,
+      <abs ABSG = 5 
+       data hash MD5: 1K
+       CC 01 0B 3A E4 67 5A 41 20 F7 D4 A5 53 66 ED 83>)
+(   6,<2024-04-12 10:43:49.265 -0400>,<fatema>,<2ua5461vxm.structbio.pitt.edu>,<proc1d>,<TopSpin 3.5.7>,
+      <apk 
+       data hash MD5: 1K
+       BE 94 2E 44 9D D8 F4 36 15 D1 4D 30 A4 CB 83 22>)
+(   7,<2024-04-12 10:44:18.134 -0400>,<fatema>,<2ua5461vxm.structbio.pitt.edu>,<proc1d>,<TopSpin 3.5.7>,
+      <apk 
+       data hash MD5: 1K
+       BC 0A 03 DE F0 11 DE F4 31 CB 9D 03 A0 CD 84 C7>)
+(   8,<2024-04-12 10:44:19.682 -0400>,<fatema>,<2ua5461vxm.structbio.pitt.edu>,<proc1d>,<TopSpin 3.5.7>,
+      <abs ABSG = 5 
+       data hash MD5: 1K
+       44 99 71 C8 3E 2E FD 03 A4 BD 4A 41 E0 10 42 86>)
+(   9,<2024-04-12 10:44:20.858 -0400>,<fatema>,<2ua5461vxm.structbio.pitt.edu>,<proc1d>,<TopSpin 3.5.7>,
+      <apk 
+       data hash MD5: 1K
+       02 5A FE E3 A0 DB FE 8A FD C7 E9 2A C0 72 F3 26>)
+##END=
+
+$$ hash MD5
+$$ 2F A7 15 8A 5D B9 4A 8D 50 7E 84 2C 11 5E 92 4D

@@ -1,6 +1,6 @@
 ###/Network/Servers/sagan.structbio.pitt.edu/Volumes/home3/Users/dyang/nmr/ctd/600-1/DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc 
 
- README Created: Tue Apr 2 12:42:38 EDT 2024 
+ README Created: Mon Apr 15 10:48:49 EDT 2024 
 
  EXP 1/ 
  	 SUBEXP 1/pdata/1/ 
@@ -10,6 +10,14 @@
  	 SUBEXP 10/pdata/1/ 
 	CA-CTD T188C 2mM (OXIDIZED) 25mM NaPi pH 6.5, 0.02% NaN3, 10% D2O 298K, 18Mar2024 1pm From DTNB: should be fully oxidized now 
 
+ EXP 11/ 
+ 	 SUBEXP 11/pdata/1/ 
+	CA-CTD T188C 2mM (OXIDIZED) 25mM NaPi pH 6.5, 0.02% NaN3, 10% D2O 298K, 12Apr2024 10:30am Checking to see the progress of this non Cu oxidized sample 
+
+ EXP 12/ 
+ 	 SUBEXP 12/pdata/1/ 
+	CA-CTD T188C 2mM (OXIDIZED) 25mM NaPi pH 6.5, 0.02% NaN3, 10% D2O 298K, 12Apr2024 10:30am : checked to see the progress of this non Cu oxidized sample The progress looked good, getting a 512NS overnight to compare to reduced 
+
  EXP 2/ 
  	 SUBEXP 2/pdata/1/ 
 	CA-CTD T188C 2mM (OXIDIZED) 25mM NaPi pH 6.5, 0.02% NaN3, 10% D2O 298K, 23Feb2024 10:30am 
@@ -17,6 +25,10 @@
  EXP 20/ 
  	 SUBEXP 20/pdata/1/ 
 	CA-CTD T188C 2mM (REDUCED) 25mM NaPi pH 6.5, 0.02% NaN3, 10% D2O 298K, 20Mar2024 11am Other sample maybe wasn't fully reduced 
+
+ EXP 21/ 
+ 	 SUBEXP 21/pdata/1/ 
+	CA-CTD T188C 2mM (REDUCED) 25mM NaPi pH 6.5, 0.02% NaN3, 10% D2O 298K, 11Apr2024 11am Getting cleaner spectra with 512NS 
 
  EXP 3/ 
  	 SUBEXP 3/pdata/1/ 
