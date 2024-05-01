@@ -1,6 +1,6 @@
 ###/Network/Servers/sagan.structbio.pitt.edu/Volumes/home3/Users/dyang/nmr/ctd/600-1/DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc 
 
- README Created: Mon Apr 15 10:48:49 EDT 2024 
+ README Created: Wed May 1 15:06:32 EDT 2024 
 
  EXP 1/ 
  	 SUBEXP 1/pdata/1/ 
@@ -18,6 +18,10 @@
  	 SUBEXP 12/pdata/1/ 
 	CA-CTD T188C 2mM (OXIDIZED) 25mM NaPi pH 6.5, 0.02% NaN3, 10% D2O 298K, 12Apr2024 10:30am : checked to see the progress of this non Cu oxidized sample The progress looked good, getting a 512NS overnight to compare to reduced 
 
+ EXP 13/ 
+ 	 SUBEXP 13/pdata/1/ 
+	CA-CTD T188C 2mM (OXIDIZED) 25mM NaPi pH 6.5, 0.02% NaN3, 10% D2O 280K, 8NS lower temp of non-Cu ox sample 18Apr2024 
+
  EXP 2/ 
  	 SUBEXP 2/pdata/1/ 
 	CA-CTD T188C 2mM (OXIDIZED) 25mM NaPi pH 6.5, 0.02% NaN3, 10% D2O 298K, 23Feb2024 10:30am 
@@ -29,6 +33,10 @@
  EXP 21/ 
  	 SUBEXP 21/pdata/1/ 
 	CA-CTD T188C 2mM (REDUCED) 25mM NaPi pH 6.5, 0.02% NaN3, 10% D2O 298K, 11Apr2024 11am Getting cleaner spectra with 512NS 
+
+ EXP 22/ 
+ 	 SUBEXP 22/pdata/1/ 
+	CA-CTD T188C 2mM (REDUCED) 25mM NaPi pH 6.5, 0.02% NaN3, 10% D2O 280K, 18Apr2024, 8NS Checking reduced temp 
 
  EXP 3/ 
  	 SUBEXP 3/pdata/1/ 
