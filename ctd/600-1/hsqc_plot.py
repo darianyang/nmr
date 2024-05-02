@@ -14,7 +14,8 @@ plt.style.use("/Users/darian/github/wedap/wedap/styles/default.mplstyle")
 
 # plot parameters
 #contour_start = 2400000           # contour level start value
-contour_start = 1500000           # contour level start value
+contour_start = 6000000           # contour level start value
+#contour_start = 1500000           # contour level start value
 #contour_start = 1200000           # contour level start value
 contour_num = 8                # number of contour levels
 contour_factor = 1.8          # scaling factor between contour levels
@@ -23,7 +24,7 @@ contour_factor = 1.8          # scaling factor between contour levels
 cl = contour_start * contour_factor ** np.arange(contour_num) 
 
 def plot_hsqc(path, contour_levels=cl, ax=None, label=None, 
-              color="magenta", title=None, linewidths=1.5):
+              color="magenta", title=None, linewidths=1):
     """
     Plot 1H-15N HSQC.
 
@@ -84,7 +85,8 @@ def plot_hsqc(path, contour_levels=cl, ax=None, label=None,
 fig, ax = plt.subplots(figsize=(11,7))
 
 # WT
-#plot_hsqc("DTY_22Feb2024_CA-CTD-WT_2mM_hsqc/4/test.DAT", color="tab:blue", ax=ax, label="WT")
+#cl = 3000000 * contour_factor ** np.arange(contour_num) 
+#plot_hsqc("DTY_22Feb2024_CA-CTD-WT_2mM_hsqc/4/test.DAT", color="gray", ax=ax, label="WT")
 # T188C reduced
 plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/1/test.DAT", color="tab:blue", ax=ax, label="T188C RED")
 
@@ -93,9 +95,10 @@ plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/1/test.DAT", color="tab:blue", ax
 #           color="tab:blue", ax=ax, label="T188C Reduced 1")
 # plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/20/test.DAT", 
 #           color="tab:red", ax=ax, label="T188C Reduced 2")
-# T188C 'full' ox
-plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/10/test.DAT", 
-          color="tab:green", ax=ax, label="T188C half OX")
+# T188C 'half' ox
+# cl = 3000000 * contour_factor ** np.arange(contour_num) 
+# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/10/test.DAT", 
+#           color="tab:green", ax=ax, label="T188C half OX")
 
 # T188C ox some
 # plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/2/test.DAT", 
@@ -104,18 +107,30 @@ plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/10/test.DAT",
 #           color="tab:red", ax=ax, label="T188C Oxidized 2")
 # plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/5/test.DAT", 
 #           color="tab:red", ax=ax, label="T188C Oxidized 3")
+# cl = 3000000 * contour_factor ** np.arange(contour_num) 
 # plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/6/test.DAT", 
 #           color="tab:green", ax=ax, label="T188C Oxidized 4")
 
 # T188C ox 20uM
-# cl = 3000000 * contour_factor ** np.arange(contour_num) 
+# cl = 2500000 * contour_factor ** np.arange(contour_num) 
 # plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/30/test.DAT", cl,
-#           color="tab:green", ax=ax, label="T188C OX 20$\mu$M")
+#           color="tab:orange", ax=ax, label="T188C OX 20$\mu$M")
 
-# post Cu dialysis full ox
-cl = 2400000 * contour_factor ** np.arange(contour_num) 
-plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/40/test.DAT", cl,
-          color="tab:red", ax=ax, label="T188C OX",)
+# post Cu dialysis full ox (64NS and then 512NS)
+# cl = 3000000 * contour_factor ** np.arange(contour_num) 
+# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/40/test.DAT", cl,
+#           color="tab:red", ax=ax, label="T188C OX",)
+# cl = 20000000 * contour_factor ** np.arange(contour_num) 
+# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/41/test.DAT", cl,
+#           color="tab:red", ax=ax, label="T188C OX",)
+
+# T188C OX after sitting for a few months (298K): 8NS and 512NS
+#cl = 5000000 * contour_factor ** np.arange(contour_num) 
+plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/11/test.DAT", cl,
+          color="tab:red", ax=ax, label="T188C OX")
+# cl = 500000000 * contour_factor ** np.arange(contour_num) 
+# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/12/test.DAT", cl,
+#           color="tab:red", ax=ax, label="T188C OX 512NS")
 
 # current WT spectrum compare to previous, 
 # maybe older WT is oxidized and that's why there is shifts?
@@ -123,6 +138,30 @@ plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/40/test.DAT", cl,
 # cl = 1200000 * contour_factor ** np.arange(contour_num) 
 # plot_hsqc("../800/DTY-CaCTD-15NFW-12162022/1/test.DAT", cl,
 #           color="tab:red", ax=ax, label="T188C WT Pre")
+
+# the 512NS original T188C samples
+# cl = 200000000 * contour_factor ** np.arange(contour_num) 
+# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/21/test.DAT", cl,
+#           color="tab:blue", ax=ax, label="T188C RED")
+# cl = 200000000 * contour_factor ** np.arange(contour_num) 
+# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/12/test.DAT", cl,
+#           color="tab:red", ax=ax, label="T188C OX")
+
+# In WT, the 280K 512NS is exp 12, the 298K 512NS is exp 5 (but old, exp 4 is 8NS)
+# cl = 100000000 * contour_factor ** np.arange(contour_num) 
+# plot_hsqc("DTY_22Feb2024_CA-CTD-WT_2mM_hsqc/12/test.DAT", cl,
+#           color="tab:blue", ax=ax, label="WT 280K")
+# cl = 5000000 * contour_factor ** np.arange(contour_num) 
+# plot_hsqc("DTY_22Feb2024_CA-CTD-WT_2mM_hsqc/4/test.DAT", cl,
+#           color="tab:red", ax=ax, label="WT 298K")
+
+# 2 new T188C experiments: 13: 8NS 280K old OX, 22: 8NS 280K reduced
+# samples might be a bit too old at this point
+# cl = 2000000 * contour_factor ** np.arange(contour_num) 
+# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/22/test.DAT", cl,
+#           color="tab:blue", ax=ax, label="T188C 280K RED")
+# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/13/test.DAT", cl,
+#           color="tab:red", ax=ax, label="T188C 280K OX")
 
 # peak label plotting function
 # 4F
@@ -155,8 +194,12 @@ plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/40/test.DAT", cl,
 #                                    redlist=[])
 
 # full oxidation comparison
-plot_peak_labels.peak_text_plotter("../CA_CTD_BMRB_assignments.shifts", ax=ax,
-                                  redlist=[161,199,169,162,182,222,191,201,155,174,186,220,218,188,148,172,150,168,179,200,152,184,216,146,194,198])
+# plot_peak_labels.peak_text_plotter("../CA_CTD_BMRB_assignments.shifts", ax=ax, hl_color="magenta",
+#                                   hl_peaks=[161,199,169,162,182,222,191,201,155,174,186,220,218,188,148,172,150,168,179,200,152,184,216,146,194,198])
+# plot_peak_labels.peak_text_plotter("../CA_CTD_BMRB_assignments.shifts", ax=ax, hl_color="magenta",
+#                                   hl_peaks=[188])
+
+plot_peak_labels.peak_text_plotter("../CA_CTD_BMRB_assignments.shifts", ax=ax)
 
 plt.legend(frameon=False)
 fig.tight_layout()
@@ -169,3 +212,5 @@ plt.show()
 #fig.savefig("T188C_ox_conc_100x.pdf")
 #fig.savefig("WT_pre_vs_post_freeze.pdf")
 #fig.savefig("T188C-post-Cu-ox.pdf")
+fig.savefig("T188Cred_vs_ox_labeled.pdf")
+#fig.savefig("WT_vs_T188Cred_labeled.pdf")

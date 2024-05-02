@@ -33,7 +33,7 @@ def proc_ctd_shifts(shift_file):
 #print(np.unique(shifts[:,0]).shape)
 #print(shifts[shifts[:,0] == "146"])
 
-def peak_text_plotter(shifts, color="k", ax=None, redlist=None):
+def peak_text_plotter(shifts, color="k", ax=None, hl_peaks=None, hl_color="red"):
     """
     Plot the 1H-15N peaks from peak_list array.
     shifts = 3 cols: resnum | atom_name | shift_val
@@ -44,8 +44,10 @@ def peak_text_plotter(shifts, color="k", ax=None, redlist=None):
         Can be file path or prefomatted array.
     color : str
     ax : mpl axes object
-    redlist : list
-        List of residue number to mark in red.
+    hl_peaks : list
+        List of residue numbers to highlight in hl_color.
+    hl_color : str
+        Color to mark the hl_peaks.
     """
     # if file path, gen list of shifts
     if isinstance(shifts, str):
@@ -82,9 +84,9 @@ def peak_text_plotter(shifts, color="k", ax=None, redlist=None):
 
     # plot peak assignments
     for peak in peaks:
-        if redlist is not None and int(peak[0]) in redlist:
+        if hl_peaks is not None and int(peak[0]) in hl_peaks:
             plt.text(peak[1], peak[2], int(peak[0]), fontsize=8, 
-                     color="red", ha="center", va="center")
+                     color=hl_color, ha="center", va="center")
         else:
             plt.text(peak[1], peak[2], int(peak[0]), fontsize=8, 
                      color=color, ha="center", va="center")
