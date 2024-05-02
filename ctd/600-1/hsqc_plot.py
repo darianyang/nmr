@@ -97,8 +97,8 @@ plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/1/test.DAT", color="tab:blue", ax
 #           color="tab:red", ax=ax, label="T188C Reduced 2")
 # T188C 'half' ox
 # cl = 3000000 * contour_factor ** np.arange(contour_num) 
-# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/10/test.DAT", 
-#           color="tab:green", ax=ax, label="T188C half OX")
+plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/10/test.DAT", 
+          color="tab:orange", ax=ax, label="T188C Partial OX")
 
 # T188C ox some
 # plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/2/test.DAT", 
@@ -126,8 +126,8 @@ plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/1/test.DAT", color="tab:blue", ax
 
 # T188C OX after sitting for a few months (298K): 8NS and 512NS
 #cl = 5000000 * contour_factor ** np.arange(contour_num) 
-plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/11/test.DAT", cl,
-          color="tab:red", ax=ax, label="T188C OX")
+# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/11/test.DAT", cl,
+#           color="tab:red", ax=ax, label="T188C OX")
 # cl = 500000000 * contour_factor ** np.arange(contour_num) 
 # plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/12/test.DAT", cl,
 #           color="tab:red", ax=ax, label="T188C OX 512NS")
@@ -212,5 +212,6 @@ plt.show()
 #fig.savefig("T188C_ox_conc_100x.pdf")
 #fig.savefig("WT_pre_vs_post_freeze.pdf")
 #fig.savefig("T188C-post-Cu-ox.pdf")
-fig.savefig("T188Cred_vs_ox_labeled.pdf")
+#fig.savefig("T188Cred_vs_ox_labeled.pdf")
 #fig.savefig("WT_vs_T188Cred_labeled.pdf")
+fig.savefig("T188Cred_vs_part_ox_labeled.pdf")
