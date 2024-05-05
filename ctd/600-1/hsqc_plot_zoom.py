@@ -14,7 +14,7 @@ plt.style.use("/Users/darian/github/wedap/wedap/styles/default.mplstyle")
 
 # plot parameters
 #contour_start = 2400000           # contour level start value
-contour_start = 6000000           # contour level start value
+contour_start = 500000           # contour level start value
 #contour_start = 1500000           # contour level start value
 #contour_start = 1200000           # contour level start value
 contour_num = 8                # number of contour levels
@@ -74,20 +74,24 @@ def plot_hsqc(path, contour_levels=cl, ax=None, label=None,
     ax.set_ylabel("$^{15}$N (ppm)")
     ax.set_xlabel("$^{1}$H (ppm)")
     ax.set_title(title)
-    ax.set_xlim(6, 11)
-    ax.set_ylim(100, 135)
+    #ax.set_xlim(6, 11)
+    #ax.set_ylim(100, 135)
+    ax.set_xlim(10, 10.8)
+    ax.set_ylim(127.5, 133)
     # the WT rectangle is X: 9.9 - 10.9, Y: 128 - 132.5
     #ax.set_xlim(9.9, 10.9)
     #ax.set_ylim(128, 132.5)
     ax.invert_xaxis()
     ax.invert_yaxis()
 
-fig, ax = plt.subplots(figsize=(11,7))
+#fig, ax = plt.subplots(figsize=(11,7))
+fig, ax = plt.subplots(figsize=(6,4))
 
 # WT
 #cl = 3000000 * contour_factor ** np.arange(contour_num) 
 #plot_hsqc("DTY_22Feb2024_CA-CTD-WT_2mM_hsqc/4/test.DAT", color="gray", ax=ax, label="WT")
 # T188C reduced
+#cl = 2000000 * contour_factor ** np.arange(contour_num) 
 plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/1/test.DAT", color="tab:blue", ax=ax, label="T188C RED")
 
 # T188C 'full' red
@@ -96,7 +100,7 @@ plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/1/test.DAT", color="tab:blue", ax
 # plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/20/test.DAT", 
 #           color="tab:red", ax=ax, label="T188C Reduced 2")
 # T188C 'half' ox
-# cl = 3000000 * contour_factor ** np.arange(contour_num) 
+#cl = 1000000 * contour_factor ** np.arange(contour_num) 
 plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/10/test.DAT", 
           color="tab:orange", ax=ax, label="T188C Partial OX")
 
@@ -120,7 +124,7 @@ plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/10/test.DAT",
 # cl = 3000000 * contour_factor ** np.arange(contour_num) 
 # plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/40/test.DAT", cl,
 #           color="tab:red", ax=ax, label="T188C OX",)
-# cl = 20000000 * contour_factor ** np.arange(contour_num) 
+# cl = 10000000 * contour_factor ** np.arange(contour_num) 
 # plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/41/test.DAT", cl,
 #           color="tab:red", ax=ax, label="T188C OX",)
 
@@ -201,17 +205,14 @@ plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/10/test.DAT",
 
 #plot_peak_labels.peak_text_plotter("../CA_CTD_BMRB_assignments.shifts", ax=ax)
 
-plt.legend(frameon=False)
+plt.legend(frameon=False, loc='upper left')
 fig.tight_layout()
 plt.show()
 #fig.savefig("figures/wt_vs_7f_hsqc_peak_labels.png", dpi=300, transparent=True)
 #fig.savefig("figures/wt_hsqc_boxonly.png", dpi=300, transparent=True)
-#fig.savefig("WT_vs_T188C_shifts.pdf")
-#fig.savefig("T188C_red_vs_ox_shifts.pdf")
-#fig.savefig("T188C_red_vs_ox4_shifts.pdf")
-#fig.savefig("T188C_ox_conc_100x.pdf")
-#fig.savefig("WT_pre_vs_post_freeze.pdf")
-#fig.savefig("T188C-post-Cu-ox.pdf")
-#fig.savefig("T188Cred_vs_ox_labeled.pdf")
-#fig.savefig("WT_vs_T188Cred_labeled.pdf")
-#fig.savefig("T188Cred_vs_part_ox_labeled.pdf")
+
+#fig.savefig("W184_WT_T188C.pdf")
+#fig.savefig("W184_T188C_red-Pox.pdf")
+#fig.savefig("W184_T188C_red-ox.pdf")
+#fig.savefig("W184_WT_T188C_red-ox.pdf")
+fig.savefig("lowC_red_pOx.pdf")
