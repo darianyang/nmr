@@ -14,7 +14,7 @@ plt.style.use("/Users/darian/github/wedap/wedap/styles/default.mplstyle")
 
 # plot parameters
 #contour_start = 2400000           # contour level start value
-contour_start = 500000           # contour level start value
+contour_start = 2000000           # contour level start value
 #contour_start = 1500000           # contour level start value
 #contour_start = 1200000           # contour level start value
 contour_num = 8                # number of contour levels
@@ -89,7 +89,7 @@ fig, ax = plt.subplots(figsize=(6,4))
 
 # WT
 #cl = 3000000 * contour_factor ** np.arange(contour_num) 
-#plot_hsqc("DTY_22Feb2024_CA-CTD-WT_2mM_hsqc/4/test.DAT", color="gray", ax=ax, label="WT")
+plot_hsqc("DTY_22Feb2024_CA-CTD-WT_2mM_hsqc/4/test.DAT", color="gray", ax=ax, label="WT")
 # T188C reduced
 #cl = 2000000 * contour_factor ** np.arange(contour_num) 
 plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/1/test.DAT", color="tab:blue", ax=ax, label="T188C RED")
@@ -101,8 +101,8 @@ plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/1/test.DAT", color="tab:blue", ax
 #           color="tab:red", ax=ax, label="T188C Reduced 2")
 # T188C 'half' ox
 #cl = 1000000 * contour_factor ** np.arange(contour_num) 
-plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/10/test.DAT", 
-          color="tab:orange", ax=ax, label="T188C Partial OX")
+# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/10/test.DAT", 
+#           color="tab:orange", ax=ax, label="T188C Partial OX")
 
 # T188C ox some
 # plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/2/test.DAT", 
@@ -130,11 +130,15 @@ plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/10/test.DAT",
 
 # T188C OX after sitting for a few months (298K): 8NS and 512NS
 #cl = 5000000 * contour_factor ** np.arange(contour_num) 
-# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/11/test.DAT", cl,
-#           color="tab:red", ax=ax, label="T188C OX")
+plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/11/test.DAT", cl,
+          color="tab:red", ax=ax, label="T188C OX")
 # cl = 500000000 * contour_factor ** np.arange(contour_num) 
 # plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/12/test.DAT", cl,
 #           color="tab:red", ax=ax, label="T188C OX 512NS")
+# T188C OX after another month (298K) 8NS
+#cl = 5000000 * contour_factor ** np.arange(contour_num) 
+# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/14/test.DAT", cl,
+#           color="tab:red", ax=ax, label="T188C OX")
 
 # current WT spectrum compare to previous, 
 # maybe older WT is oxidized and that's why there is shifts?
@@ -215,4 +219,6 @@ plt.show()
 #fig.savefig("W184_T188C_red-Pox.pdf")
 #fig.savefig("W184_T188C_red-ox.pdf")
 #fig.savefig("W184_WT_T188C_red-ox.pdf")
-fig.savefig("lowC_red_pOx.pdf")
+#fig.savefig("lowC_WT_red.pdf")
+#fig.savefig("lowC_red_pOx.pdf")
+fig.savefig("WT_T188C_RED_OX.pdf")
