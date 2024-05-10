@@ -10,8 +10,8 @@ import matplotlib.cm
 import gif
 from tqdm.auto import tqdm
 
-#plt.style.use("/Users/darian/github/wedap/wedap/styles/default.mplstyle")
-plt.style.use("/Users/darian/github/wedap/styles/poster.mplstyle")
+plt.style.use("/Users/darian/github/wedap/wedap/styles/default.mplstyle")
+#plt.style.use("/Users/darian/github/wedap/styles/poster.mplstyle")
 
 # 4F or 7F
 f_pos = "4F"
@@ -210,7 +210,7 @@ def four_panel_exsy():
     #plt.show()
     plt.savefig("figures/4panel.png", dpi=600, transparent=True)
 
-four_panel_exsy()
+#four_panel_exsy()
 
 def plot_iratios():
     # from looking at peak heights, amplitudes, and nmrpipe peak heights
@@ -227,6 +227,7 @@ def plot_iratios():
             i += 10
             cut = 450000
             lim = 0.6
+            #center = 297
             center = 297
             # TODO: need to plot on spectrum to confirm peak position
             loc_11 = (224, 1940)
@@ -240,7 +241,9 @@ def plot_iratios():
             loc_11 = (188, 1810)
             loc_12 = (188, 2401)
         # read in the data from a NMRPipe file
+        # shape (512, 4096)
         dic, data = ng.pipe.read(f"{f_path}/{i}/test.DAT")
+        #print(data.shape)
         peaks = ng.peakpick.pick(data, cut, cluster=False)
         #print(peaks)
 
@@ -263,7 +266,10 @@ def plot_iratios():
         # uncertainty from random noise in peak ratio
         # using the central row intensities should work well (no signals)
         #noise = data[int(((loc11_x + diag2_x) / 2)),:]
-        noise = data[center, :]
+        #noise = data[center, :]
+        # or maybe the bottom row?
+        noise = data[-1,:]
+        #print(noise)
         #print(noise.shape)
         # rmsd of the noise for a non-signal region
         # sqrt(1/n * (x_1^2 + x_2^2 + ... + x_n^2))
@@ -297,16 +303,17 @@ def plot_iratios():
     np.savetxt(f"iratios_{f_pos}.txt", ratios, delimiter="\t")
 
     #plt.scatter(times, ratios)
+    #plt.errorbar(times, ratios[:,0], yerr=ratios[:,1], fmt="o", capsize=3, capthick=2)
     plt.errorbar(times, ratios[:,0], yerr=ratios[:,1], fmt="o", capsize=3, capthick=2)
     plt.xlim(-10, 210)
     plt.ylim(0, lim)
-    plt.xlabel("Time (ms)")
+    plt.xlabel("t(m): Mixing Time (ms)")
     plt.ylabel("I$_{12}$/I$_{11}$")
     #plt.title("")
     plt.tight_layout()
     #plt.savefig(f"figures/Iratios_{f_pos}.png", dpi=300, transparent=True)
     plt.show()
 
-#plot_iratios()
+plot_iratios()
 
-# use peak width for noise selection and select a more isolated corner/region
+# TODO: use peak width for noise selection and select a more isolated corner/region
