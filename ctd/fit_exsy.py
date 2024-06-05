@@ -10,14 +10,15 @@ import numpy as np
 import matplotlib.pyplot as plt
 import scipy.optimize
 
-plt.style.use("/Users/darian/github/wedap/wedap/styles/default.mplstyle")
+#plt.style.use("/Users/darian/github/wedap/wedap/styles/default.mplstyle")
 #plt.style.use("/Users/darian/github/wedap/styles/poster.mplstyle")
+plt.style.use("/Users/darian/github/nmr/ctd/default.mplstyle")
 
 # 4F or 7F
 f_pos = "4F"
 print(f"CTD-{f_pos}:")
 
-fig, ax = plt.subplots()
+fig, ax = plt.subplots(figsize=(5,3.5))
 
 # import intensity ratio dataset (I_12 / I_11)
 ratios = np.loadtxt(f"iratios_{f_pos}.txt")
@@ -121,8 +122,10 @@ ax.errorbar(times, ratios[:,0], yerr=ratios[:,1], fmt="o", capsize=3, capthick=2
 #ax.errorbar(times, ratios[:,0], yerr=np.array(mcCI).reshape(2,-1), fmt="o", capsize=3, capthick=2)
 
 #ax.set(xlabel="Mixing Time (s)", ylabel="I$_{12}$/I$_{11}$", title=f"{f_pos}-CA-CTD")
-ax.set(xlabel="t(m): Mixing Time (ms)", ylabel="I$_{12}$/I$_{11}$")
+ax.set(xlabel="t(m): Mixing Time (ms)", ylabel="I$_{12}$/I$_{11}$", ylim=(-0.02, 0.5))
 
 fig.tight_layout()
-fig.savefig(f"figures/fit_exsy_{f_pos}_final.png", dpi=600, transparent=True)
+#fig.savefig(f"figures/fit_exsy_{f_pos}_final.png", dpi=600, transparent=True)
+fig.savefig(f"figures/fit_exsy_{f_pos}_final_forpaper.pdf")
+fig.savefig(f"figures/fit_exsy_{f_pos}_final_forpaper.png", dpi=600, transparent=True)
 plt.show()
