@@ -89,7 +89,8 @@ def plot_1d(path, ax=None, label=None, color="magenta", scale=None, xlim=(-120, 
     #fig.savefig("spectrum.png") # this can be .pdf, .ps, etc
 
 fig, ax = plt.subplots()
-xlim = (-110, -135)
+#xlim = (-110, -135)
+xlim = (-115, -135)
 #xlim = (-125, -140)
 
 # ax.invert_xaxis()
@@ -100,9 +101,9 @@ xlim = (-110, -135)
 # 500uM 4F CA
 #plot_1d("ca_fl/DTY-CA-FL-4F-24Mar2023/1/test.DAT", ax=ax, label="CA", xlim=xlim, color="k")
 
-# # CTD low vs high
-# plot_1d("600-2/DTY-CaCTD-F-12152022/2/test.DAT", ax=ax, label="CTD 4F: 1.4mM", xlim=xlim, scale=1)
-# plot_1d("600-2/DTY-CaCTD-F-12152022/3/test.DAT", ax=ax, label="CTD 4F: 0.14mM (10X)", xlim=xlim, scale=10, color="k")
+# CTD low vs high
+plot_1d("600-2/DTY-CaCTD-F-12152022/2/test.DAT", ax=ax, label="CA-CTD 4F-Trp: 1.2 mM", xlim=xlim, scale=1)
+plot_1d("600-2/DTY-CaCTD-F-12152022/3/test.DAT", ax=ax, label="CA-CTD 4F-Trp: 0.12 mM", xlim=xlim, scale=10, color="k")
 # plot_1d("600-2/DTY-CaCTD-F-12152022/22/test.DAT", ax=ax, label="CTD 7F: 2mM", xlim=xlim, scale=1)
 # plot_1d("600-2/DTY-CaCTD-F-12152022/21/test.DAT", ax=ax, label="CTD 7F: 0.2mM", xlim=xlim, scale=10, color="k")
 
@@ -115,6 +116,7 @@ xlim = (-110, -135)
 #plot_1d("ca_fl/600-2/DTY-CA-FL-and-CTD-4F-05Apr2023/2", ax=ax, label="CA-FL 4F 1mM", xlim=xlim)
 
 fig.tight_layout()
-plt.legend(loc=2)
+plt.legend(loc=2, frameon=False)
 plt.show()
+fig.savefig("figures/4F-low-vs-high.pdf")
 #fig.savefig(f"figures/1d_ctd_{f_pos}_1024NS.svg", dpi=300, transparent=True)
