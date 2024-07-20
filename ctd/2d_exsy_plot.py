@@ -224,8 +224,8 @@ def four_panel_exsy():
     fig.tight_layout(pad=2.5, h_pad=0, w_pad=0)
 
     #plt.savefig("figures/4panel.png", dpi=600, transparent=True)
-    plt.savefig("figures/4panel-5.png", dpi=600, transparent=True)
-    plt.savefig("figures/4panel-4.pdf")
+    # plt.savefig("figures/4panel-5.png", dpi=600, transparent=True)
+    # plt.savefig("figures/4panel-4.pdf")
     #plt.savefig("figures/4panel-nogrid.pdf")
     plt.show()
 
