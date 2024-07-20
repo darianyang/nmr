@@ -71,7 +71,7 @@ def plot_1d(path, ax=None, label=None, color="magenta", scale=None, xlim=(-120, 
     uc = ng.pipe.make_uc(dic, data)
 
     # plot the spectrum
-    ax.plot(uc.ppm_scale(), data, color=color, label=label)
+    ax.plot(uc.ppm_scale()+77.8189, data, color=color, label=label)
 
     # decorate axes
     ax.set_yticklabels([])
@@ -90,8 +90,11 @@ def plot_1d(path, ax=None, label=None, color="magenta", scale=None, xlim=(-120, 
 
 fig, ax = plt.subplots()
 #xlim = (-110, -135)
-xlim = (-115, -135)
+# low high comp 4F
+#xlim = (-115+77.8189 , -135+77.8189)
 #xlim = (-125, -140)
+# just the high conc 4F
+xlim = (-120+77.8189 , -131+77.8189)
 
 # ax.invert_xaxis()
 # plt.legend(prop={'size': 12})
@@ -103,7 +106,8 @@ xlim = (-115, -135)
 
 # CTD low vs high
 plot_1d("600-2/DTY-CaCTD-F-12152022/2/test.DAT", ax=ax, label="CA-CTD 4F-Trp: 1.2 mM", xlim=xlim, scale=1)
-plot_1d("600-2/DTY-CaCTD-F-12152022/3/test.DAT", ax=ax, label="CA-CTD 4F-Trp: 0.12 mM", xlim=xlim, scale=10, color="k")
+#plot_1d("600-2/DTY-CaCTD-F-12152022/3/test.DAT", ax=ax, label="CA-CTD 4F-Trp: 0.12 mM", xlim=xlim, scale=10, color="k")
+
 # plot_1d("600-2/DTY-CaCTD-F-12152022/22/test.DAT", ax=ax, label="CTD 7F: 2mM", xlim=xlim, scale=1)
 # plot_1d("600-2/DTY-CaCTD-F-12152022/21/test.DAT", ax=ax, label="CTD 7F: 0.2mM", xlim=xlim, scale=10, color="k")
 
@@ -116,7 +120,10 @@ plot_1d("600-2/DTY-CaCTD-F-12152022/3/test.DAT", ax=ax, label="CA-CTD 4F-Trp: 0.
 #plot_1d("ca_fl/600-2/DTY-CA-FL-and-CTD-4F-05Apr2023/2", ax=ax, label="CA-FL 4F 1mM", xlim=xlim)
 
 fig.tight_layout()
-plt.legend(loc=2, frameon=False)
-plt.show()
-fig.savefig("figures/4F-low-vs-high.pdf")
+#plt.legend(loc=2, frameon=False, fontsize=11)
+#plt.show()
+#fig.savefig("figures/4F-low-vs-high-TFA.pdf")
 #fig.savefig(f"figures/1d_ctd_{f_pos}_1024NS.svg", dpi=300, transparent=True)
+
+#fig.savefig("figures/4F-high-conc.pdf")
+plt.show()

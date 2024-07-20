@@ -23,7 +23,7 @@ elif f_pos == "7F":
 # plot parameters
 cmap = matplotlib.cm.Blues_r    # contour map (colors to use for contours)
 # # 4F ideal
-contour_start = 500000           # contour level start value
+contour_start = 400000           # contour level start value
 contour_num = 8                # number of contour levels
 contour_factor = 1.5          # scaling factor between contour levels
 # 7F ideal
@@ -78,8 +78,10 @@ def plot_exsy(path, ax=None, color="magenta", title=None):
     # ax.set_ylabel("$^{19}$F (ppm)")
     # ax.set_xlabel("$^{19}$F (ppm)")
     ax.set_title(title)
-    ax.set_xlim(-126, -125.2)
-    ax.set_ylim(-131, -122)
+    # ax.set_xlim(-126, -125.2)
+    # ax.set_ylim(-131, -122)
+    ax.set_xlim(-125.9, -125.3)
+    ax.set_ylim(-129.5, -123)
     ax.invert_xaxis()
     ax.invert_yaxis()
 
@@ -176,9 +178,11 @@ def four_panel_exsy():
     # plot_exsy(f"{f_path}/11/test.DAT", ax=ax, 
     #         title="Mixing Time = " + str(times[0]) + "ms")
 
-    fig, ax = plt.subplots(ncols=2, nrows=2, sharex=False, sharey=False)
-    xticks = [-125.4, -125.8]
-    yticks = [-123, -126, -129]
+    fig, ax = plt.subplots(ncols=2, nrows=2, sharex=False, sharey=False, figsize=(6,4))
+    #xticks = [-125.4, -125.8]
+    xticks = [-125.48, -125.725]
+    #yticks = [-123, -126, -129]
+    yticks = [-125.08, -127.53]
     # 2 5 50 200
     for i, mt in enumerate([0, 1, 6, 9]):
         plot_exsy(f"{f_path}/1{mt}/test.DAT", ax=ax.flatten()[i]) 
@@ -193,24 +197,31 @@ def four_panel_exsy():
     # fig.supxlabel("$^{19}$F (ppm)", fontweight="bold")
     # fig.supylabel("$^{19}$F (ppm)", fontweight="bold")
 
-    fig.text(0.55, 0.02, "$^{19}$F (ppm)", ha='center', fontweight="bold", fontsize=22)
-    fig.text(0.0, 0.5, "$^{19}$F (ppm)", va='center', rotation='vertical', fontweight="bold", fontsize=22)
+    fig.text(0.55, 0.015, "$^{19}$F (ppm)", ha='center', fontweight="bold", fontsize=17)
+    fig.text(0.001, 0.5, "$^{19}$F (ppm)", va='center', rotation='vertical', fontweight="bold", fontsize=17)
 
     # get rid of white space
     # plot 1
     ax[0,0].set_xticklabels([])
+    ax[0,0].set_yticklabels([-47.5, -48.6], fontsize=14)
     # plot 2
     ax[0,1].set_xticklabels([])
     ax[0,1].set_yticklabels([])
+    # plot 3
+    ax[1,0].set_xticklabels([-47.5, -48.6], fontsize=14)
+    ax[1,0].set_yticklabels([-47.5, -48.6], fontsize=14)
     # plot 4
+    ax[1,1].set_xticklabels([-47.5, -48.6], fontsize=14)
     ax[1,1].set_yticklabels([])
     plt.subplots_adjust(hspace=0, wspace=0)
-    fig.tight_layout(pad=2, h_pad=0, w_pad=0)
+    fig.tight_layout(pad=2.5, h_pad=0, w_pad=0)
 
-    #plt.show()
-    plt.savefig("figures/4panel.png", dpi=600, transparent=True)
+    #plt.savefig("figures/4panel.png", dpi=600, transparent=True)
+    plt.savefig("figures/4panel-2.png", dpi=600, transparent=True)
+    plt.savefig("figures/4panel-2.pdf")
+    plt.show()
 
-#four_panel_exsy()
+four_panel_exsy()
 
 def plot_iratios():
     # from looking at peak heights, amplitudes, and nmrpipe peak heights
@@ -314,6 +325,4 @@ def plot_iratios():
     #plt.savefig(f"figures/Iratios_{f_pos}.png", dpi=300, transparent=True)
     plt.show()
 
-plot_iratios()
-
-# TODO: use peak width for noise selection and select a more isolated corner/region
+#plot_iratios()
