@@ -204,7 +204,7 @@ def four_panel_exsy():
     # t(m) labels
     fig.text(0.25, 0.85, "2 ms",  va='center', ha='center', fontsize=15)
     fig.text(0.635, 0.85, "5 ms",  va='center', ha='center', fontsize=15)
-    fig.text(0.25, 0.48, "50 ms",  va='center', ha='center', fontsize=15)
+    fig.text(0.255, 0.48, "50 ms",  va='center', ha='center', fontsize=15)
     fig.text(0.645, 0.48, "200 ms",  va='center', ha='center', fontsize=15)
 
     # get rid of white space
@@ -224,7 +224,8 @@ def four_panel_exsy():
     fig.tight_layout(pad=2.5, h_pad=0, w_pad=0)
 
     #plt.savefig("figures/4panel.png", dpi=600, transparent=True)
-    #plt.savefig("figures/4panel-5.png", dpi=600, transparent=True)
+    plt.savefig("figures/4panel-5.png", dpi=600, transparent=True)
+    plt.savefig("figures/4panel-4.pdf")
     #plt.savefig("figures/4panel-nogrid.pdf")
     plt.show()
 
