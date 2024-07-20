@@ -81,7 +81,8 @@ def plot_exsy(path, ax=None, color="magenta", title=None):
     # ax.set_xlim(-126, -125.2)
     # ax.set_ylim(-131, -122)
     ax.set_xlim(-125.9, -125.3)
-    ax.set_ylim(-129.5, -123)
+    #ax.set_ylim(-129.5, -123)
+    ax.set_ylim(-130.5, -123)
     ax.invert_xaxis()
     ax.invert_yaxis()
 
@@ -200,6 +201,12 @@ def four_panel_exsy():
     fig.text(0.55, 0.015, "$^{19}$F (ppm)", ha='center', fontweight="bold", fontsize=17)
     fig.text(0.001, 0.5, "$^{19}$F (ppm)", va='center', rotation='vertical', fontweight="bold", fontsize=17)
 
+    # t(m) labels
+    fig.text(0.25, 0.85, "2 ms",  va='center', ha='center', fontsize=15)
+    fig.text(0.635, 0.85, "5 ms",  va='center', ha='center', fontsize=15)
+    fig.text(0.25, 0.48, "50 ms",  va='center', ha='center', fontsize=15)
+    fig.text(0.645, 0.48, "200 ms",  va='center', ha='center', fontsize=15)
+
     # get rid of white space
     # plot 1
     ax[0,0].set_xticklabels([])
@@ -217,8 +224,8 @@ def four_panel_exsy():
     fig.tight_layout(pad=2.5, h_pad=0, w_pad=0)
 
     #plt.savefig("figures/4panel.png", dpi=600, transparent=True)
-    plt.savefig("figures/4panel-3.png", dpi=600, transparent=True)
-    plt.savefig("figures/4panel-3.pdf")
+    #plt.savefig("figures/4panel-5.png", dpi=600, transparent=True)
+    #plt.savefig("figures/4panel-nogrid.pdf")
     plt.show()
 
 four_panel_exsy()
