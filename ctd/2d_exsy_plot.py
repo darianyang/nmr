@@ -23,7 +23,7 @@ elif f_pos == "7F":
 # plot parameters
 cmap = matplotlib.cm.Blues_r    # contour map (colors to use for contours)
 # # 4F ideal
-contour_start = 400000           # contour level start value
+contour_start = 500000           # contour level start value
 contour_num = 8                # number of contour levels
 contour_factor = 1.5          # scaling factor between contour levels
 # 7F ideal
@@ -217,8 +217,8 @@ def four_panel_exsy():
     fig.tight_layout(pad=2.5, h_pad=0, w_pad=0)
 
     #plt.savefig("figures/4panel.png", dpi=600, transparent=True)
-    plt.savefig("figures/4panel-2.png", dpi=600, transparent=True)
-    plt.savefig("figures/4panel-2.pdf")
+    plt.savefig("figures/4panel-3.png", dpi=600, transparent=True)
+    plt.savefig("figures/4panel-3.pdf")
     plt.show()
 
 four_panel_exsy()
