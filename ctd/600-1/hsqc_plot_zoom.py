@@ -14,7 +14,8 @@ plt.style.use("/Users/darian/github/wedap/wedap/styles/default.mplstyle")
 
 # plot parameters
 #contour_start = 2400000           # contour level start value
-contour_start = 2000000           # contour level start value
+contour_start = 2000000           # contour level for final paper main fig
+contour_start = 1000000           # contour level start value
 #contour_start = 1500000           # contour level start value
 #contour_start = 1200000           # contour level start value
 contour_num = 8                # number of contour levels
@@ -101,8 +102,8 @@ plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/1/test.DAT", color="tab:blue", ax
 #           color="tab:red", ax=ax, label="T188C Reduced 2")
 # T188C 'half' ox
 #cl = 1000000 * contour_factor ** np.arange(contour_num) 
-# plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/10/test.DAT", 
-#           color="tab:orange", ax=ax, label="T188C Partial OX")
+plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/10/test.DAT", 
+          color="tab:orange", ax=ax, label="T188C Partial OX")
 
 # T188C ox some
 # plot_hsqc("DTY_22Feb2024_CA-CTD-T188C_2mM_hsqc/2/test.DAT", 
@@ -221,4 +222,4 @@ plt.show()
 #fig.savefig("W184_WT_T188C_red-ox.pdf")
 #fig.savefig("lowC_WT_red.pdf")
 #fig.savefig("lowC_red_pOx.pdf")
-fig.savefig("WT_T188C_RED_OX.pdf")
+#fig.savefig("WT_T188C_RED_OX.pdf")
