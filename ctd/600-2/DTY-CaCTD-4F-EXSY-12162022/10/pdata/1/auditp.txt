@@ -49,7 +49,24 @@ $$ /opt/topspin/data/fatema/DTY-CaCTD-4F-EXSY-12162022/10/pdata/1/auditp.txt
        298KTITLE_END
        data hash MD5: 4K * 64
        18 A0 6C B5 61 92 7C 5A 28 E7 64 13 46 A5 F3 A3>)
+$$ /Users/darian/github/nmr/ctd/600-2/DTY-CaCTD-4F-EXSY-12162022/10/pdata/1/auditp.txt
+(   6,<2024-07-20T17:53:19.425-0400>,<darian>,<mba>,<cprserver>,<TopSpin 4.4.0>,
+      <changed parameter F2 OFFSET to 0>)
+(   7,<2024-07-20T17:53:23.887-0400>,<darian>,<mba>,<cprserver>,<TopSpin 4.4.0>,
+      <changed parameter F1 OFFSET to 0>)
+(   8,<2024-07-20T17:53:52.778-0400>,<darian>,<mba>,<cprserver>,<TopSpin 4.4.0>,
+      <changed parameter F2 OFFSET to -43939.91016>)
+(   9,<2024-07-20T17:53:54.951-0400>,<darian>,<mba>,<cprserver>,<TopSpin 4.4.0>,
+      <changed parameter F1 OFFSET to -43939.91016>)
+(  10,<2024-07-20T17:54:04.408-0400>,<darian>,<mba>,<cprserver>,<TopSpin 4.4.0>,
+      <changed parameter F2 OFFSET to 0>)
+(  11,<2024-07-20T17:54:06.402-0400>,<darian>,<mba>,<cprserver>,<TopSpin 4.4.0>,
+      <changed parameter F1 OFFSET to 0>)
+(  12,<2024-07-20T17:54:08.490-0400>,<darian>,<mba>,<cprserver>,<TopSpin 4.4.0>,
+      <changed parameter F2 SR to -43939.91>)
+(  13,<2024-07-20T17:54:09.942-0400>,<darian>,<mba>,<cprserver>,<TopSpin 4.4.0>,
+      <changed parameter F1 SR to -43939.91>)
 ##END=
 
 $$ hash MD5
-$$ 6A 30 CA 8B 84 5B 57 20 3E 4C 51 CA 9F B5 82 D4
+$$ 0D 29 26 7B B1 C8 A6 BD 0C 0F 25 B8 D4 6F CE CC

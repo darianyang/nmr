@@ -1,12 +1,12 @@
-##TITLE= Parameter file, TOPSPIN		Version 3.2
+##TITLE= Parameter file, TopSpin 4.4.0
 ##JCAMPDX= 5.0
 ##DATATYPE= Parameter Values
-##NPOINTS= 11	$$ modification sequence number
+##NPOINTS= 15	$$ modification sequence number
 ##ORIGIN= Bruker BioSpin GmbH
 ##OWNER= fatema
-$$ 2022-12-16 10:05:17.993 -0500  fatema@bh029603
-$$ /opt/topspin/data/fatema/DTY-CaCTD-F-12152022/3/pdata/1/procs
-$$ process /opt/topspin3.2/prog/mod/proc1d
+$$ 2024-07-30 13:49:46.186 -0400  darian@mba
+$$ /Users/darian/github/nmr/ctd/600-2/DTY-CaCTD-F-12152022/3/pdata/1/procs
+$$ process /opt/topspin4.4.0/prog/mod/getlim
 ##$ABSF1= -97.84525
 ##$ABSF2= -148.1548
 ##$ABSG= 5
@@ -44,7 +44,7 @@ $$ process /opt/topspin3.2/prog/mod/proc1d
 ##$GAMMA= 0
 ##$GB= 0
 ##$INTBC= 1
-##$INTSCL= 1.224459e-10
+##$INTSCL= 3.8779386530541e-11
 ##$ISEN= 128
 ##$LB= 100
 ##$LEV0= 0
@@ -75,8 +75,8 @@ $$ process /opt/topspin3.2/prog/mod/proc1d
 ##$NCOEF= 0
 ##$NC_proc= -11
 ##$NLEV= 6
-##$NOISF1= 10
-##$NOISF2= 9
+##$NOISF1= -103.2749
+##$NOISF2= -116.1971
 ##$NSP= 0
 ##$NTH_PI= 0
 ##$NZP= 0
@@ -97,9 +97,9 @@ $$ process /opt/topspin3.2/prog/mod/proc1d
 ##$REVERSE= no
 ##$SF= 564.686388
 ##$SI= 16384
-##$SIGF1= 1
-##$SIGF2= -1
-##$SINO= 16
+##$SIGF1= -124.0116
+##$SIGF2= -127.2294
+##$SINO= 25.49233
 ##$SIOLD= 16384
 ##$SPECTYP= <>
 ##$SREGLST= <19F.C6D6>
