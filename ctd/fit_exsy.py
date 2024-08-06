@@ -52,8 +52,9 @@ def calc_rates(times, ratios):
     p_sigma = np.sqrt(np.diag(param_cov))
 
     # rate with stdev
-    print(f"k_12 = {param[0]*1000:0.2f} ± {p_sigma[0]*1000:0.2f} ms^-1")
-    print(f"k_21 = {param[1]*1000:0.2f} ± {p_sigma[1]*1000:0.2f} ms^-1")
+    # since input tm is in ms, convert to s^-1
+    print(f"k_12 = {param[0]*1000:0.2f} ± {p_sigma[0]*1000:0.2f} s^-1")
+    print(f"k_21 = {param[1]*1000:0.2f} ± {p_sigma[1]*1000:0.2f} s^-1")
 
     # exchange ratio
     Kex = param[0] / param[1]
@@ -126,6 +127,6 @@ ax.set(xlabel="t(m): Mixing Time (ms)", ylabel="I$_{12}$/I$_{11}$", ylim=(-0.02,
 
 fig.tight_layout()
 #fig.savefig(f"figures/fit_exsy_{f_pos}_final.png", dpi=600, transparent=True)
-fig.savefig(f"figures/fit_exsy_{f_pos}_final_forpaper.pdf")
-fig.savefig(f"figures/fit_exsy_{f_pos}_final_forpaper.png", dpi=600, transparent=True)
+#fig.savefig(f"figures/fit_exsy_{f_pos}_final_forpaper.pdf")
+#fig.savefig(f"figures/fit_exsy_{f_pos}_final_forpaper.png", dpi=600, transparent=True)
 plt.show()
